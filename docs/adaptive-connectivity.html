@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Adaptive Connectivity | Collective Resource Tracking Statistical Analysis</title>
+  <meta name="description" content="Adaptive Connectivity | Collective Resource Tracking Statistical Analysis" />
+  <meta name="generator" content="bookdown 0.44 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Adaptive Connectivity | Collective Resource Tracking Statistical Analysis" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Adaptive Connectivity | Collective Resource Tracking Statistical Analysis" />
+  
+  
+  
+
+<meta name="author" content="Valerii Chirkov" />
+
+
+<meta name="date" content="2025-09-14" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="static-connecitvity.html"/>
+<link rel="next" href="resouece-discoveries.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #204a87; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #204a87; font-weight: bold; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #ce5c00; font-weight: bold; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Load Packages &amp; Data</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#subject-level-data"><i class="fa fa-check"></i>Subject-level Data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#time-series-data"><i class="fa fa-check"></i>Time Series Data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#resource-discoveries-data"><i class="fa fa-check"></i>Resource Discoveries Data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#resource-discoveries-data-voluntary-payoff-condition"><i class="fa fa-check"></i>Resource Discoveries Data: Voluntary Payoff condition</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#session-information"><i class="fa fa-check"></i>Session Information</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="demographics-and-data-filtering.html"><a href="demographics-and-data-filtering.html"><i class="fa fa-check"></i>Demographics and data filtering</a>
+<ul>
+<li class="chapter" data-level="" data-path="demographics-and-data-filtering.html"><a href="demographics-and-data-filtering.html#count-excluded-participants-on-each-step-of-data-cleaning"><i class="fa fa-check"></i>Count excluded participants on each step of data cleaning</a></li>
+<li class="chapter" data-level="" data-path="demographics-and-data-filtering.html"><a href="demographics-and-data-filtering.html#sex"><i class="fa fa-check"></i>Sex</a></li>
+<li class="chapter" data-level="" data-path="demographics-and-data-filtering.html"><a href="demographics-and-data-filtering.html#age"><i class="fa fa-check"></i>Age</a></li>
+<li class="chapter" data-level="" data-path="demographics-and-data-filtering.html"><a href="demographics-and-data-filtering.html#approvals"><i class="fa fa-check"></i>Approvals</a></li>
+<li class="chapter" data-level="" data-path="demographics-and-data-filtering.html"><a href="demographics-and-data-filtering.html#duplicates-time-steps-when-the-participant-was-not-moving"><i class="fa fa-check"></i>Duplicates (time steps when the participant was not moving)</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html"><i class="fa fa-check"></i>Collected Points</a>
+<ul>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-1"><i class="fa fa-check"></i>Model 1</a>
+<ul>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#prior-predictive-checks"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-fitting"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-diagnostics"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-predictions"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#condition-comparisons"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#figure"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-2"><i class="fa fa-check"></i>Model 2</a>
+<ul>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#prior-predictive-checks-1"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-fitting-1"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-diagnostics-1"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-predictions-1"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#condition-comparisons-1"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#figure-1"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-comparison"><i class="fa fa-check"></i>Model Comparison</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html"><i class="fa fa-check"></i>Tracking Time</a>
+<ul>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-1-1"><i class="fa fa-check"></i>Model 1</a>
+<ul>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#prior-predictive-checks-2"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-fitting-2"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-diagnostics-2"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-predictions-2"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#condition-comparisons-2"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#figure-2"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-2-1"><i class="fa fa-check"></i>Model 2</a>
+<ul>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#prior-predictive-checks-3"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-fitting-3"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-diagnostics-3"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-predictions-3"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#condition-comparisons-3"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#figure-3"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-comparison-1"><i class="fa fa-check"></i>Model Comparison</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html"><i class="fa fa-check"></i>Tracking Efficiency</a>
+<ul>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-1-2"><i class="fa fa-check"></i>Model 1</a>
+<ul>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#prior-predictive-checks-4"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-fitting-4"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-diagnostics-4"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-predictions-4"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#condition-comparisons-4"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#figure-4"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-2-2"><i class="fa fa-check"></i>Model 2</a>
+<ul>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#prior-predictive-checks-5"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-fitting-5"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-diagnostics-5"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-predictions-5"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#condition-comparisons-5"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#figure-5"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-comparison-2"><i class="fa fa-check"></i>Model Comparison</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="tracking-time-vs.-tracking-efficiency-combined-plot.html"><a href="tracking-time-vs.-tracking-efficiency-combined-plot.html"><i class="fa fa-check"></i>Tracking Time vs. Tracking Efficiency Combined Plot</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html"><i class="fa fa-check"></i>Static Connecitvity</a>
+<ul>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#in-degree-model"><i class="fa fa-check"></i>In-degree model</a>
+<ul>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#prior-predictive-checks-6"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-fitting-6"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-diagnostics-6"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-predictions-6"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#condition-comparisons-6"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#figure-6"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#out-degree-model"><i class="fa fa-check"></i>Out-degree model</a>
+<ul>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#prior-predictive-checks-7"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-fitting-7"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-diagnostics-7"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-predictions-7"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#condition-comparisons-7"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#figure-7"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#correlation"><i class="fa fa-check"></i>Correlation</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="adaptive-connectivity.html"><a href="adaptive-connectivity.html"><i class="fa fa-check"></i>Adaptive Connectivity</a>
+<ul>
+<li class="chapter" data-level="" data-path="adaptive-connectivity.html"><a href="adaptive-connectivity.html#social-information-quality-model"><i class="fa fa-check"></i>Social Information Quality Model</a>
+<ul>
+<li class="chapter" data-level="" data-path="adaptive-connectivity.html"><a href="adaptive-connectivity.html#model-diagnostics-8"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="adaptive-connectivity.html"><a href="adaptive-connectivity.html#model-predictions-8"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="adaptive-connectivity.html"><a href="adaptive-connectivity.html#condition-comparisons-8"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="adaptive-connectivity.html"><a href="adaptive-connectivity.html#figure-8"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html"><i class="fa fa-check"></i>Resouece Discoveries</a>
+<ul>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#fast"><i class="fa fa-check"></i>Fast</a>
+<ul>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#probability-of-staying-on-resource"><i class="fa fa-check"></i>Probability of staying on resource</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#probability-of-staying-on-resource-vp"><i class="fa fa-check"></i>Probability of staying on resource VP</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#probability-of-reaching-resource"><i class="fa fa-check"></i>Probability of reaching resource</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#probability-of-reaching-resource-vp"><i class="fa fa-check"></i>Probability of reaching resource VP</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#out-degree"><i class="fa fa-check"></i>Out degree</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#out-degree-discoverer"><i class="fa fa-check"></i>Out degree (Discoverer)</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#out-degree-vp"><i class="fa fa-check"></i>Out degree VP</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#in-degree"><i class="fa fa-check"></i>In degree</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#in-degree-others"><i class="fa fa-check"></i>In degree (Others)</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#in-degree-vp"><i class="fa fa-check"></i>In degree VP</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#combine-plot"><i class="fa fa-check"></i>Combine plot</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#combine-plot-inout-degree-full"><i class="fa fa-check"></i>Combine plot (in/out degree full)</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#combine-plot-vp"><i class="fa fa-check"></i>Combine plot VP</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#slow"><i class="fa fa-check"></i>Slow</a>
+<ul>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#probability-of-staying-on-resource-1"><i class="fa fa-check"></i>Probability of staying on resource</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#probability-of-staying-on-resource-vp-1"><i class="fa fa-check"></i>Probability of staying on resource VP</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#probability-of-reaching-on-resource"><i class="fa fa-check"></i>Probability of reaching on resource</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#probability-of-reaching-resource-vp-1"><i class="fa fa-check"></i>Probability of reaching resource VP</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#out-degree-1"><i class="fa fa-check"></i>Out degree</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#out-degree-discoverer-1"><i class="fa fa-check"></i>Out degree (Discoverer)</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#out-degree-vp-1"><i class="fa fa-check"></i>Out degree VP</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#in-degree-1"><i class="fa fa-check"></i>In degree</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#in-degree-others-1"><i class="fa fa-check"></i>In degree (Others)</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#in-degree-vp-1"><i class="fa fa-check"></i>In degree VP</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#combine-plot-1"><i class="fa fa-check"></i>Combine plot</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#combine-plot-inout-degree-full-1"><i class="fa fa-check"></i>Combine plot (in/out degree full)</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#combine-plot-vp-1"><i class="fa fa-check"></i>Combine plot VP</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html"><i class="fa fa-check"></i>Degree and Rank</a>
+<ul>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#rotation-per-condition"><i class="fa fa-check"></i>Rotation per condition</a></li>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-in-degree"><i class="fa fa-check"></i>Model In-Degree</a>
+<ul>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-fitting-28"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-diagnostics-29"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#figure-28"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-out-degree"><i class="fa fa-check"></i>Model Out-Degree</a>
+<ul>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-fitting-29"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-diagnostics-30"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#figure-29"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#combined-figures"><i class="fa fa-check"></i>Combined figures</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html"><i class="fa fa-check"></i>Roation Magnitude (Tracking)</a>
+<ul>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#prior-predictive-checks-28"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-fitting-9.5h"><i class="fa fa-check"></i>Model fitting (~9.5h)</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-diagnostics-31"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-predictions-9"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#figures"><i class="fa fa-check"></i>Figures</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#random-effects"><i class="fa fa-check"></i>Random Effects</a>
+<ul>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-tracking-efficiency"><i class="fa fa-check"></i>Model Tracking Efficiency</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-score"><i class="fa fa-check"></i>Model Score</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#random-effects-correlations"><i class="fa fa-check"></i>Random Effects Correlations</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html"><i class="fa fa-check"></i>Roation Magnitude (Search)</a>
+<ul>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#prior-predictive-checks-29"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#model-fitting-9.5h-1"><i class="fa fa-check"></i>Model fitting (~9.5h)</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#model-diagnostics-32"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#model-predictions-10"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#random-effects-1"><i class="fa fa-check"></i>Random Effects</a>
+<ul>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#modeltracking-time"><i class="fa fa-check"></i>ModelTracking Time</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#random-effects-correlations-1"><i class="fa fa-check"></i>Random Effects Correlations</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html"><i class="fa fa-check"></i>Rotation Direction (Tracking)</a>
+<ul>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#detector-change"><i class="fa fa-check"></i>Detector Change</a>
+<ul>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-fitting-30"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-diagnostics-33"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-predictions-11"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#figure-30"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#social-information"><i class="fa fa-check"></i>Social Information</a>
+<ul>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-fitting-31"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-diagnostics-34"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-predictions-12"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#figure-31"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html"><i class="fa fa-check"></i>Voluntary Payoff Sharing</a>
+<ul>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#sharing-actions-count"><i class="fa fa-check"></i>Sharing actions count</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#count-model"><i class="fa fa-check"></i>Count Model</a>
+<ul>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-fitting-32"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-diagnostics-35"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-predictions-13"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#condition-draws"><i class="fa fa-check"></i>Condition draws</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#count-vs-score-model"><i class="fa fa-check"></i>Count vs Score model</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#total-sharing"><i class="fa fa-check"></i>Total Sharing</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#total-sharing-model"><i class="fa fa-check"></i>Total Sharing Model</a>
+<ul>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-fitting-33"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-diagnostics-38"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-predictions-16"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#condition-draws-1"><i class="fa fa-check"></i>Condition draws</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#total-sharing-vs-score-model"><i class="fa fa-check"></i>Total Sharing vs Score Model</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#sharing-probability-resource-state-time-distance"><i class="fa fa-check"></i>Sharing Probability: Resource, State, Time, Distance</a>
+<ul>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-fitting-34"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-diagnostics-41"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-predictions-19"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#figure-34"><i class="fa fa-check"></i>Figure</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#statistical-comparisons-4"><i class="fa fa-check"></i>Statistical Comparisons</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#sharing-probability-resource-distance"><i class="fa fa-check"></i>Sharing Probability: Resource, Distance</a>
+<ul>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-fitting-35"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-diagnostics-42"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-predictions-20"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#figure-35"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Collective Resource Tracking Statistical Analysis</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="adaptive-connectivity" class="section level1 hasAnchor">
+<h1>Adaptive Connectivity<a href="adaptive-connectivity.html#adaptive-connectivity" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="sourceCode" id="cb226"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb226-1"><a href="adaptive-connectivity.html#cb226-1" tabindex="-1"></a>m.AdaptiveConnectivity.data <span class="ot">&lt;-</span> time_series_data <span class="sc">%&gt;%</span> </span>
+<span id="cb226-2"><a href="adaptive-connectivity.html#cb226-2" tabindex="-1"></a>  <span class="fu">filter</span>(OutDegree <span class="sc">&gt;</span> <span class="dv">0</span>, State <span class="sc">==</span> <span class="st">&#39;tracking&#39;</span> <span class="sc">|</span> State <span class="sc">==</span> <span class="st">&#39;searching&#39;</span>, NoMovementTimes <span class="sc">&lt;</span> <span class="dv">3</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb226-3"><a href="adaptive-connectivity.html#cb226-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">SignalingType =</span> <span class="fu">factor</span>(SignalingType, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">&#39;NP&#39;</span>, <span class="st">&#39;VP&#39;</span>, <span class="st">&#39;FP&#39;</span>))) <span class="sc">%&gt;%</span></span>
+<span id="cb226-4"><a href="adaptive-connectivity.html#cb226-4" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">State =</span> <span class="fu">factor</span>(State, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">&#39;tracking&#39;</span>, <span class="st">&#39;searching&#39;</span>))) <span class="sc">%&gt;%</span> </span>
+<span id="cb226-5"><a href="adaptive-connectivity.html#cb226-5" tabindex="-1"></a>  <span class="fu">select</span>(Participant, SignalingType, ResourceSpeed, State, SocInfoQualityBin, IsGoodSocialInfoAvailable, SocInfoQualityRawBest, VisPlayersDistFromResource, OutDegree)</span>
+<span id="cb226-6"><a href="adaptive-connectivity.html#cb226-6" tabindex="-1"></a></span>
+<span id="cb226-7"><a href="adaptive-connectivity.html#cb226-7" tabindex="-1"></a><span class="fu">head</span>(m.AdaptiveConnectivity.data)</span></code></pre></div>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Participant"],"name":[1],"type":["fct"],"align":["left"]},{"label":["SignalingType"],"name":[2],"type":["fct"],"align":["left"]},{"label":["ResourceSpeed"],"name":[3],"type":["fct"],"align":["left"]},{"label":["State"],"name":[4],"type":["fct"],"align":["left"]},{"label":["SocInfoQualityBin"],"name":[5],"type":["fct"],"align":["left"]},{"label":["IsGoodSocialInfoAvailable"],"name":[6],"type":["fct"],"align":["left"]},{"label":["SocInfoQualityRawBest"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["VisPlayersDistFromResource"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["OutDegree"],"name":[9],"type":["dbl"],"align":["right"]}],"data":[{"1":"1012F54BE7B8916F","2":"FP","3":"slow","4":"tracking","5":"1","6":"1","7":"-14.20","8":"14.74","9":"3"},{"1":"1012F54BE7B8916F","2":"FP","3":"slow","4":"tracking","5":"1","6":"1","7":"-20.65","8":"9.52","9":"3"},{"1":"1012F54BE7B8916F","2":"FP","3":"slow","4":"tracking","5":"1","6":"1","7":"-20.60","8":"10.88","9":"3"},{"1":"1012F54BE7B8916F","2":"FP","3":"slow","4":"tracking","5":"1","6":"1","7":"-5.32","8":"25.30","9":"2"},{"1":"1012F54BE7B8916F","2":"FP","3":"slow","4":"searching","5":"0","6":"1","7":"4.64","8":"44.89","9":"1"},{"1":"1012F54BE7B8916F","2":"FP","3":"slow","4":"searching","5":"1","6":"1","7":"-46.86","8":"4.51","9":"4"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<div id="social-information-quality-model" class="section level2 hasAnchor">
+<h2>Social Information Quality Model<a href="adaptive-connectivity.html#social-information-quality-model" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb227-1"><a href="adaptive-connectivity.html#cb227-1" tabindex="-1"></a>m.AdaptiveConnectivity.formula <span class="ot">&lt;-</span> <span class="fu">brmsformula</span>(</span>
+<span id="cb227-2"><a href="adaptive-connectivity.html#cb227-2" tabindex="-1"></a>  SocInfoQualityBin <span class="sc">~</span> SignalingType <span class="sc">*</span> ResourceSpeed <span class="sc">*</span> State <span class="sc">*</span> IsGoodSocialInfoAvailable <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> Participant),</span>
+<span id="cb227-3"><a href="adaptive-connectivity.html#cb227-3" tabindex="-1"></a>  <span class="at">family =</span> <span class="fu">bernoulli</span>(<span class="at">link =</span> <span class="st">&quot;logit&quot;</span>)</span>
+<span id="cb227-4"><a href="adaptive-connectivity.html#cb227-4" tabindex="-1"></a>  )</span>
+<span id="cb227-5"><a href="adaptive-connectivity.html#cb227-5" tabindex="-1"></a></span>
+<span id="cb227-6"><a href="adaptive-connectivity.html#cb227-6" tabindex="-1"></a>m.AdaptiveConnectivity.formula_comparison <span class="ot">&lt;-</span> <span class="fu">brmsformula</span>(</span>
+<span id="cb227-7"><a href="adaptive-connectivity.html#cb227-7" tabindex="-1"></a>  SocInfoQualityBin <span class="sc">~</span> SignalingType <span class="sc">*</span> ResourceSpeed <span class="sc">*</span> State <span class="sc">*</span> IsGoodSocialInfoAvailable</span>
+<span id="cb227-8"><a href="adaptive-connectivity.html#cb227-8" tabindex="-1"></a>  )</span>
+<span id="cb227-9"><a href="adaptive-connectivity.html#cb227-9" tabindex="-1"></a></span>
+<span id="cb227-10"><a href="adaptive-connectivity.html#cb227-10" tabindex="-1"></a>m.AdaptiveConnectivity.priors <span class="ot">&lt;-</span></span>
+<span id="cb227-11"><a href="adaptive-connectivity.html#cb227-11" tabindex="-1"></a>  <span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="at">class =</span> <span class="st">&quot;Intercept&quot;</span>) <span class="sc">+</span></span>
+<span id="cb227-12"><a href="adaptive-connectivity.html#cb227-12" tabindex="-1"></a>  <span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>, <span class="fl">0.5</span>), <span class="at">class =</span> b) <span class="sc">+</span></span>
+<span id="cb227-13"><a href="adaptive-connectivity.html#cb227-13" tabindex="-1"></a>  <span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>, <span class="fl">0.1</span>), <span class="at">class =</span> <span class="st">&#39;sd&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb228"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb228-1"><a href="adaptive-connectivity.html#cb228-1" tabindex="-1"></a>m.AdaptiveConnectivity.fit <span class="ot">&lt;-</span> <span class="fu">brm</span>(</span>
+<span id="cb228-2"><a href="adaptive-connectivity.html#cb228-2" tabindex="-1"></a>  <span class="at">formula =</span> m.AdaptiveConnectivity.formula,</span>
+<span id="cb228-3"><a href="adaptive-connectivity.html#cb228-3" tabindex="-1"></a>  <span class="at">data    =</span> m.AdaptiveConnectivity.data,</span>
+<span id="cb228-4"><a href="adaptive-connectivity.html#cb228-4" tabindex="-1"></a>  <span class="at">prior   =</span> m.AdaptiveConnectivity.priors,</span>
+<span id="cb228-5"><a href="adaptive-connectivity.html#cb228-5" tabindex="-1"></a>  <span class="at">chains =</span> <span class="dv">5</span>,</span>
+<span id="cb228-6"><a href="adaptive-connectivity.html#cb228-6" tabindex="-1"></a>  <span class="at">cores =</span> <span class="dv">5</span>,</span>
+<span id="cb228-7"><a href="adaptive-connectivity.html#cb228-7" tabindex="-1"></a>  <span class="at">seed =</span> <span class="dv">4242</span>,</span>
+<span id="cb228-8"><a href="adaptive-connectivity.html#cb228-8" tabindex="-1"></a>  <span class="at">warmup =</span> <span class="dv">500</span>,</span>
+<span id="cb228-9"><a href="adaptive-connectivity.html#cb228-9" tabindex="-1"></a>  <span class="at">iter =</span> <span class="dv">2000</span>,</span>
+<span id="cb228-10"><a href="adaptive-connectivity.html#cb228-10" tabindex="-1"></a>  <span class="at">file =</span> <span class="fu">paste0</span>(fits_path, <span class="st">&#39;adaptive_connectivity_1.rds&#39;</span>),</span>
+<span id="cb228-11"><a href="adaptive-connectivity.html#cb228-11" tabindex="-1"></a>  <span class="at">backend =</span> <span class="st">&quot;cmdstanr&quot;</span>,</span>
+<span id="cb228-12"><a href="adaptive-connectivity.html#cb228-12" tabindex="-1"></a>  <span class="at">threads =</span> <span class="fu">threading</span>(<span class="dv">100</span>),</span>
+<span id="cb228-13"><a href="adaptive-connectivity.html#cb228-13" tabindex="-1"></a>  <span class="at">save_pars =</span> <span class="fu">save_pars</span>(<span class="at">all =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb228-14"><a href="adaptive-connectivity.html#cb228-14" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb229"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb229-1"><a href="adaptive-connectivity.html#cb229-1" tabindex="-1"></a><span class="fu">summary</span>(m.AdaptiveConnectivity.fit, <span class="at">ask =</span> F)</span></code></pre></div>
+<pre><code>##  Family: bernoulli 
+##   Links: mu = logit 
+## Formula: SocInfoQualityBin ~ SignalingType * ResourceSpeed * State * IsGoodSocialInfoAvailable + (1 | Participant) 
+##    Data: m.AdaptiveConnectivity.data (Number of observations: 225600) 
+##   Draws: 5 chains, each with iter = 2000; warmup = 500; thin = 1;
+##          total post-warmup draws = 7500
+## 
+## Multilevel Hyperparameters:
+## ~Participant (Number of levels: 477) 
+##               Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+## sd(Intercept)     0.31      0.01     0.29     0.34 1.00     2736     4643
+## 
+## Regression Coefficients:
+##                                                                             Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+## Intercept                                                                      -6.48      0.23    -6.95    -6.05 1.00     9643     6047
+## SignalingTypeVP                                                                -0.70      0.28    -1.25    -0.16 1.00     9572     5934
+## SignalingTypeFP                                                                -0.48      0.28    -1.05     0.05 1.00     9103     5897
+## ResourceSpeedslow                                                              -0.71      0.27    -1.26    -0.20 1.00     7093     5968
+## Statesearching                                                                 -1.53      0.26    -2.04    -1.01 1.00     8241     6200
+## IsGoodSocialInfoAvailable1                                                      7.08      0.23     6.65     7.54 1.00     9835     5942
+## SignalingTypeVP:ResourceSpeedslow                                              -0.17      0.32    -0.80     0.45 1.00     8335     5542
+## SignalingTypeFP:ResourceSpeedslow                                              -0.39      0.33    -1.03     0.24 1.00     8599     5316
+## SignalingTypeVP:Statesearching                                                 -0.23      0.32    -0.86     0.38 1.00    11420     5718
+## SignalingTypeFP:Statesearching                                                 -0.18      0.32    -0.83     0.44 1.00     8415     5571
+## ResourceSpeedslow:Statesearching                                                0.01      0.34    -0.66     0.67 1.00     9818     5908
+## SignalingTypeVP:IsGoodSocialInfoAvailable1                                      0.89      0.28     0.36     1.44 1.00     9171     5997
+## SignalingTypeFP:IsGoodSocialInfoAvailable1                                      1.19      0.28     0.65     1.76 1.00     9216     5898
+## ResourceSpeedslow:IsGoodSocialInfoAvailable1                                    1.04      0.27     0.54     1.58 1.00     7125     5811
+## Statesearching:IsGoodSocialInfoAvailable1                                       1.18      0.26     0.66     1.69 1.00     8259     6003
+## SignalingTypeVP:ResourceSpeedslow:Statesearching                               -0.05      0.35    -0.74     0.63 1.00     9922     5737
+## SignalingTypeFP:ResourceSpeedslow:Statesearching                                0.08      0.35    -0.60     0.76 1.00    10723     5702
+## SignalingTypeVP:ResourceSpeedslow:IsGoodSocialInfoAvailable1                    0.10      0.32    -0.53     0.72 1.00     8221     5396
+## SignalingTypeFP:ResourceSpeedslow:IsGoodSocialInfoAvailable1                   -0.08      0.33    -0.72     0.55 1.00     8717     5739
+## SignalingTypeVP:Statesearching:IsGoodSocialInfoAvailable1                       0.36      0.32    -0.25     0.98 1.00    11249     5669
+## SignalingTypeFP:Statesearching:IsGoodSocialInfoAvailable1                       0.41      0.32    -0.22     1.06 1.00     8379     5669
+## ResourceSpeedslow:Statesearching:IsGoodSocialInfoAvailable1                     0.14      0.34    -0.52     0.81 1.00     9879     5829
+## SignalingTypeVP:ResourceSpeedslow:Statesearching:IsGoodSocialInfoAvailable1    -0.02      0.35    -0.69     0.67 1.00     9761     5863
+## SignalingTypeFP:ResourceSpeedslow:Statesearching:IsGoodSocialInfoAvailable1     0.10      0.35    -0.59     0.79 1.00    10768     5640
+## 
+## Draws were sampled using sample(hmc). For each parameter, Bulk_ESS
+## and Tail_ESS are effective sample size measures, and Rhat is the potential
+## scale reduction factor on split chains (at convergence, Rhat = 1).</code></pre>
+<div id="model-diagnostics-8" class="section level3 hasAnchor">
+<h3>Model diagnostics<a href="adaptive-connectivity.html#model-diagnostics-8" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-258-1.png" width="672" style="display: block; margin: auto;" /><img src="collective_tracking_results_files/figure-html/unnamed-chunk-258-2.png" width="672" style="display: block; margin: auto;" /><img src="collective_tracking_results_files/figure-html/unnamed-chunk-258-3.png" width="672" style="display: block; margin: auto;" /><img src="collective_tracking_results_files/figure-html/unnamed-chunk-258-4.png" width="672" style="display: block; margin: auto;" /><img src="collective_tracking_results_files/figure-html/unnamed-chunk-258-5.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-259-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="model-predictions-8" class="section level3 hasAnchor">
+<h3>Model predictions<a href="adaptive-connectivity.html#model-predictions-8" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb231"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb231-1"><a href="adaptive-connectivity.html#cb231-1" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">conditional_effects</span>(m.AdaptiveConnectivity.fit, </span>
+<span id="cb231-2"><a href="adaptive-connectivity.html#cb231-2" tabindex="-1"></a>                         <span class="at">re_formula =</span> m.AdaptiveConnectivity.formula_comparison),</span>
+<span id="cb231-3"><a href="adaptive-connectivity.html#cb231-3" tabindex="-1"></a>     <span class="at">points =</span> F, <span class="at">ask =</span> F)</span></code></pre></div>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-260-1.png" width="672" style="display: block; margin: auto;" /><img src="collective_tracking_results_files/figure-html/unnamed-chunk-260-2.png" width="672" style="display: block; margin: auto;" /><img src="collective_tracking_results_files/figure-html/unnamed-chunk-260-3.png" width="672" style="display: block; margin: auto;" /><img src="collective_tracking_results_files/figure-html/unnamed-chunk-260-4.png" width="672" style="display: block; margin: auto;" /><img src="collective_tracking_results_files/figure-html/unnamed-chunk-260-5.png" width="672" style="display: block; margin: auto;" /><img src="collective_tracking_results_files/figure-html/unnamed-chunk-260-6.png" width="672" style="display: block; margin: auto;" /><img src="collective_tracking_results_files/figure-html/unnamed-chunk-260-7.png" width="672" style="display: block; margin: auto;" /><img src="collective_tracking_results_files/figure-html/unnamed-chunk-260-8.png" width="672" style="display: block; margin: auto;" /><img src="collective_tracking_results_files/figure-html/unnamed-chunk-260-9.png" width="672" style="display: block; margin: auto;" /><img src="collective_tracking_results_files/figure-html/unnamed-chunk-260-10.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="condition-comparisons-8" class="section level3 hasAnchor">
+<h3>Condition comparisons<a href="adaptive-connectivity.html#condition-comparisons-8" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb232"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb232-1"><a href="adaptive-connectivity.html#cb232-1" tabindex="-1"></a>m.AdaptiveConnectivity.emmeans_contrast_draws <span class="ot">&lt;-</span> m.AdaptiveConnectivity.fit <span class="sc">%&gt;%</span></span>
+<span id="cb232-2"><a href="adaptive-connectivity.html#cb232-2" tabindex="-1"></a>  <span class="fu">emmeans</span>(<span class="sc">~</span> SignalingType <span class="sc">*</span> ResourceSpeed <span class="sc">*</span> State <span class="sc">*</span> IsGoodSocialInfoAvailable, </span>
+<span id="cb232-3"><a href="adaptive-connectivity.html#cb232-3" tabindex="-1"></a>          <span class="at">epred =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb232-4"><a href="adaptive-connectivity.html#cb232-4" tabindex="-1"></a>          <span class="at">re_formula =</span> m.AdaptiveConnectivity.formula_comparison,</span>
+<span id="cb232-5"><a href="adaptive-connectivity.html#cb232-5" tabindex="-1"></a>          <span class="at">type =</span> <span class="st">&quot;response&quot;</span>,</span>
+<span id="cb232-6"><a href="adaptive-connectivity.html#cb232-6" tabindex="-1"></a>          ) <span class="sc">%&gt;%</span></span>
+<span id="cb232-7"><a href="adaptive-connectivity.html#cb232-7" tabindex="-1"></a>  <span class="fu">contrast</span>(<span class="at">method =</span> <span class="st">&quot;revpairwise&quot;</span>, <span class="at">simple =</span> <span class="st">&quot;each&quot;</span>, <span class="at">combine =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb232-8"><a href="adaptive-connectivity.html#cb232-8" tabindex="-1"></a>  <span class="fu">gather_emmeans_draws</span>()</span></code></pre></div>
+<table class=" lightable-classic" style="font-family: &quot;Arial Narrow&quot;, &quot;Source Sans Pro&quot;, sans-serif; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+ResourceSpeed
+</th>
+<th style="text-align:left;">
+State
+</th>
+<th style="text-align:left;">
+IsGoodSocialInfoAvailable
+</th>
+<th style="text-align:left;">
+SignalingType
+</th>
+<th style="text-align:left;">
+contrast
+</th>
+<th style="text-align:right;">
+.value
+</th>
+<th style="text-align:right;">
+.lower
+</th>
+<th style="text-align:right;">
+.upper
+</th>
+<th style="text-align:right;">
+.width
+</th>
+<th style="text-align:left;">
+.point
+</th>
+<th style="text-align:left;">
+.interval
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+searching
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+FP
+</td>
+<td style="text-align:left;">
+slow - fast
+</td>
+<td style="text-align:right;">
+0.03
+</td>
+<td style="text-align:right;">
+0.01
+</td>
+<td style="text-align:right;">
+0.05
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+searching
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+NP
+</td>
+<td style="text-align:left;">
+slow - fast
+</td>
+<td style="text-align:right;">
+0.11
+</td>
+<td style="text-align:right;">
+0.09
+</td>
+<td style="text-align:right;">
+0.14
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+searching
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+VP
+</td>
+<td style="text-align:left;">
+slow - fast
+</td>
+<td style="text-align:right;">
+0.08
+</td>
+<td style="text-align:right;">
+0.05
+</td>
+<td style="text-align:right;">
+0.10
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+tracking
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+FP
+</td>
+<td style="text-align:left;">
+slow - fast
+</td>
+<td style="text-align:right;">
+-0.02
+</td>
+<td style="text-align:right;">
+-0.04
+</td>
+<td style="text-align:right;">
+-0.01
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+tracking
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+NP
+</td>
+<td style="text-align:left;">
+slow - fast
+</td>
+<td style="text-align:right;">
+0.07
+</td>
+<td style="text-align:right;">
+0.05
+</td>
+<td style="text-align:right;">
+0.09
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+tracking
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+VP
+</td>
+<td style="text-align:left;">
+slow - fast
+</td>
+<td style="text-align:right;">
+0.05
+</td>
+<td style="text-align:right;">
+0.03
+</td>
+<td style="text-align:right;">
+0.07
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fast
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+FP
+</td>
+<td style="text-align:left;">
+searching - tracking
+</td>
+<td style="text-align:right;">
+-0.02
+</td>
+<td style="text-align:right;">
+-0.03
+</td>
+<td style="text-align:right;">
+-0.01
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fast
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+NP
+</td>
+<td style="text-align:left;">
+searching - tracking
+</td>
+<td style="text-align:right;">
+-0.08
+</td>
+<td style="text-align:right;">
+-0.10
+</td>
+<td style="text-align:right;">
+-0.07
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fast
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+VP
+</td>
+<td style="text-align:left;">
+searching - tracking
+</td>
+<td style="text-align:right;">
+-0.05
+</td>
+<td style="text-align:right;">
+-0.06
+</td>
+<td style="text-align:right;">
+-0.04
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fast
+</td>
+<td style="text-align:left;">
+searching
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+FP - NP
+</td>
+<td style="text-align:right;">
+0.20
+</td>
+<td style="text-align:right;">
+0.18
+</td>
+<td style="text-align:right;">
+0.23
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fast
+</td>
+<td style="text-align:left;">
+searching
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+FP - VP
+</td>
+<td style="text-align:right;">
+0.13
+</td>
+<td style="text-align:right;">
+0.11
+</td>
+<td style="text-align:right;">
+0.15
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fast
+</td>
+<td style="text-align:left;">
+searching
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+VP - NP
+</td>
+<td style="text-align:right;">
+0.08
+</td>
+<td style="text-align:right;">
+0.06
+</td>
+<td style="text-align:right;">
+0.10
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fast
+</td>
+<td style="text-align:left;">
+tracking
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+FP - NP
+</td>
+<td style="text-align:right;">
+0.14
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:right;">
+0.16
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fast
+</td>
+<td style="text-align:left;">
+tracking
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+FP - VP
+</td>
+<td style="text-align:right;">
+0.10
+</td>
+<td style="text-align:right;">
+0.08
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fast
+</td>
+<td style="text-align:left;">
+tracking
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+VP - NP
+</td>
+<td style="text-align:right;">
+0.04
+</td>
+<td style="text-align:right;">
+0.02
+</td>
+<td style="text-align:right;">
+0.07
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+slow
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+FP
+</td>
+<td style="text-align:left;">
+searching - tracking
+</td>
+<td style="text-align:right;">
+0.03
+</td>
+<td style="text-align:right;">
+0.02
+</td>
+<td style="text-align:right;">
+0.05
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+slow
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+NP
+</td>
+<td style="text-align:left;">
+searching - tracking
+</td>
+<td style="text-align:right;">
+-0.04
+</td>
+<td style="text-align:right;">
+-0.06
+</td>
+<td style="text-align:right;">
+-0.03
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+slow
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+VP
+</td>
+<td style="text-align:left;">
+searching - tracking
+</td>
+<td style="text-align:right;">
+-0.03
+</td>
+<td style="text-align:right;">
+-0.04
+</td>
+<td style="text-align:right;">
+-0.01
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+slow
+</td>
+<td style="text-align:left;">
+searching
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+FP - NP
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:right;">
+0.10
+</td>
+<td style="text-align:right;">
+0.15
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+slow
+</td>
+<td style="text-align:left;">
+searching
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+FP - VP
+</td>
+<td style="text-align:right;">
+0.08
+</td>
+<td style="text-align:right;">
+0.06
+</td>
+<td style="text-align:right;">
+0.11
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+slow
+</td>
+<td style="text-align:left;">
+searching
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+VP - NP
+</td>
+<td style="text-align:right;">
+0.04
+</td>
+<td style="text-align:right;">
+0.02
+</td>
+<td style="text-align:right;">
+0.06
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+slow
+</td>
+<td style="text-align:left;">
+tracking
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+FP - NP
+</td>
+<td style="text-align:right;">
+0.05
+</td>
+<td style="text-align:right;">
+0.03
+</td>
+<td style="text-align:right;">
+0.06
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+slow
+</td>
+<td style="text-align:left;">
+tracking
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+FP - VP
+</td>
+<td style="text-align:right;">
+0.02
+</td>
+<td style="text-align:right;">
+0.01
+</td>
+<td style="text-align:right;">
+0.04
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+slow
+</td>
+<td style="text-align:left;">
+tracking
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+VP - NP
+</td>
+<td style="text-align:right;">
+0.02
+</td>
+<td style="text-align:right;">
+0.01
+</td>
+<td style="text-align:right;">
+0.04
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb233"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb233-1"><a href="adaptive-connectivity.html#cb233-1" tabindex="-1"></a>m.AdaptiveConnectivity.comparison.combined_table <span class="ot">&lt;-</span> m.AdaptiveConnectivity.comparison <span class="sc">%&gt;%</span></span>
+<span id="cb233-2"><a href="adaptive-connectivity.html#cb233-2" tabindex="-1"></a>  <span class="fu">select</span>(ResourceSpeed, SignalingType, State, IsGoodSocialInfoAvailable, contrast, .value, .lower, .upper) <span class="sc">%&gt;%</span></span>
+<span id="cb233-3"><a href="adaptive-connectivity.html#cb233-3" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb233-4"><a href="adaptive-connectivity.html#cb233-4" tabindex="-1"></a>    <span class="at">ResourceSpeed =</span> <span class="fu">ifelse</span>(<span class="fu">is.na</span>(ResourceSpeed), <span class="st">&quot;.&quot;</span>, <span class="fu">as.character</span>(ResourceSpeed)),</span>
+<span id="cb233-5"><a href="adaptive-connectivity.html#cb233-5" tabindex="-1"></a>    <span class="at">SignalingType =</span> <span class="fu">ifelse</span>(<span class="fu">is.na</span>(SignalingType), <span class="st">&quot;.&quot;</span>, <span class="fu">as.character</span>(SignalingType)),</span>
+<span id="cb233-6"><a href="adaptive-connectivity.html#cb233-6" tabindex="-1"></a>    <span class="at">sig =</span> (.lower <span class="sc">*</span> .upper) <span class="sc">&gt;</span> <span class="dv">0</span>,</span>
+<span id="cb233-7"><a href="adaptive-connectivity.html#cb233-7" tabindex="-1"></a>    <span class="at">Estimate =</span> <span class="fu">sprintf</span>(<span class="st">&quot;%.2f&quot;</span>, .value),</span>
+<span id="cb233-8"><a href="adaptive-connectivity.html#cb233-8" tabindex="-1"></a>    <span class="at">Estimate =</span> <span class="fu">ifelse</span>(sig, <span class="fu">paste0</span>(<span class="st">&quot;</span><span class="sc">\\</span><span class="st">textbf{&quot;</span>, Estimate, <span class="st">&quot;}&quot;</span>), Estimate),</span>
+<span id="cb233-9"><a href="adaptive-connectivity.html#cb233-9" tabindex="-1"></a>    <span class="at">hpdi =</span> <span class="fu">sprintf</span>(<span class="st">&quot;[%.2f, %.2f]&quot;</span>, .lower, .upper),</span>
+<span id="cb233-10"><a href="adaptive-connectivity.html#cb233-10" tabindex="-1"></a>    <span class="at">hpdi =</span> <span class="fu">ifelse</span>(sig, <span class="fu">paste0</span>(<span class="st">&quot;</span><span class="sc">\\</span><span class="st">textbf{&quot;</span>, hpdi, <span class="st">&quot;}&quot;</span>), hpdi)</span>
+<span id="cb233-11"><a href="adaptive-connectivity.html#cb233-11" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb233-12"><a href="adaptive-connectivity.html#cb233-12" tabindex="-1"></a>  <span class="fu">select</span>(ResourceSpeed, SignalingType, State, contrast, Estimate, hpdi)  <span class="co"># , IsGoodSocialInfoAvailable</span></span>
+<span id="cb233-13"><a href="adaptive-connectivity.html#cb233-13" tabindex="-1"></a></span>
+<span id="cb233-14"><a href="adaptive-connectivity.html#cb233-14" tabindex="-1"></a><span class="fu">colnames</span>(m.AdaptiveConnectivity.comparison.combined_table) <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb233-15"><a href="adaptive-connectivity.html#cb233-15" tabindex="-1"></a>  <span class="st">&quot;Resource Speed&quot;</span>, <span class="st">&quot;Payoff Condition&quot;</span>, <span class="st">&quot;State&quot;</span>, <span class="st">&quot;Contrast&quot;</span>, <span class="st">&quot;Mean&quot;</span>, <span class="st">&quot;90</span><span class="sc">\\</span><span class="st">% HPDI&quot;</span> <span class="co"># , &quot;Adaptive Social Info Available&quot;</span></span>
+<span id="cb233-16"><a href="adaptive-connectivity.html#cb233-16" tabindex="-1"></a>)</span>
+<span id="cb233-17"><a href="adaptive-connectivity.html#cb233-17" tabindex="-1"></a></span>
+<span id="cb233-18"><a href="adaptive-connectivity.html#cb233-18" tabindex="-1"></a>kbl <span class="ot">&lt;-</span> <span class="fu">kable</span>(</span>
+<span id="cb233-19"><a href="adaptive-connectivity.html#cb233-19" tabindex="-1"></a>  m.AdaptiveConnectivity.comparison.combined_table,</span>
+<span id="cb233-20"><a href="adaptive-connectivity.html#cb233-20" tabindex="-1"></a>  <span class="at">format =</span> <span class="st">&quot;latex&quot;</span>,</span>
+<span id="cb233-21"><a href="adaptive-connectivity.html#cb233-21" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb233-22"><a href="adaptive-connectivity.html#cb233-22" tabindex="-1"></a>  <span class="at">align =</span> <span class="fu">c</span>(<span class="st">&quot;l&quot;</span>, <span class="st">&quot;l&quot;</span>, <span class="st">&quot;l&quot;</span>, <span class="st">&quot;l&quot;</span>, <span class="st">&quot;r&quot;</span>, <span class="st">&quot;r&quot;</span>),</span>
+<span id="cb233-23"><a href="adaptive-connectivity.html#cb233-23" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">&quot;Posterior Estimates Adaptive Connectivity&quot;</span>,</span>
+<span id="cb233-24"><a href="adaptive-connectivity.html#cb233-24" tabindex="-1"></a>  <span class="at">escape =</span> <span class="cn">FALSE</span></span>
+<span id="cb233-25"><a href="adaptive-connectivity.html#cb233-25" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb233-26"><a href="adaptive-connectivity.html#cb233-26" tabindex="-1"></a>    <span class="fu">kable_styling</span>(<span class="at">latex_options =</span> <span class="st">&quot;hold_position&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb233-27"><a href="adaptive-connectivity.html#cb233-27" tabindex="-1"></a>    <span class="fu">row_spec</span>(<span class="dv">0</span>, <span class="at">bold =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb233-28"><a href="adaptive-connectivity.html#cb233-28" tabindex="-1"></a></span>
+<span id="cb233-29"><a href="adaptive-connectivity.html#cb233-29" tabindex="-1"></a>unique_speeds <span class="ot">&lt;-</span> <span class="fu">unique</span>(m.AdaptiveConnectivity.comparison.combined_table<span class="sc">$</span><span class="st">`</span><span class="at">Resource Speed</span><span class="st">`</span>)</span>
+<span id="cb233-30"><a href="adaptive-connectivity.html#cb233-30" tabindex="-1"></a>start <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb233-31"><a href="adaptive-connectivity.html#cb233-31" tabindex="-1"></a><span class="cf">for</span> (speed <span class="cf">in</span> unique_speeds) {</span>
+<span id="cb233-32"><a href="adaptive-connectivity.html#cb233-32" tabindex="-1"></a>  n_rows <span class="ot">&lt;-</span> <span class="fu">sum</span>(m.AdaptiveConnectivity.comparison.combined_table<span class="sc">$</span><span class="st">`</span><span class="at">Resource Speed</span><span class="st">`</span> <span class="sc">==</span> speed)</span>
+<span id="cb233-33"><a href="adaptive-connectivity.html#cb233-33" tabindex="-1"></a>  <span class="cf">if</span> (speed <span class="sc">!=</span> <span class="st">&quot;.&quot;</span>) { </span>
+<span id="cb233-34"><a href="adaptive-connectivity.html#cb233-34" tabindex="-1"></a>    kbl <span class="ot">&lt;-</span> <span class="fu">group_rows</span>(kbl, speed, start, start <span class="sc">+</span> n_rows <span class="sc">-</span> <span class="dv">1</span>)</span>
+<span id="cb233-35"><a href="adaptive-connectivity.html#cb233-35" tabindex="-1"></a>  }</span>
+<span id="cb233-36"><a href="adaptive-connectivity.html#cb233-36" tabindex="-1"></a>  start <span class="ot">&lt;-</span> start <span class="sc">+</span> n_rows</span>
+<span id="cb233-37"><a href="adaptive-connectivity.html#cb233-37" tabindex="-1"></a>}</span>
+<span id="cb233-38"><a href="adaptive-connectivity.html#cb233-38" tabindex="-1"></a></span>
+<span id="cb233-39"><a href="adaptive-connectivity.html#cb233-39" tabindex="-1"></a><span class="fu">writeLines</span>(kbl, <span class="fu">paste0</span>(comparisons, <span class="st">&quot;adaptive_connectiveity_comparison.tex&quot;</span>))</span></code></pre></div>
+</div>
+<div id="figure-8" class="section level3 hasAnchor">
+<h3>Figure<a href="adaptive-connectivity.html#figure-8" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb234"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb234-1"><a href="adaptive-connectivity.html#cb234-1" tabindex="-1"></a>fig_adaptive_connectivity <span class="ot">&lt;-</span> m.AdaptiveConnectivity.draws <span class="sc">%&gt;%</span></span>
+<span id="cb234-2"><a href="adaptive-connectivity.html#cb234-2" tabindex="-1"></a>  <span class="fu">filter</span>(IsGoodSocialInfoAvailable <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb234-3"><a href="adaptive-connectivity.html#cb234-3" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x     =</span> SignalingType, </span>
+<span id="cb234-4"><a href="adaptive-connectivity.html#cb234-4" tabindex="-1"></a>             <span class="at">y     =</span> .epred, </span>
+<span id="cb234-5"><a href="adaptive-connectivity.html#cb234-5" tabindex="-1"></a>             <span class="at">color =</span> SignalingType, </span>
+<span id="cb234-6"><a href="adaptive-connectivity.html#cb234-6" tabindex="-1"></a>             <span class="at">fill  =</span> SignalingType,</span>
+<span id="cb234-7"><a href="adaptive-connectivity.html#cb234-7" tabindex="-1"></a>             <span class="at">shape =</span> ResourceSpeed)) <span class="sc">+</span></span>
+<span id="cb234-8"><a href="adaptive-connectivity.html#cb234-8" tabindex="-1"></a>  ggdist<span class="sc">::</span><span class="fu">stat_pointinterval</span>(</span>
+<span id="cb234-9"><a href="adaptive-connectivity.html#cb234-9" tabindex="-1"></a>    <span class="at">position =</span> <span class="fu">position_dodge</span>(<span class="at">width =</span> .<span class="dv">55</span>),</span>
+<span id="cb234-10"><a href="adaptive-connectivity.html#cb234-10" tabindex="-1"></a>    <span class="at">point_interval =</span> <span class="st">&quot;mean_hdci&quot;</span>,</span>
+<span id="cb234-11"><a href="adaptive-connectivity.html#cb234-11" tabindex="-1"></a>    <span class="at">.width =</span> <span class="fl">0.9</span>,</span>
+<span id="cb234-12"><a href="adaptive-connectivity.html#cb234-12" tabindex="-1"></a>    <span class="at">point_size =</span> <span class="fl">3.6</span>,</span>
+<span id="cb234-13"><a href="adaptive-connectivity.html#cb234-13" tabindex="-1"></a>    ) <span class="sc">+</span> </span>
+<span id="cb234-14"><a href="adaptive-connectivity.html#cb234-14" tabindex="-1"></a>  <span class="fu">theme_nice</span>(<span class="at">legend.pos =</span> <span class="st">&quot;right&quot;</span>) <span class="sc">+</span></span>
+<span id="cb234-15"><a href="adaptive-connectivity.html#cb234-15" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="st">&#39;A&#39;</span>, <span class="st">&#39;NP&#39;</span>, <span class="st">&#39;VP&#39;</span>, <span class="st">&#39;FP&#39;</span>),</span>
+<span id="cb234-16"><a href="adaptive-connectivity.html#cb234-16" tabindex="-1"></a>                     <span class="at">aesthetics =</span> <span class="fu">c</span>(<span class="st">&quot;colour&quot;</span>, <span class="st">&quot;fill&quot;</span>),</span>
+<span id="cb234-17"><a href="adaptive-connectivity.html#cb234-17" tabindex="-1"></a>                     <span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;#000000&quot;</span>, <span class="st">&quot;#DF536B&quot;</span>, <span class="st">&quot;#61D04F&quot;</span>, <span class="st">&quot;#2297E6&quot;</span>), </span>
+<span id="cb234-18"><a href="adaptive-connectivity.html#cb234-18" tabindex="-1"></a>                     <span class="at">guide =</span> <span class="fu">guide_legend</span>(<span class="at">title =</span> <span class="st">&quot;Signaling&quot;</span>),</span>
+<span id="cb234-19"><a href="adaptive-connectivity.html#cb234-19" tabindex="-1"></a>                     <span class="co"># alpha = 1 override.aes = list(alpha = 1)</span></span>
+<span id="cb234-20"><a href="adaptive-connectivity.html#cb234-20" tabindex="-1"></a>                     ) <span class="sc">+</span></span>
+<span id="cb234-21"><a href="adaptive-connectivity.html#cb234-21" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(</span>
+<span id="cb234-22"><a href="adaptive-connectivity.html#cb234-22" tabindex="-1"></a>    <span class="at">limits  =</span> <span class="fu">c</span>(<span class="fl">0.5</span>, <span class="fl">0.85</span>),</span>
+<span id="cb234-23"><a href="adaptive-connectivity.html#cb234-23" tabindex="-1"></a>    <span class="at">expand  =</span> <span class="fu">expansion</span>(<span class="at">mult =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.04</span>))</span>
+<span id="cb234-24"><a href="adaptive-connectivity.html#cb234-24" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb234-25"><a href="adaptive-connectivity.html#cb234-25" tabindex="-1"></a>  <span class="fu">theme_clean</span>() <span class="sc">+</span></span>
+<span id="cb234-26"><a href="adaptive-connectivity.html#cb234-26" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;none&quot;</span>) <span class="sc">+</span></span>
+<span id="cb234-27"><a href="adaptive-connectivity.html#cb234-27" tabindex="-1"></a>  <span class="fu">panel_border</span>() <span class="sc">+</span></span>
+<span id="cb234-28"><a href="adaptive-connectivity.html#cb234-28" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="fu">vars</span>(State), <span class="at">ncol =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb234-29"><a href="adaptive-connectivity.html#cb234-29" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot; &quot;</span>, <span class="at">y =</span> <span class="st">&quot;P(Adaptive Social Info)&quot;</span>)</span>
+<span id="cb234-30"><a href="adaptive-connectivity.html#cb234-30" tabindex="-1"></a></span>
+<span id="cb234-31"><a href="adaptive-connectivity.html#cb234-31" tabindex="-1"></a>fig_adaptive_connectivity</span></code></pre></div>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-265-1.png" width="672" style="display: block; margin: auto;" /></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="static-connecitvity.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="resouece-discoveries.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>

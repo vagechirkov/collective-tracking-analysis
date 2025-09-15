@@ -1,0 +1,2020 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Tracking Time | Collective Resource Tracking Statistical Analysis</title>
+  <meta name="description" content="Tracking Time | Collective Resource Tracking Statistical Analysis" />
+  <meta name="generator" content="bookdown 0.44 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Tracking Time | Collective Resource Tracking Statistical Analysis" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Tracking Time | Collective Resource Tracking Statistical Analysis" />
+  
+  
+  
+
+<meta name="author" content="Valerii Chirkov" />
+
+
+<meta name="date" content="2025-09-14" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="collected-points.html"/>
+<link rel="next" href="tracking-efficiency.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #204a87; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #204a87; font-weight: bold; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #ce5c00; font-weight: bold; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Load Packages &amp; Data</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#subject-level-data"><i class="fa fa-check"></i>Subject-level Data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#time-series-data"><i class="fa fa-check"></i>Time Series Data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#resource-discoveries-data"><i class="fa fa-check"></i>Resource Discoveries Data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#resource-discoveries-data-voluntary-payoff-condition"><i class="fa fa-check"></i>Resource Discoveries Data: Voluntary Payoff condition</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#session-information"><i class="fa fa-check"></i>Session Information</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="demographics-and-data-filtering.html"><a href="demographics-and-data-filtering.html"><i class="fa fa-check"></i>Demographics and data filtering</a>
+<ul>
+<li class="chapter" data-level="" data-path="demographics-and-data-filtering.html"><a href="demographics-and-data-filtering.html#count-excluded-participants-on-each-step-of-data-cleaning"><i class="fa fa-check"></i>Count excluded participants on each step of data cleaning</a></li>
+<li class="chapter" data-level="" data-path="demographics-and-data-filtering.html"><a href="demographics-and-data-filtering.html#sex"><i class="fa fa-check"></i>Sex</a></li>
+<li class="chapter" data-level="" data-path="demographics-and-data-filtering.html"><a href="demographics-and-data-filtering.html#age"><i class="fa fa-check"></i>Age</a></li>
+<li class="chapter" data-level="" data-path="demographics-and-data-filtering.html"><a href="demographics-and-data-filtering.html#approvals"><i class="fa fa-check"></i>Approvals</a></li>
+<li class="chapter" data-level="" data-path="demographics-and-data-filtering.html"><a href="demographics-and-data-filtering.html#duplicates-time-steps-when-the-participant-was-not-moving"><i class="fa fa-check"></i>Duplicates (time steps when the participant was not moving)</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html"><i class="fa fa-check"></i>Collected Points</a>
+<ul>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-1"><i class="fa fa-check"></i>Model 1</a>
+<ul>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#prior-predictive-checks"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-fitting"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-diagnostics"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-predictions"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#condition-comparisons"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#figure"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-2"><i class="fa fa-check"></i>Model 2</a>
+<ul>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#prior-predictive-checks-1"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-fitting-1"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-diagnostics-1"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-predictions-1"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#condition-comparisons-1"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#figure-1"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-comparison"><i class="fa fa-check"></i>Model Comparison</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html"><i class="fa fa-check"></i>Tracking Time</a>
+<ul>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-1-1"><i class="fa fa-check"></i>Model 1</a>
+<ul>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#prior-predictive-checks-2"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-fitting-2"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-diagnostics-2"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-predictions-2"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#condition-comparisons-2"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#figure-2"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-2-1"><i class="fa fa-check"></i>Model 2</a>
+<ul>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#prior-predictive-checks-3"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-fitting-3"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-diagnostics-3"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-predictions-3"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#condition-comparisons-3"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#figure-3"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-comparison-1"><i class="fa fa-check"></i>Model Comparison</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html"><i class="fa fa-check"></i>Tracking Efficiency</a>
+<ul>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-1-2"><i class="fa fa-check"></i>Model 1</a>
+<ul>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#prior-predictive-checks-4"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-fitting-4"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-diagnostics-4"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-predictions-4"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#condition-comparisons-4"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#figure-4"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-2-2"><i class="fa fa-check"></i>Model 2</a>
+<ul>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#prior-predictive-checks-5"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-fitting-5"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-diagnostics-5"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-predictions-5"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#condition-comparisons-5"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#figure-5"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-comparison-2"><i class="fa fa-check"></i>Model Comparison</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="tracking-time-vs.-tracking-efficiency-combined-plot.html"><a href="tracking-time-vs.-tracking-efficiency-combined-plot.html"><i class="fa fa-check"></i>Tracking Time vs. Tracking Efficiency Combined Plot</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html"><i class="fa fa-check"></i>Static Connecitvity</a>
+<ul>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#in-degree-model"><i class="fa fa-check"></i>In-degree model</a>
+<ul>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#prior-predictive-checks-6"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-fitting-6"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-diagnostics-6"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-predictions-6"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#condition-comparisons-6"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#figure-6"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#out-degree-model"><i class="fa fa-check"></i>Out-degree model</a>
+<ul>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#prior-predictive-checks-7"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-fitting-7"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-diagnostics-7"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-predictions-7"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#condition-comparisons-7"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#figure-7"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#correlation"><i class="fa fa-check"></i>Correlation</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="adaptive-connectivity.html"><a href="adaptive-connectivity.html"><i class="fa fa-check"></i>Adaptive Connectivity</a>
+<ul>
+<li class="chapter" data-level="" data-path="adaptive-connectivity.html"><a href="adaptive-connectivity.html#social-information-quality-model"><i class="fa fa-check"></i>Social Information Quality Model</a>
+<ul>
+<li class="chapter" data-level="" data-path="adaptive-connectivity.html"><a href="adaptive-connectivity.html#model-diagnostics-8"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="adaptive-connectivity.html"><a href="adaptive-connectivity.html#model-predictions-8"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="adaptive-connectivity.html"><a href="adaptive-connectivity.html#condition-comparisons-8"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="adaptive-connectivity.html"><a href="adaptive-connectivity.html#figure-8"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html"><i class="fa fa-check"></i>Resouece Discoveries</a>
+<ul>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#fast"><i class="fa fa-check"></i>Fast</a>
+<ul>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#probability-of-staying-on-resource"><i class="fa fa-check"></i>Probability of staying on resource</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#probability-of-staying-on-resource-vp"><i class="fa fa-check"></i>Probability of staying on resource VP</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#probability-of-reaching-resource"><i class="fa fa-check"></i>Probability of reaching resource</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#probability-of-reaching-resource-vp"><i class="fa fa-check"></i>Probability of reaching resource VP</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#out-degree"><i class="fa fa-check"></i>Out degree</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#out-degree-discoverer"><i class="fa fa-check"></i>Out degree (Discoverer)</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#out-degree-vp"><i class="fa fa-check"></i>Out degree VP</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#in-degree"><i class="fa fa-check"></i>In degree</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#in-degree-others"><i class="fa fa-check"></i>In degree (Others)</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#in-degree-vp"><i class="fa fa-check"></i>In degree VP</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#combine-plot"><i class="fa fa-check"></i>Combine plot</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#combine-plot-inout-degree-full"><i class="fa fa-check"></i>Combine plot (in/out degree full)</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#combine-plot-vp"><i class="fa fa-check"></i>Combine plot VP</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#slow"><i class="fa fa-check"></i>Slow</a>
+<ul>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#probability-of-staying-on-resource-1"><i class="fa fa-check"></i>Probability of staying on resource</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#probability-of-staying-on-resource-vp-1"><i class="fa fa-check"></i>Probability of staying on resource VP</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#probability-of-reaching-on-resource"><i class="fa fa-check"></i>Probability of reaching on resource</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#probability-of-reaching-resource-vp-1"><i class="fa fa-check"></i>Probability of reaching resource VP</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#out-degree-1"><i class="fa fa-check"></i>Out degree</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#out-degree-discoverer-1"><i class="fa fa-check"></i>Out degree (Discoverer)</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#out-degree-vp-1"><i class="fa fa-check"></i>Out degree VP</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#in-degree-1"><i class="fa fa-check"></i>In degree</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#in-degree-others-1"><i class="fa fa-check"></i>In degree (Others)</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#in-degree-vp-1"><i class="fa fa-check"></i>In degree VP</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#combine-plot-1"><i class="fa fa-check"></i>Combine plot</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#combine-plot-inout-degree-full-1"><i class="fa fa-check"></i>Combine plot (in/out degree full)</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#combine-plot-vp-1"><i class="fa fa-check"></i>Combine plot VP</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html"><i class="fa fa-check"></i>Degree and Rank</a>
+<ul>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#rotation-per-condition"><i class="fa fa-check"></i>Rotation per condition</a></li>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-in-degree"><i class="fa fa-check"></i>Model In-Degree</a>
+<ul>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-fitting-28"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-diagnostics-29"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#figure-28"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-out-degree"><i class="fa fa-check"></i>Model Out-Degree</a>
+<ul>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-fitting-29"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-diagnostics-30"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#figure-29"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#combined-figures"><i class="fa fa-check"></i>Combined figures</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html"><i class="fa fa-check"></i>Roation Magnitude (Tracking)</a>
+<ul>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#prior-predictive-checks-28"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-fitting-9.5h"><i class="fa fa-check"></i>Model fitting (~9.5h)</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-diagnostics-31"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-predictions-9"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#figures"><i class="fa fa-check"></i>Figures</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#random-effects"><i class="fa fa-check"></i>Random Effects</a>
+<ul>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-tracking-efficiency"><i class="fa fa-check"></i>Model Tracking Efficiency</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-score"><i class="fa fa-check"></i>Model Score</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#random-effects-correlations"><i class="fa fa-check"></i>Random Effects Correlations</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html"><i class="fa fa-check"></i>Roation Magnitude (Search)</a>
+<ul>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#prior-predictive-checks-29"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#model-fitting-9.5h-1"><i class="fa fa-check"></i>Model fitting (~9.5h)</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#model-diagnostics-32"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#model-predictions-10"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#random-effects-1"><i class="fa fa-check"></i>Random Effects</a>
+<ul>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#modeltracking-time"><i class="fa fa-check"></i>ModelTracking Time</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#random-effects-correlations-1"><i class="fa fa-check"></i>Random Effects Correlations</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html"><i class="fa fa-check"></i>Rotation Direction (Tracking)</a>
+<ul>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#detector-change"><i class="fa fa-check"></i>Detector Change</a>
+<ul>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-fitting-30"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-diagnostics-33"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-predictions-11"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#figure-30"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#social-information"><i class="fa fa-check"></i>Social Information</a>
+<ul>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-fitting-31"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-diagnostics-34"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-predictions-12"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#figure-31"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html"><i class="fa fa-check"></i>Voluntary Payoff Sharing</a>
+<ul>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#sharing-actions-count"><i class="fa fa-check"></i>Sharing actions count</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#count-model"><i class="fa fa-check"></i>Count Model</a>
+<ul>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-fitting-32"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-diagnostics-35"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-predictions-13"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#condition-draws"><i class="fa fa-check"></i>Condition draws</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#count-vs-score-model"><i class="fa fa-check"></i>Count vs Score model</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#total-sharing"><i class="fa fa-check"></i>Total Sharing</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#total-sharing-model"><i class="fa fa-check"></i>Total Sharing Model</a>
+<ul>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-fitting-33"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-diagnostics-38"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-predictions-16"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#condition-draws-1"><i class="fa fa-check"></i>Condition draws</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#total-sharing-vs-score-model"><i class="fa fa-check"></i>Total Sharing vs Score Model</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#sharing-probability-resource-state-time-distance"><i class="fa fa-check"></i>Sharing Probability: Resource, State, Time, Distance</a>
+<ul>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-fitting-34"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-diagnostics-41"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-predictions-19"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#figure-34"><i class="fa fa-check"></i>Figure</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#statistical-comparisons-4"><i class="fa fa-check"></i>Statistical Comparisons</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#sharing-probability-resource-distance"><i class="fa fa-check"></i>Sharing Probability: Resource, Distance</a>
+<ul>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-fitting-35"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-diagnostics-42"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-predictions-20"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#figure-35"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Collective Resource Tracking Statistical Analysis</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="tracking-time" class="section level1 hasAnchor">
+<h1>Tracking Time<a href="tracking-time.html#tracking-time" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="tracking-time.html#cb96-1" tabindex="-1"></a>TrackingTime_max <span class="ot">=</span> <span class="fl">15.02</span></span>
+<span id="cb96-2"><a href="tracking-time.html#cb96-2" tabindex="-1"></a></span>
+<span id="cb96-3"><a href="tracking-time.html#cb96-3" tabindex="-1"></a>m.TrackingTime.data <span class="ot">&lt;-</span> subj_data <span class="sc">%&gt;%</span></span>
+<span id="cb96-4"><a href="tracking-time.html#cb96-4" tabindex="-1"></a>  <span class="fu">select</span>(Participant, Group, ResourceSpeed, SignalingType, TrackingTime) <span class="sc">%&gt;%</span></span>
+<span id="cb96-5"><a href="tracking-time.html#cb96-5" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">TrackingTime_0_1 =</span> (TrackingTime <span class="sc">+</span> <span class="fl">0.01</span>) <span class="sc">/</span> TrackingTime_max)</span>
+<span id="cb96-6"><a href="tracking-time.html#cb96-6" tabindex="-1"></a></span>
+<span id="cb96-7"><a href="tracking-time.html#cb96-7" tabindex="-1"></a><span class="fu">head</span>(m.TrackingTime.data)</span></code></pre></div>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["Participant"],"name":[1],"type":["fct"],"align":["left"]},{"label":["Group"],"name":[2],"type":["fct"],"align":["left"]},{"label":["ResourceSpeed"],"name":[3],"type":["fct"],"align":["left"]},{"label":["SignalingType"],"name":[4],"type":["fct"],"align":["left"]},{"label":["TrackingTime"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["TrackingTime_0_1"],"name":[6],"type":["dbl"],"align":["right"]}],"data":[{"1":"123D81F697F290DC","2":"A-1","3":"fast","4":"A","5":"1.193333","6":"0.08011540","_rn_":"1"},{"1":"13098F362ED0DFF6","2":"A-2","3":"fast","4":"A","5":"1.391667","6":"0.09332002","_rn_":"2"},{"1":"138DDF040577E0B9","2":"A-3","3":"fast","4":"A","5":"1.076667","6":"0.07234798","_rn_":"3"},{"1":"14DFAF953BA7B382","2":"NP-1","3":"slow","4":"NP","5":"14.558333","6":"0.96992898","_rn_":"4"},{"1":"5ED739219E8B3C8C","2":"NP-1","3":"slow","4":"NP","5":"11.390000","6":"0.75898802","_rn_":"5"},{"1":"4C89F970925A588","2":"NP-1","3":"slow","4":"NP","5":"11.128333","6":"0.74156680","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="tracking-time.html#cb97-1" tabindex="-1"></a>m.TrackingTime.data <span class="sc">%&gt;%</span></span>
+<span id="cb97-2"><a href="tracking-time.html#cb97-2" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> TrackingTime)) <span class="sc">+</span></span>
+<span id="cb97-3"><a href="tracking-time.html#cb97-3" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>, <span class="at">fill =</span> <span class="st">&quot;lightblue&quot;</span>, <span class="at">color =</span> <span class="st">&quot;black&quot;</span>) <span class="sc">+</span></span>
+<span id="cb97-4"><a href="tracking-time.html#cb97-4" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">rows =</span> <span class="fu">vars</span>(ResourceSpeed), <span class="at">cols =</span> <span class="fu">vars</span>(SignalingType)) <span class="sc">+</span></span>
+<span id="cb97-5"><a href="tracking-time.html#cb97-5" tabindex="-1"></a>  <span class="fu">theme_nice</span>()</span></code></pre></div>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-104-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div id="model-1-1" class="section level2 hasAnchor">
+<h2>Model 1<a href="tracking-time.html#model-1-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="tracking-time.html#cb98-1" tabindex="-1"></a>m.TrackingTime.<span class="fl">1.</span>formula <span class="ot">&lt;-</span> <span class="fu">brmsformula</span>(</span>
+<span id="cb98-2"><a href="tracking-time.html#cb98-2" tabindex="-1"></a>  TrackingTime_0_1 <span class="sc">~</span> <span class="dv">1</span> <span class="sc">+</span> SignalingType <span class="sc">*</span> ResourceSpeed <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> Group),</span>
+<span id="cb98-3"><a href="tracking-time.html#cb98-3" tabindex="-1"></a>  <span class="at">family =</span> <span class="fu">Beta</span>(<span class="at">link =</span> <span class="st">&quot;logit&quot;</span>, <span class="at">link_phi =</span> <span class="st">&quot;log&quot;</span>)</span>
+<span id="cb98-4"><a href="tracking-time.html#cb98-4" tabindex="-1"></a>  )</span>
+<span id="cb98-5"><a href="tracking-time.html#cb98-5" tabindex="-1"></a></span>
+<span id="cb98-6"><a href="tracking-time.html#cb98-6" tabindex="-1"></a>m.TrackingTime.<span class="fl">1.</span>formula_comparison <span class="ot">&lt;-</span> <span class="fu">brmsformula</span>(</span>
+<span id="cb98-7"><a href="tracking-time.html#cb98-7" tabindex="-1"></a>  TrackingTime_0_1 <span class="sc">~</span> <span class="dv">1</span> <span class="sc">+</span> SignalingType <span class="sc">*</span> ResourceSpeed</span>
+<span id="cb98-8"><a href="tracking-time.html#cb98-8" tabindex="-1"></a>  )</span>
+<span id="cb98-9"><a href="tracking-time.html#cb98-9" tabindex="-1"></a></span>
+<span id="cb98-10"><a href="tracking-time.html#cb98-10" tabindex="-1"></a>m.TrackingTime.<span class="fl">1.</span>priors <span class="ot">&lt;-</span> </span>
+<span id="cb98-11"><a href="tracking-time.html#cb98-11" tabindex="-1"></a>  <span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>, <span class="fl">0.5</span>), <span class="at">class =</span> b) <span class="sc">+</span></span>
+<span id="cb98-12"><a href="tracking-time.html#cb98-12" tabindex="-1"></a>  <span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="at">class =</span> Intercept) <span class="sc">+</span></span>
+<span id="cb98-13"><a href="tracking-time.html#cb98-13" tabindex="-1"></a>  <span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">2</span>, <span class="dv">1</span>), <span class="at">class =</span> phi, <span class="at">lb =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb98-14"><a href="tracking-time.html#cb98-14" tabindex="-1"></a>  <span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="at">class =</span> sd, <span class="at">lb =</span> <span class="dv">0</span>)</span></code></pre></div>
+<div id="prior-predictive-checks-2" class="section level3 hasAnchor">
+<h3>Prior predictive checks<a href="tracking-time.html#prior-predictive-checks-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="tracking-time.html#cb99-1" tabindex="-1"></a>m.TrackingTime.<span class="fl">1.</span>fit_prior <span class="ot">&lt;-</span> <span class="fu">brm</span>(</span>
+<span id="cb99-2"><a href="tracking-time.html#cb99-2" tabindex="-1"></a>  <span class="at">formula =</span> m.TrackingTime.<span class="fl">1.</span>formula,</span>
+<span id="cb99-3"><a href="tracking-time.html#cb99-3" tabindex="-1"></a>  <span class="at">data    =</span> m.TrackingTime.data,</span>
+<span id="cb99-4"><a href="tracking-time.html#cb99-4" tabindex="-1"></a>  <span class="at">prior   =</span> m.TrackingTime.<span class="fl">1.</span>priors,</span>
+<span id="cb99-5"><a href="tracking-time.html#cb99-5" tabindex="-1"></a>  <span class="at">chains  =</span> <span class="dv">4</span>,</span>
+<span id="cb99-6"><a href="tracking-time.html#cb99-6" tabindex="-1"></a>  <span class="at">cores   =</span> <span class="dv">4</span>,</span>
+<span id="cb99-7"><a href="tracking-time.html#cb99-7" tabindex="-1"></a>  <span class="at">seed    =</span> <span class="dv">42</span>,</span>
+<span id="cb99-8"><a href="tracking-time.html#cb99-8" tabindex="-1"></a>  <span class="at">iter    =</span> <span class="dv">2000</span>,</span>
+<span id="cb99-9"><a href="tracking-time.html#cb99-9" tabindex="-1"></a>  <span class="at">file =</span> <span class="fu">paste0</span>(fits_path, <span class="st">&#39;tracking_time_1_prior.rds&#39;</span>),</span>
+<span id="cb99-10"><a href="tracking-time.html#cb99-10" tabindex="-1"></a>  <span class="at">sample_prior =</span> <span class="st">&quot;only&quot;</span>,</span>
+<span id="cb99-11"><a href="tracking-time.html#cb99-11" tabindex="-1"></a>  <span class="at">backend =</span> <span class="st">&quot;cmdstanr&quot;</span>,</span>
+<span id="cb99-12"><a href="tracking-time.html#cb99-12" tabindex="-1"></a>  <span class="at">threads =</span> <span class="fu">threading</span>(<span class="dv">100</span>),</span>
+<span id="cb99-13"><a href="tracking-time.html#cb99-13" tabindex="-1"></a>  <span class="at">control =</span> <span class="fu">list</span>(<span class="at">adapt_delta =</span> <span class="fl">0.95</span>),</span>
+<span id="cb99-14"><a href="tracking-time.html#cb99-14" tabindex="-1"></a>  <span class="at">save_pars =</span> <span class="fu">save_pars</span>(<span class="at">all =</span> <span class="cn">TRUE</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="tracking-time.html#cb100-1" tabindex="-1"></a><span class="fu">pp_check</span>(m.TrackingTime.<span class="fl">1.</span>fit_prior, <span class="at">prefix =</span> <span class="st">&quot;ppd&quot;</span>, <span class="at">ndraw =</span> <span class="dv">20</span>)</span></code></pre></div>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-107-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="model-fitting-2" class="section level3 hasAnchor">
+<h3>Model fitting<a href="tracking-time.html#model-fitting-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="tracking-time.html#cb101-1" tabindex="-1"></a>m.TrackingTime.<span class="fl">1.</span>fit <span class="ot">&lt;-</span> <span class="fu">brm</span>(</span>
+<span id="cb101-2"><a href="tracking-time.html#cb101-2" tabindex="-1"></a>  <span class="at">formula =</span> m.TrackingTime.<span class="fl">1.</span>formula,</span>
+<span id="cb101-3"><a href="tracking-time.html#cb101-3" tabindex="-1"></a>  <span class="at">data    =</span> m.TrackingTime.data,</span>
+<span id="cb101-4"><a href="tracking-time.html#cb101-4" tabindex="-1"></a>  <span class="at">prior   =</span> m.TrackingTime.<span class="fl">1.</span>priors,</span>
+<span id="cb101-5"><a href="tracking-time.html#cb101-5" tabindex="-1"></a>  <span class="at">chains  =</span> <span class="dv">7</span>,</span>
+<span id="cb101-6"><a href="tracking-time.html#cb101-6" tabindex="-1"></a>  <span class="at">cores   =</span> <span class="dv">7</span>,</span>
+<span id="cb101-7"><a href="tracking-time.html#cb101-7" tabindex="-1"></a>  <span class="at">seed    =</span> <span class="dv">42</span>,</span>
+<span id="cb101-8"><a href="tracking-time.html#cb101-8" tabindex="-1"></a>  <span class="at">iter    =</span> <span class="dv">20000</span>,</span>
+<span id="cb101-9"><a href="tracking-time.html#cb101-9" tabindex="-1"></a>  <span class="at">file =</span> <span class="fu">paste0</span>(fits_path, <span class="st">&#39;tracking_time_1.rds&#39;</span>),</span>
+<span id="cb101-10"><a href="tracking-time.html#cb101-10" tabindex="-1"></a>  <span class="at">backend =</span> <span class="st">&quot;cmdstanr&quot;</span>,</span>
+<span id="cb101-11"><a href="tracking-time.html#cb101-11" tabindex="-1"></a>  <span class="at">threads =</span> <span class="fu">threading</span>(<span class="dv">100</span>),</span>
+<span id="cb101-12"><a href="tracking-time.html#cb101-12" tabindex="-1"></a>  <span class="at">control =</span> <span class="fu">list</span>(<span class="at">adapt_delta =</span> <span class="fl">0.95</span>),</span>
+<span id="cb101-13"><a href="tracking-time.html#cb101-13" tabindex="-1"></a>  <span class="at">save_pars =</span> <span class="fu">save_pars</span>(<span class="at">all =</span> <span class="cn">TRUE</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="tracking-time.html#cb102-1" tabindex="-1"></a><span class="fu">summary</span>(m.TrackingTime.<span class="fl">1.</span>fit)</span></code></pre></div>
+<pre><code>##  Family: beta 
+##   Links: mu = logit; phi = identity 
+## Formula: TrackingTime_0_1 ~ 1 + SignalingType * ResourceSpeed + (1 | Group) 
+##    Data: m.TrackingTime.data (Number of observations: 621) 
+##   Draws: 7 chains, each with iter = 20000; warmup = 10000; thin = 1;
+##          total post-warmup draws = 70000
+## 
+## Multilevel Hyperparameters:
+## ~Group (Number of levels: 247) 
+##               Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+## sd(Intercept)     1.01      0.07     0.88     1.14 1.00    18644    36287
+## 
+## Regression Coefficients:
+##                                   Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+## Intercept                            -1.03      0.12    -1.27    -0.78 1.00    25349    41522
+## SignalingTypeNP                      -0.02      0.24    -0.48     0.45 1.00    14213    27623
+## SignalingTypeVP                       0.16      0.22    -0.28     0.59 1.00    13255    27315
+## SignalingTypeFP                       0.61      0.23     0.17     1.07 1.00    14283    29073
+## ResourceSpeedslow                     1.71      0.17     1.39     2.04 1.00    23423    37533
+## SignalingTypeNP:ResourceSpeedslow     0.57      0.31    -0.03     1.17 1.00    16182    29741
+## SignalingTypeVP:ResourceSpeedslow     0.69      0.30     0.10     1.28 1.00    16924    30485
+## SignalingTypeFP:ResourceSpeedslow     0.68      0.30     0.10     1.27 1.00    17194    31172
+## 
+## Further Distributional Parameters:
+##     Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+## phi     9.87      0.60     8.70    11.07 1.00    40615    50243
+## 
+## Draws were sampled using sample(hmc). For each parameter, Bulk_ESS
+## and Tail_ESS are effective sample size measures, and Rhat is the potential
+## scale reduction factor on split chains (at convergence, Rhat = 1).</code></pre>
+</div>
+<div id="model-diagnostics-2" class="section level3 hasAnchor">
+<h3>Model diagnostics<a href="tracking-time.html#model-diagnostics-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="tracking-time.html#cb104-1" tabindex="-1"></a><span class="fu">plot</span>(m.TrackingTime.<span class="fl">1.</span>fit, <span class="at">ask =</span> F)</span></code></pre></div>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-110-1.png" width="672" style="display: block; margin: auto;" /><img src="collective_tracking_results_files/figure-html/unnamed-chunk-110-2.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="tracking-time.html#cb105-1" tabindex="-1"></a>m.TrackingTime.<span class="fl">1.</span>y <span class="ot">=</span> m.TrackingTime.data<span class="sc">$</span>TrackingTime_0_1</span>
+<span id="cb105-2"><a href="tracking-time.html#cb105-2" tabindex="-1"></a>m.TrackingTime.<span class="fl">1.</span>yrep <span class="ot">=</span> <span class="fu">posterior_predict</span>(m.TrackingTime.<span class="fl">1.</span>fit, <span class="at">draws =</span> <span class="dv">1000</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="tracking-time.html#cb106-1" tabindex="-1"></a><span class="fu">pp_check</span>(m.TrackingTime.<span class="fl">1.</span>fit, <span class="at">ndraws =</span> <span class="dv">100</span>, <span class="at">type =</span> <span class="st">&#39;ecdf_overlay&#39;</span>)</span></code></pre></div>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-112-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="tracking-time.html#cb107-1" tabindex="-1"></a><span class="fu">ppc_dens_overlay</span>(m.TrackingTime.<span class="fl">1.</span>y, m.TrackingTime.<span class="fl">1.</span>yrep[<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, ])</span></code></pre></div>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-113-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="tracking-time.html#cb108-1" tabindex="-1"></a><span class="fu">ppc_dens_overlay_grouped</span>(m.TrackingTime.<span class="fl">1.</span>y, m.TrackingTime.<span class="fl">1.</span>yrep[<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, ], </span>
+<span id="cb108-2"><a href="tracking-time.html#cb108-2" tabindex="-1"></a>                         <span class="at">group =</span> m.TrackingTime.data<span class="sc">$</span>ResourceSpeed)</span></code></pre></div>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-114-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="tracking-time.html#cb109-1" tabindex="-1"></a><span class="fu">ppc_dens_overlay_grouped</span>(m.TrackingTime.<span class="fl">1.</span>y,</span>
+<span id="cb109-2"><a href="tracking-time.html#cb109-2" tabindex="-1"></a>                         m.TrackingTime.<span class="fl">1.</span>yrep[<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, ],</span>
+<span id="cb109-3"><a href="tracking-time.html#cb109-3" tabindex="-1"></a>                         <span class="at">group =</span> m.TrackingTime.data<span class="sc">$</span>SignalingType)</span></code></pre></div>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-115-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="tracking-time.html#cb110-1" tabindex="-1"></a>group <span class="ot">&lt;-</span> m.TrackingTime.data<span class="sc">$</span>SignalingType</span>
+<span id="cb110-2"><a href="tracking-time.html#cb110-2" tabindex="-1"></a>mask <span class="ot">&lt;-</span> m.TrackingTime.data<span class="sc">$</span>ResourceSpeed <span class="sc">==</span> <span class="st">&#39;fast&#39;</span></span>
+<span id="cb110-3"><a href="tracking-time.html#cb110-3" tabindex="-1"></a></span>
+<span id="cb110-4"><a href="tracking-time.html#cb110-4" tabindex="-1"></a><span class="fu">ppc_dens_overlay_grouped</span>(m.TrackingTime.<span class="fl">1.</span>y[mask],</span>
+<span id="cb110-5"><a href="tracking-time.html#cb110-5" tabindex="-1"></a>                         m.TrackingTime.<span class="fl">1.</span>yrep[<span class="dv">1</span><span class="sc">:</span><span class="dv">50</span>, mask],</span>
+<span id="cb110-6"><a href="tracking-time.html#cb110-6" tabindex="-1"></a>                         <span class="at">group =</span> group[mask])</span></code></pre></div>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-116-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="tracking-time.html#cb111-1" tabindex="-1"></a>group <span class="ot">&lt;-</span> m.TrackingTime.data<span class="sc">$</span>SignalingType</span>
+<span id="cb111-2"><a href="tracking-time.html#cb111-2" tabindex="-1"></a>mask <span class="ot">&lt;-</span> m.TrackingTime.data<span class="sc">$</span>ResourceSpeed <span class="sc">==</span> <span class="st">&#39;slow&#39;</span></span>
+<span id="cb111-3"><a href="tracking-time.html#cb111-3" tabindex="-1"></a></span>
+<span id="cb111-4"><a href="tracking-time.html#cb111-4" tabindex="-1"></a><span class="fu">ppc_dens_overlay_grouped</span>(m.TrackingTime.<span class="fl">1.</span>y[mask],</span>
+<span id="cb111-5"><a href="tracking-time.html#cb111-5" tabindex="-1"></a>                         m.TrackingTime.<span class="fl">1.</span>yrep[<span class="dv">1</span><span class="sc">:</span><span class="dv">50</span>, mask],</span>
+<span id="cb111-6"><a href="tracking-time.html#cb111-6" tabindex="-1"></a>                         <span class="at">group =</span> group[mask])</span></code></pre></div>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-117-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="model-predictions-2" class="section level3 hasAnchor">
+<h3>Model predictions<a href="tracking-time.html#model-predictions-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-118-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="tracking-time.html#cb112-1" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">conditional_effects</span>(m.TrackingTime.<span class="fl">1.</span>fit, <span class="at">re_formula =</span> m.TrackingTime.<span class="fl">1.</span>formula_comparison, <span class="at">prob =</span> <span class="fl">0.9</span>), <span class="at">ask =</span> F)</span></code></pre></div>
+</div>
+<div id="condition-comparisons-2" class="section level3 hasAnchor">
+<h3>Condition comparisons<a href="tracking-time.html#condition-comparisons-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="tracking-time.html#cb113-1" tabindex="-1"></a>m.TrackingTime.<span class="fl">1.</span>emmeans_contrast_draws<span class="fl">.1</span> <span class="ot">&lt;-</span> m.TrackingTime.<span class="fl">1.</span>fit <span class="sc">%&gt;%</span></span>
+<span id="cb113-2"><a href="tracking-time.html#cb113-2" tabindex="-1"></a>  <span class="fu">emmeans</span>(<span class="sc">~</span> SignalingType <span class="sc">*</span> ResourceSpeed, <span class="at">epred =</span> <span class="cn">TRUE</span>, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>, </span>
+<span id="cb113-3"><a href="tracking-time.html#cb113-3" tabindex="-1"></a>          <span class="at">re_formula =</span> m.TrackingTime.<span class="fl">1.</span>formula_comparison) <span class="sc">%&gt;%</span></span>
+<span id="cb113-4"><a href="tracking-time.html#cb113-4" tabindex="-1"></a>  <span class="fu">contrast</span>(<span class="at">method =</span> <span class="st">&quot;revpairwise&quot;</span>, <span class="at">simple =</span> <span class="st">&quot;each&quot;</span>, <span class="at">combine =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb113-5"><a href="tracking-time.html#cb113-5" tabindex="-1"></a>  <span class="fu">gather_emmeans_draws</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb113-6"><a href="tracking-time.html#cb113-6" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">.value =</span> .value <span class="sc">*</span> TrackingTime_max)</span></code></pre></div>
+<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="tracking-time.html#cb114-1" tabindex="-1"></a>m.TrackingTime.<span class="fl">1.</span>comparison<span class="fl">.1</span> <span class="ot">&lt;-</span> m.TrackingTime.<span class="fl">1.</span>emmeans_contrast_draws<span class="fl">.1</span> <span class="sc">%&gt;%</span></span>
+<span id="cb114-2"><a href="tracking-time.html#cb114-2" tabindex="-1"></a>  ggdist<span class="sc">::</span><span class="fu">mean_hdci</span>(<span class="at">.width =</span> <span class="fl">0.9</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb114-3"><a href="tracking-time.html#cb114-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">.value =</span> <span class="fu">round</span>(.value, <span class="dv">2</span>), <span class="at">.lower =</span> <span class="fu">round</span>(.lower, <span class="dv">2</span>), <span class="at">.upper =</span> <span class="fu">round</span>(.upper, <span class="dv">2</span>)) </span>
+<span id="cb114-4"><a href="tracking-time.html#cb114-4" tabindex="-1"></a></span>
+<span id="cb114-5"><a href="tracking-time.html#cb114-5" tabindex="-1"></a>m.TrackingTime.<span class="fl">1.</span>comparison<span class="fl">.1</span> <span class="sc">%&gt;%</span> </span>
+<span id="cb114-6"><a href="tracking-time.html#cb114-6" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="st">&quot;html&quot;</span>, <span class="at">digits =</span> <span class="dv">2</span>) <span class="sc">%&gt;%</span> <span class="fu">kable_classic</span>(<span class="at">full_width =</span> T, <span class="at">position =</span> <span class="st">&quot;center&quot;</span>, )</span></code></pre></div>
+<table class=" lightable-classic" style="font-family: &quot;Arial Narrow&quot;, &quot;Source Sans Pro&quot;, sans-serif; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+ResourceSpeed
+</th>
+<th style="text-align:left;">
+SignalingType
+</th>
+<th style="text-align:left;">
+contrast
+</th>
+<th style="text-align:right;">
+.value
+</th>
+<th style="text-align:right;">
+.lower
+</th>
+<th style="text-align:right;">
+.upper
+</th>
+<th style="text-align:right;">
+.width
+</th>
+<th style="text-align:left;">
+.point
+</th>
+<th style="text-align:left;">
+.interval
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:left;">
+slow - fast
+</td>
+<td style="text-align:right;">
+6.01
+</td>
+<td style="text-align:right;">
+5.18
+</td>
+<td style="text-align:right;">
+6.88
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+FP
+</td>
+<td style="text-align:left;">
+slow - fast
+</td>
+<td style="text-align:right;">
+7.17
+</td>
+<td style="text-align:right;">
+5.88
+</td>
+<td style="text-align:right;">
+8.48
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+NP
+</td>
+<td style="text-align:left;">
+slow - fast
+</td>
+<td style="text-align:right;">
+7.68
+</td>
+<td style="text-align:right;">
+6.36
+</td>
+<td style="text-align:right;">
+9.03
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+VP
+</td>
+<td style="text-align:left;">
+slow - fast
+</td>
+<td style="text-align:right;">
+7.85
+</td>
+<td style="text-align:right;">
+6.59
+</td>
+<td style="text-align:right;">
+9.11
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fast
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+FP - A
+</td>
+<td style="text-align:right;">
+2.03
+</td>
+<td style="text-align:right;">
+0.73
+</td>
+<td style="text-align:right;">
+3.32
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fast
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+FP - NP
+</td>
+<td style="text-align:right;">
+2.06
+</td>
+<td style="text-align:right;">
+0.44
+</td>
+<td style="text-align:right;">
+3.68
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fast
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+FP - VP
+</td>
+<td style="text-align:right;">
+1.54
+</td>
+<td style="text-align:right;">
+-0.06
+</td>
+<td style="text-align:right;">
+3.17
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fast
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+NP - A
+</td>
+<td style="text-align:right;">
+-0.03
+</td>
+<td style="text-align:right;">
+-1.19
+</td>
+<td style="text-align:right;">
+1.06
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fast
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+VP - A
+</td>
+<td style="text-align:right;">
+0.49
+</td>
+<td style="text-align:right;">
+-0.65
+</td>
+<td style="text-align:right;">
+1.61
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fast
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+VP - NP
+</td>
+<td style="text-align:right;">
+0.52
+</td>
+<td style="text-align:right;">
+-0.98
+</td>
+<td style="text-align:right;">
+1.99
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+slow
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+FP - A
+</td>
+<td style="text-align:right;">
+3.19
+</td>
+<td style="text-align:right;">
+2.28
+</td>
+<td style="text-align:right;">
+4.09
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+slow
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+FP - NP
+</td>
+<td style="text-align:right;">
+1.55
+</td>
+<td style="text-align:right;">
+0.37
+</td>
+<td style="text-align:right;">
+2.73
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+slow
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+FP - VP
+</td>
+<td style="text-align:right;">
+0.86
+</td>
+<td style="text-align:right;">
+-0.19
+</td>
+<td style="text-align:right;">
+1.90
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+slow
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+NP - A
+</td>
+<td style="text-align:right;">
+1.64
+</td>
+<td style="text-align:right;">
+0.43
+</td>
+<td style="text-align:right;">
+2.81
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+slow
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+VP - A
+</td>
+<td style="text-align:right;">
+2.33
+</td>
+<td style="text-align:right;">
+1.25
+</td>
+<td style="text-align:right;">
+3.39
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+slow
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+VP - NP
+</td>
+<td style="text-align:right;">
+0.69
+</td>
+<td style="text-align:right;">
+-0.62
+</td>
+<td style="text-align:right;">
+2.02
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb115-1"><a href="tracking-time.html#cb115-1" tabindex="-1"></a>m.TrackingTime.<span class="fl">1.</span>emmeans_contrast_draws<span class="fl">.1</span> <span class="sc">%&gt;%</span></span>
+<span id="cb115-2"><a href="tracking-time.html#cb115-2" tabindex="-1"></a>  <span class="fu">filter</span>(ResourceSpeed <span class="sc">!=</span> <span class="st">&#39;.&#39;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb115-3"><a href="tracking-time.html#cb115-3" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">prediction =</span> .value) <span class="sc">%&gt;%</span> </span>
+<span id="cb115-4"><a href="tracking-time.html#cb115-4" tabindex="-1"></a>  <span class="fu">ggplot</span>(</span>
+<span id="cb115-5"><a href="tracking-time.html#cb115-5" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">y =</span> contrast, </span>
+<span id="cb115-6"><a href="tracking-time.html#cb115-6" tabindex="-1"></a>        <span class="at">x =</span> prediction, </span>
+<span id="cb115-7"><a href="tracking-time.html#cb115-7" tabindex="-1"></a>        <span class="at">color =</span> ResourceSpeed, <span class="at">shape =</span> ResourceSpeed, <span class="at">fill =</span> ResourceSpeed)) <span class="sc">+</span></span>
+<span id="cb115-8"><a href="tracking-time.html#cb115-8" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">rows =</span> <span class="fu">vars</span>(ResourceSpeed)) <span class="sc">+</span></span>
+<span id="cb115-9"><a href="tracking-time.html#cb115-9" tabindex="-1"></a>  <span class="fu">stat_pointinterval</span>(<span class="at">.width =</span> <span class="fl">0.9</span>) <span class="sc">+</span></span>
+<span id="cb115-10"><a href="tracking-time.html#cb115-10" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">get_colors</span>(<span class="st">&quot;Qual2&quot;</span>, <span class="at">num.colors =</span> <span class="dv">2</span>, <span class="at">reverse =</span> <span class="cn">TRUE</span>, <span class="at">gradient =</span> <span class="cn">FALSE</span>)) <span class="sc">+</span></span>
+<span id="cb115-11"><a href="tracking-time.html#cb115-11" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">get_colors</span>(<span class="st">&quot;Qual2&quot;</span>, <span class="at">num.colors =</span> <span class="dv">2</span>, <span class="at">reverse =</span> <span class="cn">TRUE</span>, <span class="at">gradient =</span> <span class="cn">FALSE</span>)) <span class="sc">+</span></span>
+<span id="cb115-12"><a href="tracking-time.html#cb115-12" tabindex="-1"></a>  <span class="fu">scale_shape_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="dv">21</span>, <span class="dv">24</span>)) <span class="sc">+</span></span>
+<span id="cb115-13"><a href="tracking-time.html#cb115-13" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept=</span><span class="dv">0</span>), <span class="at">linetype=</span><span class="st">&quot;longdash&quot;</span>) <span class="sc">+</span></span>
+<span id="cb115-14"><a href="tracking-time.html#cb115-14" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&#39;Prediction Tracking Time&#39;</span>) <span class="sc">+</span></span>
+<span id="cb115-15"><a href="tracking-time.html#cb115-15" tabindex="-1"></a>  <span class="fu">theme_nice</span>()</span></code></pre></div>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-122-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="tracking-time.html#cb116-1" tabindex="-1"></a>m.TrackingTime.<span class="fl">1.</span>emmeans_contrast_draws<span class="fl">.2</span> <span class="ot">&lt;-</span> m.TrackingTime.<span class="fl">1.</span>fit <span class="sc">%&gt;%</span></span>
+<span id="cb116-2"><a href="tracking-time.html#cb116-2" tabindex="-1"></a>  <span class="fu">emmeans</span>(<span class="sc">~</span> ResourceSpeed, <span class="at">epred =</span> <span class="cn">TRUE</span>, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>, </span>
+<span id="cb116-3"><a href="tracking-time.html#cb116-3" tabindex="-1"></a>          <span class="at">re_formula =</span> m.TrackingTime.<span class="fl">1.</span>formula_comparison) <span class="sc">%&gt;%</span></span>
+<span id="cb116-4"><a href="tracking-time.html#cb116-4" tabindex="-1"></a>  <span class="fu">contrast</span>(<span class="at">method =</span> <span class="st">&quot;revpairwise&quot;</span>, <span class="at">simple =</span> <span class="st">&quot;each&quot;</span>, <span class="at">combine =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb116-5"><a href="tracking-time.html#cb116-5" tabindex="-1"></a>  <span class="fu">gather_emmeans_draws</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb116-6"><a href="tracking-time.html#cb116-6" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">.value =</span> .value <span class="sc">*</span> TrackingTime_max)</span></code></pre></div>
+<div class="sourceCode" id="cb117"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb117-1"><a href="tracking-time.html#cb117-1" tabindex="-1"></a>m.TrackingTime.<span class="fl">1.</span>comparison<span class="fl">.2</span> <span class="ot">&lt;-</span> m.TrackingTime.<span class="fl">1.</span>emmeans_contrast_draws<span class="fl">.2</span> <span class="sc">%&gt;%</span></span>
+<span id="cb117-2"><a href="tracking-time.html#cb117-2" tabindex="-1"></a>  ggdist<span class="sc">::</span><span class="fu">mean_hdci</span>(<span class="at">.width =</span> <span class="fl">0.9</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb117-3"><a href="tracking-time.html#cb117-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">.value =</span> <span class="fu">round</span>(.value, <span class="dv">2</span>), <span class="at">.lower =</span> <span class="fu">round</span>(.lower, <span class="dv">2</span>), <span class="at">.upper =</span> <span class="fu">round</span>(.upper, <span class="dv">2</span>)) </span>
+<span id="cb117-4"><a href="tracking-time.html#cb117-4" tabindex="-1"></a></span>
+<span id="cb117-5"><a href="tracking-time.html#cb117-5" tabindex="-1"></a>m.TrackingTime.<span class="fl">1.</span>comparison<span class="fl">.2</span> <span class="sc">%&gt;%</span> </span>
+<span id="cb117-6"><a href="tracking-time.html#cb117-6" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="st">&quot;html&quot;</span>, <span class="at">digits =</span> <span class="dv">2</span>) <span class="sc">%&gt;%</span> <span class="fu">kable_classic</span>(<span class="at">full_width =</span> T, <span class="at">position =</span> <span class="st">&quot;center&quot;</span>, )</span></code></pre></div>
+<table class=" lightable-classic" style="font-family: &quot;Arial Narrow&quot;, &quot;Source Sans Pro&quot;, sans-serif; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+contrast
+</th>
+<th style="text-align:right;">
+.value
+</th>
+<th style="text-align:right;">
+.lower
+</th>
+<th style="text-align:right;">
+.upper
+</th>
+<th style="text-align:right;">
+.width
+</th>
+<th style="text-align:left;">
+.point
+</th>
+<th style="text-align:left;">
+.interval
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+slow - fast
+</td>
+<td style="text-align:right;">
+7.18
+</td>
+<td style="text-align:right;">
+6.48
+</td>
+<td style="text-align:right;">
+7.88
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="figure-2" class="section level3 hasAnchor">
+<h3>Figure<a href="tracking-time.html#figure-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-127-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="model-2-1" class="section level2 hasAnchor">
+<h2>Model 2<a href="tracking-time.html#model-2-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb118-1"><a href="tracking-time.html#cb118-1" tabindex="-1"></a>m.TrackingTime.<span class="fl">2.</span>formula <span class="ot">&lt;-</span> <span class="fu">brmsformula</span>(</span>
+<span id="cb118-2"><a href="tracking-time.html#cb118-2" tabindex="-1"></a>  TrackingTime_0_1 <span class="sc">~</span> <span class="dv">1</span> <span class="sc">+</span> SignalingType <span class="sc">*</span> ResourceSpeed <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> Group),</span>
+<span id="cb118-3"><a href="tracking-time.html#cb118-3" tabindex="-1"></a>  phi <span class="sc">~</span> ResourceSpeed <span class="sc">+</span> SignalingType,</span>
+<span id="cb118-4"><a href="tracking-time.html#cb118-4" tabindex="-1"></a>  <span class="at">family =</span> <span class="fu">Beta</span>(<span class="at">link =</span> <span class="st">&quot;logit&quot;</span>, <span class="at">link_phi =</span> <span class="st">&quot;log&quot;</span>)</span>
+<span id="cb118-5"><a href="tracking-time.html#cb118-5" tabindex="-1"></a>  )</span>
+<span id="cb118-6"><a href="tracking-time.html#cb118-6" tabindex="-1"></a></span>
+<span id="cb118-7"><a href="tracking-time.html#cb118-7" tabindex="-1"></a>m.TrackingTime.<span class="fl">2.</span>formula_comparison <span class="ot">&lt;-</span> <span class="fu">brmsformula</span>(</span>
+<span id="cb118-8"><a href="tracking-time.html#cb118-8" tabindex="-1"></a>  TrackingTime_0_1 <span class="sc">~</span> <span class="dv">1</span> <span class="sc">+</span> SignalingType <span class="sc">*</span> ResourceSpeed,</span>
+<span id="cb118-9"><a href="tracking-time.html#cb118-9" tabindex="-1"></a>  phi <span class="sc">~</span> ResourceSpeed <span class="sc">+</span> SignalingType</span>
+<span id="cb118-10"><a href="tracking-time.html#cb118-10" tabindex="-1"></a>  )</span>
+<span id="cb118-11"><a href="tracking-time.html#cb118-11" tabindex="-1"></a></span>
+<span id="cb118-12"><a href="tracking-time.html#cb118-12" tabindex="-1"></a>m.TrackingTime.<span class="fl">2.</span>priors <span class="ot">&lt;-</span> </span>
+<span id="cb118-13"><a href="tracking-time.html#cb118-13" tabindex="-1"></a>    <span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>, <span class="fl">0.5</span>), <span class="at">class =</span> b) <span class="sc">+</span></span>
+<span id="cb118-14"><a href="tracking-time.html#cb118-14" tabindex="-1"></a>    <span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="at">class =</span> Intercept) <span class="sc">+</span></span>
+<span id="cb118-15"><a href="tracking-time.html#cb118-15" tabindex="-1"></a>    <span class="fu">prior</span>(<span class="fu">gamma</span>(<span class="dv">4</span>, <span class="fl">0.1</span>), <span class="at">class =</span> Intercept, <span class="at">dpar =</span> phi, <span class="at">lb =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb118-16"><a href="tracking-time.html#cb118-16" tabindex="-1"></a>    <span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="at">class =</span> b, <span class="at">dpar =</span> phi) <span class="sc">+</span></span>
+<span id="cb118-17"><a href="tracking-time.html#cb118-17" tabindex="-1"></a>    <span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="at">class =</span> sd, <span class="at">lb =</span> <span class="dv">0</span>)</span></code></pre></div>
+<div id="prior-predictive-checks-3" class="section level3 hasAnchor">
+<h3>Prior predictive checks<a href="tracking-time.html#prior-predictive-checks-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb119-1"><a href="tracking-time.html#cb119-1" tabindex="-1"></a>m.TrackingTime.<span class="fl">2.</span>fit_prior <span class="ot">&lt;-</span> <span class="fu">brm</span>(</span>
+<span id="cb119-2"><a href="tracking-time.html#cb119-2" tabindex="-1"></a>  <span class="at">formula =</span> m.TrackingTime.<span class="fl">2.</span>formula,</span>
+<span id="cb119-3"><a href="tracking-time.html#cb119-3" tabindex="-1"></a>  <span class="at">data    =</span> m.TrackingTime.data,</span>
+<span id="cb119-4"><a href="tracking-time.html#cb119-4" tabindex="-1"></a>  <span class="at">prior   =</span> m.TrackingTime.<span class="fl">2.</span>priors,</span>
+<span id="cb119-5"><a href="tracking-time.html#cb119-5" tabindex="-1"></a>  <span class="at">chains  =</span> <span class="dv">4</span>,</span>
+<span id="cb119-6"><a href="tracking-time.html#cb119-6" tabindex="-1"></a>  <span class="at">cores   =</span> <span class="dv">4</span>,</span>
+<span id="cb119-7"><a href="tracking-time.html#cb119-7" tabindex="-1"></a>  <span class="at">seed    =</span> <span class="dv">42</span>,</span>
+<span id="cb119-8"><a href="tracking-time.html#cb119-8" tabindex="-1"></a>  <span class="at">iter    =</span> <span class="dv">2000</span>,</span>
+<span id="cb119-9"><a href="tracking-time.html#cb119-9" tabindex="-1"></a>  <span class="at">file =</span> <span class="fu">paste0</span>(fits_path, <span class="st">&#39;tracking_time_2_prior.rds&#39;</span>),</span>
+<span id="cb119-10"><a href="tracking-time.html#cb119-10" tabindex="-1"></a>  <span class="at">sample_prior =</span> <span class="st">&quot;only&quot;</span>,</span>
+<span id="cb119-11"><a href="tracking-time.html#cb119-11" tabindex="-1"></a>  <span class="at">backend =</span> <span class="st">&quot;cmdstanr&quot;</span>,</span>
+<span id="cb119-12"><a href="tracking-time.html#cb119-12" tabindex="-1"></a>  <span class="at">threads =</span> <span class="fu">threading</span>(<span class="dv">100</span>),</span>
+<span id="cb119-13"><a href="tracking-time.html#cb119-13" tabindex="-1"></a>  <span class="at">control =</span> <span class="fu">list</span>(<span class="at">adapt_delta =</span> <span class="fl">0.95</span>),</span>
+<span id="cb119-14"><a href="tracking-time.html#cb119-14" tabindex="-1"></a>  <span class="at">save_pars =</span> <span class="fu">save_pars</span>(<span class="at">all =</span> <span class="cn">TRUE</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="tracking-time.html#cb120-1" tabindex="-1"></a><span class="fu">pp_check</span>(m.TrackingTime.<span class="fl">2.</span>fit_prior, <span class="at">prefix =</span> <span class="st">&quot;ppd&quot;</span>, <span class="at">ndraw =</span> <span class="dv">20</span>)</span></code></pre></div>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-131-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="model-fitting-3" class="section level3 hasAnchor">
+<h3>Model fitting<a href="tracking-time.html#model-fitting-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb121"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb121-1"><a href="tracking-time.html#cb121-1" tabindex="-1"></a>m.TrackingTime.<span class="fl">2.</span>fit <span class="ot">&lt;-</span> <span class="fu">brm</span>(</span>
+<span id="cb121-2"><a href="tracking-time.html#cb121-2" tabindex="-1"></a>  <span class="at">formula =</span> m.TrackingTime.<span class="fl">2.</span>formula,</span>
+<span id="cb121-3"><a href="tracking-time.html#cb121-3" tabindex="-1"></a>  <span class="at">data    =</span> m.TrackingTime.data,</span>
+<span id="cb121-4"><a href="tracking-time.html#cb121-4" tabindex="-1"></a>  <span class="at">prior   =</span> m.TrackingTime.<span class="fl">2.</span>priors,</span>
+<span id="cb121-5"><a href="tracking-time.html#cb121-5" tabindex="-1"></a>  <span class="at">chains  =</span> <span class="dv">7</span>,</span>
+<span id="cb121-6"><a href="tracking-time.html#cb121-6" tabindex="-1"></a>  <span class="at">cores   =</span> <span class="dv">7</span>,</span>
+<span id="cb121-7"><a href="tracking-time.html#cb121-7" tabindex="-1"></a>  <span class="at">seed    =</span> <span class="dv">42</span>,</span>
+<span id="cb121-8"><a href="tracking-time.html#cb121-8" tabindex="-1"></a>  <span class="at">iter    =</span> <span class="dv">20000</span>,</span>
+<span id="cb121-9"><a href="tracking-time.html#cb121-9" tabindex="-1"></a>  <span class="at">file =</span> <span class="fu">paste0</span>(fits_path, <span class="st">&#39;tracking_time_2.rds&#39;</span>),</span>
+<span id="cb121-10"><a href="tracking-time.html#cb121-10" tabindex="-1"></a>  <span class="at">backend =</span> <span class="st">&quot;cmdstanr&quot;</span>,</span>
+<span id="cb121-11"><a href="tracking-time.html#cb121-11" tabindex="-1"></a>  <span class="at">threads =</span> <span class="fu">threading</span>(<span class="dv">100</span>),</span>
+<span id="cb121-12"><a href="tracking-time.html#cb121-12" tabindex="-1"></a>  <span class="at">control =</span> <span class="fu">list</span>(<span class="at">adapt_delta =</span> <span class="fl">0.95</span>),</span>
+<span id="cb121-13"><a href="tracking-time.html#cb121-13" tabindex="-1"></a>  <span class="at">save_pars =</span> <span class="fu">save_pars</span>(<span class="at">all =</span> <span class="cn">TRUE</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb122-1"><a href="tracking-time.html#cb122-1" tabindex="-1"></a><span class="fu">summary</span>(m.TrackingTime.<span class="fl">2.</span>fit)</span></code></pre></div>
+<pre><code>##  Family: beta 
+##   Links: mu = logit; phi = log 
+## Formula: TrackingTime_0_1 ~ 1 + SignalingType * ResourceSpeed + (1 | Group) 
+##          phi ~ ResourceSpeed + SignalingType
+##    Data: m.TrackingTime.data (Number of observations: 621) 
+##   Draws: 7 chains, each with iter = 20000; warmup = 10000; thin = 1;
+##          total post-warmup draws = 70000
+## 
+## Multilevel Hyperparameters:
+## ~Group (Number of levels: 247) 
+##               Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+## sd(Intercept)     0.74      0.07     0.62     0.88 1.00     9781    18119
+## 
+## Regression Coefficients:
+##                                   Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+## Intercept                            -1.04      0.11    -1.25    -0.83 1.00    28377    44434
+## phi_Intercept                         2.18      0.19     1.82     2.57 1.00    12844    18648
+## SignalingTypeNP                      -0.13      0.20    -0.51     0.26 1.00    12104    24385
+## SignalingTypeVP                       0.08      0.18    -0.28     0.44 1.00     8543    18051
+## SignalingTypeFP                       0.61      0.19     0.25     0.98 1.00     9374    19872
+## ResourceSpeedslow                     1.70      0.16     1.39     2.01 1.00    26174    38859
+## SignalingTypeNP:ResourceSpeedslow     0.68      0.27     0.15     1.20 1.00    16886    29724
+## SignalingTypeVP:ResourceSpeedslow     0.91      0.26     0.40     1.43 1.00    12383    24833
+## SignalingTypeFP:ResourceSpeedslow     0.83      0.26     0.31     1.34 1.00    14513    27868
+## phi_ResourceSpeedslow                -1.22      0.14    -1.51    -0.94 1.00    40924    51355
+## phi_SignalingTypeNP                   1.03      0.21     0.61     1.42 1.00    17795    26781
+## phi_SignalingTypeVP                   1.69      0.21     1.26     2.10 1.00    16410    24490
+## phi_SignalingTypeFP                   1.57      0.21     1.14     1.96 1.00    17664    25951
+## 
+## Draws were sampled using sample(hmc). For each parameter, Bulk_ESS
+## and Tail_ESS are effective sample size measures, and Rhat is the potential
+## scale reduction factor on split chains (at convergence, Rhat = 1).</code></pre>
+</div>
+<div id="model-diagnostics-3" class="section level3 hasAnchor">
+<h3>Model diagnostics<a href="tracking-time.html#model-diagnostics-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="tracking-time.html#cb124-1" tabindex="-1"></a><span class="fu">plot</span>(m.TrackingTime.<span class="fl">2.</span>fit, <span class="at">ask =</span> F)</span></code></pre></div>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-133-1.png" width="672" style="display: block; margin: auto;" /><img src="collective_tracking_results_files/figure-html/unnamed-chunk-133-2.png" width="672" style="display: block; margin: auto;" /><img src="collective_tracking_results_files/figure-html/unnamed-chunk-133-3.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb125"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb125-1"><a href="tracking-time.html#cb125-1" tabindex="-1"></a>m.TrackingTime.<span class="fl">2.</span>y <span class="ot">=</span> m.TrackingTime.data<span class="sc">$</span>TrackingTime_0_1</span>
+<span id="cb125-2"><a href="tracking-time.html#cb125-2" tabindex="-1"></a>m.TrackingTime.<span class="fl">2.</span>yrep <span class="ot">=</span> <span class="fu">posterior_predict</span>(m.TrackingTime.<span class="fl">2.</span>fit, <span class="at">draws =</span> <span class="dv">1000</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb126-1"><a href="tracking-time.html#cb126-1" tabindex="-1"></a><span class="fu">pp_check</span>(m.TrackingTime.<span class="fl">2.</span>fit, <span class="at">ndraws =</span> <span class="dv">100</span>, <span class="at">type =</span> <span class="st">&#39;ecdf_overlay&#39;</span>)</span></code></pre></div>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-135-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb127"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb127-1"><a href="tracking-time.html#cb127-1" tabindex="-1"></a><span class="fu">ppc_dens_overlay</span>(m.TrackingTime.<span class="fl">2.</span>y, m.TrackingTime.<span class="fl">2.</span>yrep[<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, ])</span></code></pre></div>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-136-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb128-1"><a href="tracking-time.html#cb128-1" tabindex="-1"></a><span class="fu">ppc_dens_overlay_grouped</span>(m.TrackingTime.<span class="fl">2.</span>y, m.TrackingTime.<span class="fl">2.</span>yrep[<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, ], </span>
+<span id="cb128-2"><a href="tracking-time.html#cb128-2" tabindex="-1"></a>                         <span class="at">group =</span> m.TrackingTime.data<span class="sc">$</span>ResourceSpeed)</span></code></pre></div>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-137-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb129"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb129-1"><a href="tracking-time.html#cb129-1" tabindex="-1"></a><span class="fu">ppc_dens_overlay_grouped</span>(m.TrackingTime.<span class="fl">2.</span>y,</span>
+<span id="cb129-2"><a href="tracking-time.html#cb129-2" tabindex="-1"></a>                         m.TrackingTime.<span class="fl">2.</span>yrep[<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, ],</span>
+<span id="cb129-3"><a href="tracking-time.html#cb129-3" tabindex="-1"></a>                         <span class="at">group =</span> m.TrackingTime.data<span class="sc">$</span>SignalingType)</span></code></pre></div>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-138-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb130-1"><a href="tracking-time.html#cb130-1" tabindex="-1"></a>group <span class="ot">&lt;-</span> m.TrackingTime.data<span class="sc">$</span>SignalingType</span>
+<span id="cb130-2"><a href="tracking-time.html#cb130-2" tabindex="-1"></a>mask <span class="ot">&lt;-</span> m.TrackingTime.data<span class="sc">$</span>ResourceSpeed <span class="sc">==</span> <span class="st">&#39;fast&#39;</span></span>
+<span id="cb130-3"><a href="tracking-time.html#cb130-3" tabindex="-1"></a></span>
+<span id="cb130-4"><a href="tracking-time.html#cb130-4" tabindex="-1"></a><span class="fu">ppc_dens_overlay_grouped</span>(m.TrackingTime.<span class="fl">2.</span>y[mask],</span>
+<span id="cb130-5"><a href="tracking-time.html#cb130-5" tabindex="-1"></a>                         m.TrackingTime.<span class="fl">2.</span>yrep[<span class="dv">1</span><span class="sc">:</span><span class="dv">50</span>, mask],</span>
+<span id="cb130-6"><a href="tracking-time.html#cb130-6" tabindex="-1"></a>                         <span class="at">group =</span> group[mask])</span></code></pre></div>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-139-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb131"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb131-1"><a href="tracking-time.html#cb131-1" tabindex="-1"></a>group <span class="ot">&lt;-</span> m.TrackingTime.data<span class="sc">$</span>SignalingType</span>
+<span id="cb131-2"><a href="tracking-time.html#cb131-2" tabindex="-1"></a>mask <span class="ot">&lt;-</span> m.TrackingTime.data<span class="sc">$</span>ResourceSpeed <span class="sc">==</span> <span class="st">&#39;slow&#39;</span></span>
+<span id="cb131-3"><a href="tracking-time.html#cb131-3" tabindex="-1"></a></span>
+<span id="cb131-4"><a href="tracking-time.html#cb131-4" tabindex="-1"></a><span class="fu">ppc_dens_overlay_grouped</span>(m.TrackingTime.<span class="fl">2.</span>y[mask],</span>
+<span id="cb131-5"><a href="tracking-time.html#cb131-5" tabindex="-1"></a>                         m.TrackingTime.<span class="fl">2.</span>yrep[<span class="dv">1</span><span class="sc">:</span><span class="dv">50</span>, mask],</span>
+<span id="cb131-6"><a href="tracking-time.html#cb131-6" tabindex="-1"></a>                         <span class="at">group =</span> group[mask])</span></code></pre></div>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-140-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="model-predictions-3" class="section level3 hasAnchor">
+<h3>Model predictions<a href="tracking-time.html#model-predictions-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-141-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb132"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb132-1"><a href="tracking-time.html#cb132-1" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">conditional_effects</span>(m.TrackingTime.<span class="fl">2.</span>fit, </span>
+<span id="cb132-2"><a href="tracking-time.html#cb132-2" tabindex="-1"></a>                         <span class="at">re_formula =</span> m.TrackingTime.<span class="fl">2.</span>formula_comparison, <span class="at">prob =</span> <span class="fl">0.9</span>), <span class="at">ask =</span> F)</span></code></pre></div>
+</div>
+<div id="condition-comparisons-3" class="section level3 hasAnchor">
+<h3>Condition comparisons<a href="tracking-time.html#condition-comparisons-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb133"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb133-1"><a href="tracking-time.html#cb133-1" tabindex="-1"></a>m.TrackingTime.<span class="fl">2.</span>emmeans_contrast_draws<span class="fl">.1</span> <span class="ot">&lt;-</span> m.TrackingTime.<span class="fl">2.</span>fit <span class="sc">%&gt;%</span></span>
+<span id="cb133-2"><a href="tracking-time.html#cb133-2" tabindex="-1"></a>  <span class="fu">emmeans</span>(<span class="sc">~</span> SignalingType <span class="sc">*</span> ResourceSpeed, <span class="at">epred =</span> <span class="cn">TRUE</span>, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>, </span>
+<span id="cb133-3"><a href="tracking-time.html#cb133-3" tabindex="-1"></a>          <span class="at">re_formula =</span> m.TrackingTime.<span class="fl">2.</span>formula_comparison) <span class="sc">%&gt;%</span></span>
+<span id="cb133-4"><a href="tracking-time.html#cb133-4" tabindex="-1"></a>  <span class="fu">contrast</span>(<span class="at">method =</span> <span class="st">&quot;revpairwise&quot;</span>, <span class="at">simple =</span> <span class="st">&quot;each&quot;</span>, <span class="at">combine =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb133-5"><a href="tracking-time.html#cb133-5" tabindex="-1"></a>  <span class="fu">gather_emmeans_draws</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb133-6"><a href="tracking-time.html#cb133-6" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">.value =</span> .value <span class="sc">*</span> TrackingTime_max)</span></code></pre></div>
+<div class="sourceCode" id="cb134"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb134-1"><a href="tracking-time.html#cb134-1" tabindex="-1"></a>m.TrackingTime.<span class="fl">2.</span>comparison<span class="fl">.1</span> <span class="ot">&lt;-</span> m.TrackingTime.<span class="fl">2.</span>emmeans_contrast_draws<span class="fl">.1</span> <span class="sc">%&gt;%</span></span>
+<span id="cb134-2"><a href="tracking-time.html#cb134-2" tabindex="-1"></a>  ggdist<span class="sc">::</span><span class="fu">mean_hdci</span>(<span class="at">.width =</span> <span class="fl">0.9</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb134-3"><a href="tracking-time.html#cb134-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">.value =</span> <span class="fu">round</span>(.value, <span class="dv">2</span>), <span class="at">.lower =</span> <span class="fu">round</span>(.lower, <span class="dv">2</span>), <span class="at">.upper =</span> <span class="fu">round</span>(.upper, <span class="dv">2</span>)) </span>
+<span id="cb134-4"><a href="tracking-time.html#cb134-4" tabindex="-1"></a></span>
+<span id="cb134-5"><a href="tracking-time.html#cb134-5" tabindex="-1"></a>m.TrackingTime.<span class="fl">2.</span>comparison<span class="fl">.1</span> <span class="sc">%&gt;%</span> </span>
+<span id="cb134-6"><a href="tracking-time.html#cb134-6" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="st">&quot;html&quot;</span>, <span class="at">digits =</span> <span class="dv">2</span>) <span class="sc">%&gt;%</span> <span class="fu">kable_classic</span>(<span class="at">full_width =</span> T, <span class="at">position =</span> <span class="st">&quot;center&quot;</span>, )</span></code></pre></div>
+<table class=" lightable-classic" style="font-family: &quot;Arial Narrow&quot;, &quot;Source Sans Pro&quot;, sans-serif; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+ResourceSpeed
+</th>
+<th style="text-align:left;">
+SignalingType
+</th>
+<th style="text-align:left;">
+contrast
+</th>
+<th style="text-align:right;">
+.value
+</th>
+<th style="text-align:right;">
+.lower
+</th>
+<th style="text-align:right;">
+.upper
+</th>
+<th style="text-align:right;">
+.width
+</th>
+<th style="text-align:left;">
+.point
+</th>
+<th style="text-align:left;">
+.interval
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:left;">
+slow - fast
+</td>
+<td style="text-align:right;">
+5.96
+</td>
+<td style="text-align:right;">
+5.13
+</td>
+<td style="text-align:right;">
+6.80
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+FP
+</td>
+<td style="text-align:left;">
+slow - fast
+</td>
+<td style="text-align:right;">
+7.43
+</td>
+<td style="text-align:right;">
+6.40
+</td>
+<td style="text-align:right;">
+8.44
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+NP
+</td>
+<td style="text-align:left;">
+slow - fast
+</td>
+<td style="text-align:right;">
+7.97
+</td>
+<td style="text-align:right;">
+6.86
+</td>
+<td style="text-align:right;">
+9.03
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+VP
+</td>
+<td style="text-align:left;">
+slow - fast
+</td>
+<td style="text-align:right;">
+8.41
+</td>
+<td style="text-align:right;">
+7.47
+</td>
+<td style="text-align:right;">
+9.39
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fast
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+FP - A
+</td>
+<td style="text-align:right;">
+2.00
+</td>
+<td style="text-align:right;">
+0.96
+</td>
+<td style="text-align:right;">
+3.04
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fast
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+FP - NP
+</td>
+<td style="text-align:right;">
+2.33
+</td>
+<td style="text-align:right;">
+1.07
+</td>
+<td style="text-align:right;">
+3.55
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fast
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+FP - VP
+</td>
+<td style="text-align:right;">
+1.76
+</td>
+<td style="text-align:right;">
+0.56
+</td>
+<td style="text-align:right;">
+3.01
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fast
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+NP - A
+</td>
+<td style="text-align:right;">
+-0.34
+</td>
+<td style="text-align:right;">
+-1.22
+</td>
+<td style="text-align:right;">
+0.56
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fast
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+VP - A
+</td>
+<td style="text-align:right;">
+0.23
+</td>
+<td style="text-align:right;">
+-0.66
+</td>
+<td style="text-align:right;">
+1.13
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fast
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+VP - NP
+</td>
+<td style="text-align:right;">
+0.57
+</td>
+<td style="text-align:right;">
+-0.52
+</td>
+<td style="text-align:right;">
+1.68
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+slow
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+FP - A
+</td>
+<td style="text-align:right;">
+3.47
+</td>
+<td style="text-align:right;">
+2.63
+</td>
+<td style="text-align:right;">
+4.32
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+slow
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+FP - NP
+</td>
+<td style="text-align:right;">
+1.80
+</td>
+<td style="text-align:right;">
+0.84
+</td>
+<td style="text-align:right;">
+2.74
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+slow
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+FP - VP
+</td>
+<td style="text-align:right;">
+0.78
+</td>
+<td style="text-align:right;">
+0.01
+</td>
+<td style="text-align:right;">
+1.56
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+slow
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+NP - A
+</td>
+<td style="text-align:right;">
+1.67
+</td>
+<td style="text-align:right;">
+0.56
+</td>
+<td style="text-align:right;">
+2.71
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+slow
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+VP - A
+</td>
+<td style="text-align:right;">
+2.68
+</td>
+<td style="text-align:right;">
+1.75
+</td>
+<td style="text-align:right;">
+3.63
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+slow
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+VP - NP
+</td>
+<td style="text-align:right;">
+1.01
+</td>
+<td style="text-align:right;">
+-0.03
+</td>
+<td style="text-align:right;">
+2.05
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb135"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb135-1"><a href="tracking-time.html#cb135-1" tabindex="-1"></a>m.TrackingTime.<span class="fl">2.</span>emmeans_contrast_draws<span class="fl">.1</span> <span class="sc">%&gt;%</span></span>
+<span id="cb135-2"><a href="tracking-time.html#cb135-2" tabindex="-1"></a>  <span class="fu">filter</span>(ResourceSpeed <span class="sc">!=</span> <span class="st">&#39;.&#39;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb135-3"><a href="tracking-time.html#cb135-3" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">prediction =</span> .value) <span class="sc">%&gt;%</span> </span>
+<span id="cb135-4"><a href="tracking-time.html#cb135-4" tabindex="-1"></a>  <span class="fu">ggplot</span>(</span>
+<span id="cb135-5"><a href="tracking-time.html#cb135-5" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">y =</span> contrast, </span>
+<span id="cb135-6"><a href="tracking-time.html#cb135-6" tabindex="-1"></a>        <span class="at">x =</span> prediction, </span>
+<span id="cb135-7"><a href="tracking-time.html#cb135-7" tabindex="-1"></a>        <span class="at">color =</span> ResourceSpeed, <span class="at">shape =</span> ResourceSpeed, <span class="at">fill =</span> ResourceSpeed)) <span class="sc">+</span></span>
+<span id="cb135-8"><a href="tracking-time.html#cb135-8" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">rows =</span> <span class="fu">vars</span>(ResourceSpeed)) <span class="sc">+</span></span>
+<span id="cb135-9"><a href="tracking-time.html#cb135-9" tabindex="-1"></a>  <span class="fu">stat_pointinterval</span>(<span class="at">.width =</span> <span class="fl">0.9</span>) <span class="sc">+</span></span>
+<span id="cb135-10"><a href="tracking-time.html#cb135-10" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">get_colors</span>(<span class="st">&quot;Qual2&quot;</span>, <span class="at">num.colors =</span> <span class="dv">2</span>, <span class="at">reverse =</span> <span class="cn">TRUE</span>, <span class="at">gradient =</span> <span class="cn">FALSE</span>)) <span class="sc">+</span></span>
+<span id="cb135-11"><a href="tracking-time.html#cb135-11" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">get_colors</span>(<span class="st">&quot;Qual2&quot;</span>, <span class="at">num.colors =</span> <span class="dv">2</span>, <span class="at">reverse =</span> <span class="cn">TRUE</span>, <span class="at">gradient =</span> <span class="cn">FALSE</span>)) <span class="sc">+</span></span>
+<span id="cb135-12"><a href="tracking-time.html#cb135-12" tabindex="-1"></a>  <span class="fu">scale_shape_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="dv">21</span>, <span class="dv">24</span>)) <span class="sc">+</span></span>
+<span id="cb135-13"><a href="tracking-time.html#cb135-13" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept=</span><span class="dv">0</span>), <span class="at">linetype=</span><span class="st">&quot;longdash&quot;</span>) <span class="sc">+</span></span>
+<span id="cb135-14"><a href="tracking-time.html#cb135-14" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&#39;Prediction Tracking Time&#39;</span>) <span class="sc">+</span></span>
+<span id="cb135-15"><a href="tracking-time.html#cb135-15" tabindex="-1"></a>  <span class="fu">theme_nice</span>()</span></code></pre></div>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-145-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb136"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb136-1"><a href="tracking-time.html#cb136-1" tabindex="-1"></a>m.TrackingTime.<span class="fl">2.</span>emmeans_contrast_draws<span class="fl">.2</span> <span class="ot">&lt;-</span> m.TrackingTime.<span class="fl">2.</span>fit <span class="sc">%&gt;%</span></span>
+<span id="cb136-2"><a href="tracking-time.html#cb136-2" tabindex="-1"></a>  <span class="fu">emmeans</span>(<span class="sc">~</span> ResourceSpeed, <span class="at">epred =</span> <span class="cn">TRUE</span>, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>, </span>
+<span id="cb136-3"><a href="tracking-time.html#cb136-3" tabindex="-1"></a>          <span class="at">re_formula =</span> m.TrackingTime.<span class="fl">2.</span>formula_comparison) <span class="sc">%&gt;%</span></span>
+<span id="cb136-4"><a href="tracking-time.html#cb136-4" tabindex="-1"></a>  <span class="fu">contrast</span>(<span class="at">method =</span> <span class="st">&quot;revpairwise&quot;</span>, <span class="at">simple =</span> <span class="st">&quot;each&quot;</span>, <span class="at">combine =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb136-5"><a href="tracking-time.html#cb136-5" tabindex="-1"></a>  <span class="fu">gather_emmeans_draws</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb136-6"><a href="tracking-time.html#cb136-6" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">.value =</span> .value <span class="sc">*</span> TrackingTime_max)</span></code></pre></div>
+<div class="sourceCode" id="cb137"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb137-1"><a href="tracking-time.html#cb137-1" tabindex="-1"></a>m.TrackingTime.<span class="fl">2.</span>comparison<span class="fl">.2</span> <span class="ot">&lt;-</span> m.TrackingTime.<span class="fl">2.</span>emmeans_contrast_draws<span class="fl">.2</span> <span class="sc">%&gt;%</span></span>
+<span id="cb137-2"><a href="tracking-time.html#cb137-2" tabindex="-1"></a>  ggdist<span class="sc">::</span><span class="fu">mean_hdci</span>(<span class="at">.width =</span> <span class="fl">0.9</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb137-3"><a href="tracking-time.html#cb137-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">.value =</span> <span class="fu">round</span>(.value, <span class="dv">2</span>), <span class="at">.lower =</span> <span class="fu">round</span>(.lower, <span class="dv">2</span>), <span class="at">.upper =</span> <span class="fu">round</span>(.upper, <span class="dv">2</span>)) </span>
+<span id="cb137-4"><a href="tracking-time.html#cb137-4" tabindex="-1"></a></span>
+<span id="cb137-5"><a href="tracking-time.html#cb137-5" tabindex="-1"></a>m.TrackingTime.<span class="fl">2.</span>comparison<span class="fl">.2</span> <span class="sc">%&gt;%</span> </span>
+<span id="cb137-6"><a href="tracking-time.html#cb137-6" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="st">&quot;html&quot;</span>, <span class="at">digits =</span> <span class="dv">2</span>) <span class="sc">%&gt;%</span> <span class="fu">kable_classic</span>(<span class="at">full_width =</span> T, <span class="at">position =</span> <span class="st">&quot;center&quot;</span>, )</span></code></pre></div>
+<table class=" lightable-classic" style="font-family: &quot;Arial Narrow&quot;, &quot;Source Sans Pro&quot;, sans-serif; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+contrast
+</th>
+<th style="text-align:right;">
+.value
+</th>
+<th style="text-align:right;">
+.lower
+</th>
+<th style="text-align:right;">
+.upper
+</th>
+<th style="text-align:right;">
+.width
+</th>
+<th style="text-align:left;">
+.point
+</th>
+<th style="text-align:left;">
+.interval
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+slow - fast
+</td>
+<td style="text-align:right;">
+7.44
+</td>
+<td style="text-align:right;">
+6.89
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb138"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb138-1"><a href="tracking-time.html#cb138-1" tabindex="-1"></a>m.TrackingTime.<span class="fl">2.</span>comparison.combined_table <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(</span>
+<span id="cb138-2"><a href="tracking-time.html#cb138-2" tabindex="-1"></a>  m.TrackingTime.<span class="fl">2.</span>comparison<span class="fl">.2</span>,</span>
+<span id="cb138-3"><a href="tracking-time.html#cb138-3" tabindex="-1"></a>  m.TrackingTime.<span class="fl">2.</span>comparison<span class="fl">.1</span></span>
+<span id="cb138-4"><a href="tracking-time.html#cb138-4" tabindex="-1"></a>) <span class="sc">%&gt;%</span></span>
+<span id="cb138-5"><a href="tracking-time.html#cb138-5" tabindex="-1"></a>  <span class="fu">select</span>(ResourceSpeed, SignalingType, contrast, .value, .lower, .upper) <span class="sc">%&gt;%</span></span>
+<span id="cb138-6"><a href="tracking-time.html#cb138-6" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb138-7"><a href="tracking-time.html#cb138-7" tabindex="-1"></a>    <span class="at">ResourceSpeed =</span> <span class="fu">ifelse</span>(<span class="fu">is.na</span>(ResourceSpeed), <span class="st">&quot;.&quot;</span>, <span class="fu">as.character</span>(ResourceSpeed)),</span>
+<span id="cb138-8"><a href="tracking-time.html#cb138-8" tabindex="-1"></a>    <span class="at">SignalingType =</span> <span class="fu">ifelse</span>(<span class="fu">is.na</span>(SignalingType), <span class="st">&quot;.&quot;</span>, <span class="fu">as.character</span>(SignalingType)),</span>
+<span id="cb138-9"><a href="tracking-time.html#cb138-9" tabindex="-1"></a>    <span class="at">sig =</span> (.lower <span class="sc">*</span> .upper) <span class="sc">&gt;</span> <span class="dv">0</span>,</span>
+<span id="cb138-10"><a href="tracking-time.html#cb138-10" tabindex="-1"></a>    <span class="at">Estimate =</span> <span class="fu">sprintf</span>(<span class="st">&quot;%.2f&quot;</span>, .value),</span>
+<span id="cb138-11"><a href="tracking-time.html#cb138-11" tabindex="-1"></a>    <span class="at">Estimate =</span> <span class="fu">ifelse</span>(sig, <span class="fu">paste0</span>(<span class="st">&quot;</span><span class="sc">\\</span><span class="st">textbf{&quot;</span>, Estimate, <span class="st">&quot;}&quot;</span>), Estimate),</span>
+<span id="cb138-12"><a href="tracking-time.html#cb138-12" tabindex="-1"></a>    <span class="at">hpdi =</span> <span class="fu">sprintf</span>(<span class="st">&quot;[%.2f, %.2f]&quot;</span>, .lower, .upper),</span>
+<span id="cb138-13"><a href="tracking-time.html#cb138-13" tabindex="-1"></a>    <span class="at">hpdi =</span> <span class="fu">ifelse</span>(sig, <span class="fu">paste0</span>(<span class="st">&quot;</span><span class="sc">\\</span><span class="st">textbf{&quot;</span>, hpdi, <span class="st">&quot;}&quot;</span>), hpdi)</span>
+<span id="cb138-14"><a href="tracking-time.html#cb138-14" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb138-15"><a href="tracking-time.html#cb138-15" tabindex="-1"></a>  <span class="fu">select</span>(ResourceSpeed, SignalingType, contrast, Estimate, hpdi)</span>
+<span id="cb138-16"><a href="tracking-time.html#cb138-16" tabindex="-1"></a></span>
+<span id="cb138-17"><a href="tracking-time.html#cb138-17" tabindex="-1"></a><span class="co"># (Optional) Rename columns for publication</span></span>
+<span id="cb138-18"><a href="tracking-time.html#cb138-18" tabindex="-1"></a><span class="fu">colnames</span>(m.TrackingTime.<span class="fl">2.</span>comparison.combined_table) <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb138-19"><a href="tracking-time.html#cb138-19" tabindex="-1"></a>  <span class="st">&quot;Resource Speed&quot;</span>, <span class="st">&quot;Payoff Condition&quot;</span>, <span class="st">&quot;Contrast&quot;</span>, <span class="st">&quot;Mean&quot;</span>, <span class="st">&quot;90</span><span class="sc">\\</span><span class="st">% HPDI&quot;</span></span>
+<span id="cb138-20"><a href="tracking-time.html#cb138-20" tabindex="-1"></a>)</span>
+<span id="cb138-21"><a href="tracking-time.html#cb138-21" tabindex="-1"></a></span>
+<span id="cb138-22"><a href="tracking-time.html#cb138-22" tabindex="-1"></a></span>
+<span id="cb138-23"><a href="tracking-time.html#cb138-23" tabindex="-1"></a>kbl <span class="ot">&lt;-</span> <span class="fu">kable</span>(</span>
+<span id="cb138-24"><a href="tracking-time.html#cb138-24" tabindex="-1"></a>  m.TrackingTime.<span class="fl">2.</span>comparison.combined_table,</span>
+<span id="cb138-25"><a href="tracking-time.html#cb138-25" tabindex="-1"></a>  <span class="at">format =</span> <span class="st">&quot;latex&quot;</span>,</span>
+<span id="cb138-26"><a href="tracking-time.html#cb138-26" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb138-27"><a href="tracking-time.html#cb138-27" tabindex="-1"></a>  <span class="at">align =</span> <span class="fu">c</span>(<span class="st">&quot;l&quot;</span>, <span class="st">&quot;l&quot;</span>, <span class="st">&quot;l&quot;</span>, <span class="st">&quot;r&quot;</span>, <span class="st">&quot;r&quot;</span>),</span>
+<span id="cb138-28"><a href="tracking-time.html#cb138-28" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">&quot;Posterior Estimates Tracking Time&quot;</span>,</span>
+<span id="cb138-29"><a href="tracking-time.html#cb138-29" tabindex="-1"></a>  <span class="at">escape =</span> <span class="cn">FALSE</span></span>
+<span id="cb138-30"><a href="tracking-time.html#cb138-30" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb138-31"><a href="tracking-time.html#cb138-31" tabindex="-1"></a>    <span class="fu">kable_styling</span>(<span class="at">latex_options =</span> <span class="st">&quot;hold_position&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb138-32"><a href="tracking-time.html#cb138-32" tabindex="-1"></a>    <span class="fu">row_spec</span>(<span class="dv">0</span>, <span class="at">bold =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb138-33"><a href="tracking-time.html#cb138-33" tabindex="-1"></a></span>
+<span id="cb138-34"><a href="tracking-time.html#cb138-34" tabindex="-1"></a>unique_speeds <span class="ot">&lt;-</span> <span class="fu">unique</span>(m.TrackingTime.<span class="fl">2.</span>comparison.combined_table<span class="sc">$</span><span class="st">`</span><span class="at">Resource Speed</span><span class="st">`</span>)</span>
+<span id="cb138-35"><a href="tracking-time.html#cb138-35" tabindex="-1"></a>start <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb138-36"><a href="tracking-time.html#cb138-36" tabindex="-1"></a><span class="cf">for</span> (speed <span class="cf">in</span> unique_speeds) {</span>
+<span id="cb138-37"><a href="tracking-time.html#cb138-37" tabindex="-1"></a>  n_rows <span class="ot">&lt;-</span> <span class="fu">sum</span>(m.TrackingTime.<span class="fl">2.</span>comparison.combined_table<span class="sc">$</span><span class="st">`</span><span class="at">Resource Speed</span><span class="st">`</span> <span class="sc">==</span> speed)</span>
+<span id="cb138-38"><a href="tracking-time.html#cb138-38" tabindex="-1"></a>  <span class="cf">if</span> (speed <span class="sc">!=</span> <span class="st">&quot;.&quot;</span>) { </span>
+<span id="cb138-39"><a href="tracking-time.html#cb138-39" tabindex="-1"></a>    kbl <span class="ot">&lt;-</span> <span class="fu">group_rows</span>(kbl, speed, start, start <span class="sc">+</span> n_rows <span class="sc">-</span> <span class="dv">1</span>)</span>
+<span id="cb138-40"><a href="tracking-time.html#cb138-40" tabindex="-1"></a>  }</span>
+<span id="cb138-41"><a href="tracking-time.html#cb138-41" tabindex="-1"></a>  start <span class="ot">&lt;-</span> start <span class="sc">+</span> n_rows</span>
+<span id="cb138-42"><a href="tracking-time.html#cb138-42" tabindex="-1"></a>}</span>
+<span id="cb138-43"><a href="tracking-time.html#cb138-43" tabindex="-1"></a></span>
+<span id="cb138-44"><a href="tracking-time.html#cb138-44" tabindex="-1"></a><span class="fu">writeLines</span>(kbl, <span class="fu">paste0</span>(comparisons, <span class="st">&quot;tracking_time_2_comparison_combined.tex&quot;</span>))</span></code></pre></div>
+</div>
+<div id="figure-3" class="section level3 hasAnchor">
+<h3>Figure<a href="tracking-time.html#figure-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-151-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="model-comparison-1" class="section level2 hasAnchor">
+<h2>Model Comparison<a href="tracking-time.html#model-comparison-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb139-1"><a href="tracking-time.html#cb139-1" tabindex="-1"></a>m.TrackingTime.<span class="fl">1.</span>loo_model <span class="ot">&lt;-</span> <span class="fu">loo</span>(m.TrackingTime.<span class="fl">1.</span>fit, <span class="at">moment_match =</span> F, <span class="at">reloo =</span> F, <span class="at">draws =</span> <span class="dv">1000</span>)</span>
+<span id="cb139-2"><a href="tracking-time.html#cb139-2" tabindex="-1"></a>m.TrackingTime.<span class="fl">2.</span>loo_model <span class="ot">&lt;-</span> <span class="fu">loo</span>(m.TrackingTime.<span class="fl">2.</span>fit, <span class="at">moment_match =</span> F, <span class="at">reloo =</span> F, <span class="at">draws =</span> <span class="dv">1000</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb140"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb140-1"><a href="tracking-time.html#cb140-1" tabindex="-1"></a><span class="fu">print</span>(m.TrackingTime.<span class="fl">1.</span>loo_model)</span></code></pre></div>
+<pre><code>## 
+## Computed from 70000 by 621 log-likelihood matrix.
+## 
+##          Estimate   SE
+## elpd_loo    519.9 23.6
+## p_loo       160.5 11.8
+## looic     -1039.8 47.3
+## ------
+## MCSE of elpd_loo is NA.
+## MCSE and ESS estimates assume MCMC draws (r_eff in [0.4, 2.0]).
+## 
+## Pareto k diagnostic values:
+##                          Count Pct.    Min. ESS
+## (-Inf, 0.7]   (good)     534   86.0%   236     
+##    (0.7, 1]   (bad)       76   12.2%   &lt;NA&gt;    
+##    (1, Inf)   (very bad)  11    1.8%   &lt;NA&gt;    
+## See help(&#39;pareto-k-diagnostic&#39;) for details.</code></pre>
+<div class="sourceCode" id="cb142"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb142-1"><a href="tracking-time.html#cb142-1" tabindex="-1"></a><span class="fu">print</span>(m.TrackingTime.<span class="fl">2.</span>loo_model)</span></code></pre></div>
+<pre><code>## 
+## Computed from 70000 by 621 log-likelihood matrix.
+## 
+##          Estimate   SE
+## elpd_loo    594.9 26.9
+## p_loo       146.5  9.6
+## looic     -1189.8 53.7
+## ------
+## MCSE of elpd_loo is NA.
+## MCSE and ESS estimates assume MCMC draws (r_eff in [0.4, 2.1]).
+## 
+## Pareto k diagnostic values:
+##                          Count Pct.    Min. ESS
+## (-Inf, 0.7]   (good)     594   95.7%   1136    
+##    (0.7, 1]   (bad)       27    4.3%   &lt;NA&gt;    
+##    (1, Inf)   (very bad)   0    0.0%   &lt;NA&gt;    
+## See help(&#39;pareto-k-diagnostic&#39;) for details.</code></pre>
+<div class="sourceCode" id="cb144"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb144-1"><a href="tracking-time.html#cb144-1" tabindex="-1"></a><span class="fu">print</span>(m.TrackingTime.loo_comparison, <span class="at">simplify =</span> <span class="cn">FALSE</span>, <span class="at">digits =</span> <span class="dv">3</span>)</span></code></pre></div>
+<pre><code>##                      elpd_diff se_diff   elpd_loo  se_elpd_loo p_loo     se_p_loo  looic     se_looic 
+## m.TrackingTime.2.fit     0.000     0.000   594.893    26.852     146.481     9.619 -1189.785    53.703
+## m.TrackingTime.1.fit   -74.983    12.743   519.910    23.640     160.452    11.786 -1039.819    47.281</code></pre>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="collected-points.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="tracking-efficiency.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>
