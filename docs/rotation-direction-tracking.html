@@ -23,7 +23,7 @@
 <meta name="author" content="Valerii Chirkov" />
 
 
-<meta name="date" content="2025-09-14" />
+<meta name="date" content="2026-04-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="roation-magnitude-search.html"/>
-<link rel="next" href="voluntary-payoff-sharing.html"/>
+<link rel="next" href="fov-dynamics.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -59,8 +59,9 @@
 
 
 <style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -70,7 +71,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -176,26 +177,40 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#figure-1"><i class="fa fa-check"></i>Figure</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-comparison"><i class="fa fa-check"></i>Model Comparison</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-3"><i class="fa fa-check"></i>Model 3</a>
+<ul>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-fitting-2"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-predictions-2"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#condition-comparisons-2"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#figure-2"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-4-collected-points-by-epoch"><i class="fa fa-check"></i>Model 4: Collected Points by Epoch</a>
+<ul>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-specification"><i class="fa fa-check"></i>Model specification</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-fitting-3"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#condition-comparisons-3"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-figure"><i class="fa fa-check"></i>Model figure</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html"><i class="fa fa-check"></i>Tracking Time</a>
 <ul>
 <li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-1-1"><i class="fa fa-check"></i>Model 1</a>
 <ul>
 <li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#prior-predictive-checks-2"><i class="fa fa-check"></i>Prior predictive checks</a></li>
-<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-fitting-2"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-fitting-4"><i class="fa fa-check"></i>Model fitting</a></li>
 <li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-diagnostics-2"><i class="fa fa-check"></i>Model diagnostics</a></li>
-<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-predictions-2"><i class="fa fa-check"></i>Model predictions</a></li>
-<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#condition-comparisons-2"><i class="fa fa-check"></i>Condition comparisons</a></li>
-<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#figure-2"><i class="fa fa-check"></i>Figure</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-predictions-3"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#condition-comparisons-4"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#figure-3"><i class="fa fa-check"></i>Figure</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-2-1"><i class="fa fa-check"></i>Model 2</a>
 <ul>
 <li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#prior-predictive-checks-3"><i class="fa fa-check"></i>Prior predictive checks</a></li>
-<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-fitting-3"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-fitting-5"><i class="fa fa-check"></i>Model fitting</a></li>
 <li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-diagnostics-3"><i class="fa fa-check"></i>Model diagnostics</a></li>
-<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-predictions-3"><i class="fa fa-check"></i>Model predictions</a></li>
-<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#condition-comparisons-3"><i class="fa fa-check"></i>Condition comparisons</a></li>
-<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#figure-3"><i class="fa fa-check"></i>Figure</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-predictions-4"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#condition-comparisons-5"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#figure-4"><i class="fa fa-check"></i>Figure</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-comparison-1"><i class="fa fa-check"></i>Model Comparison</a></li>
 </ul></li>
@@ -204,43 +219,92 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-1-2"><i class="fa fa-check"></i>Model 1</a>
 <ul>
 <li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#prior-predictive-checks-4"><i class="fa fa-check"></i>Prior predictive checks</a></li>
-<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-fitting-4"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-fitting-6"><i class="fa fa-check"></i>Model fitting</a></li>
 <li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-diagnostics-4"><i class="fa fa-check"></i>Model diagnostics</a></li>
-<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-predictions-4"><i class="fa fa-check"></i>Model predictions</a></li>
-<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#condition-comparisons-4"><i class="fa fa-check"></i>Condition comparisons</a></li>
-<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#figure-4"><i class="fa fa-check"></i>Figure</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-predictions-5"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#condition-comparisons-6"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#figure-5"><i class="fa fa-check"></i>Figure</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-2-2"><i class="fa fa-check"></i>Model 2</a>
 <ul>
 <li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#prior-predictive-checks-5"><i class="fa fa-check"></i>Prior predictive checks</a></li>
-<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-fitting-5"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-fitting-7"><i class="fa fa-check"></i>Model fitting</a></li>
 <li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-diagnostics-5"><i class="fa fa-check"></i>Model diagnostics</a></li>
-<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-predictions-5"><i class="fa fa-check"></i>Model predictions</a></li>
-<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#condition-comparisons-5"><i class="fa fa-check"></i>Condition comparisons</a></li>
-<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#figure-5"><i class="fa fa-check"></i>Figure</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-predictions-6"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#condition-comparisons-7"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#figure-6"><i class="fa fa-check"></i>Figure</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-comparison-2"><i class="fa fa-check"></i>Model Comparison</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="tracking-time-vs.-tracking-efficiency-combined-plot.html"><a href="tracking-time-vs.-tracking-efficiency-combined-plot.html"><i class="fa fa-check"></i>Tracking Time vs. Tracking Efficiency Combined Plot</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html"><i class="fa fa-check"></i>Average Median Distance to Resource</a>
+<ul>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#data-preparation"><i class="fa fa-check"></i>Data Preparation</a>
+<ul>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#step-1-compute-per-participant-average-distance-from-time-series"><i class="fa fa-check"></i>Step 1: Compute per-participant average distance from time series</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#step-2-map-participants-to-groups"><i class="fa fa-check"></i>Step 2: Map participants to groups</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#step-3-compute-group-level-median-distance-time-series-for-interacting-groups"><i class="fa fa-check"></i>Step 3: Compute group-level median distance time series for interacting groups</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#step-4-construct-nominal-groups-from-solo-participants"><i class="fa fa-check"></i>Step 4: Construct nominal groups from solo participants</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#step-5-combine-all-data"><i class="fa fa-check"></i>Step 5: Combine all data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#descriptive-statistics"><i class="fa fa-check"></i>Descriptive Statistics</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#descriptive-plots"><i class="fa fa-check"></i>Descriptive Plots</a>
+<ul>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#average-median-distance-by-condition"><i class="fa fa-check"></i>Average Median Distance by Condition</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#distribution-comparison"><i class="fa fa-check"></i>Distribution Comparison</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#statistical-model"><i class="fa fa-check"></i>Statistical Model</a>
+<ul>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#data-for-modelling"><i class="fa fa-check"></i>Data for modelling</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#model-specification-1"><i class="fa fa-check"></i>Model specification</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#prior-predictive-checks-6"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#model-fitting-8"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#model-diagnostics-6"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#model-predictions-7"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#condition-comparisons-8"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#combined-comparison-table"><i class="fa fa-check"></i>Combined comparison table</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#model-figure-1"><i class="fa fa-check"></i>Model figure</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html"><i class="fa fa-check"></i>Average Median Distance to Resource by Epoch</a>
+<ul>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#data-preparation-epoch"><i class="fa fa-check"></i>Data Preparation (Epoch)</a>
+<ul>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#step-1-compute-per-participant-average-distance"><i class="fa fa-check"></i>Step 1: Compute per-participant average distance</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#step-2-map-participants-to-groups-1"><i class="fa fa-check"></i>Step 2: Map participants to groups</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#step-3-compute-group-level-median-distance-time-series-for-interacting-groups-1"><i class="fa fa-check"></i>Step 3: Compute group-level median distance time series for interacting groups</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#step-4-construct-nominal-groups-from-solo-participants-1"><i class="fa fa-check"></i>Step 4: Construct nominal groups from solo participants</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#step-5-combine-all-data-1"><i class="fa fa-check"></i>Step 5: Combine all data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#statistical-model-epoch"><i class="fa fa-check"></i>Statistical Model (Epoch)</a>
+<ul>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#data-for-modelling-1"><i class="fa fa-check"></i>Data for modelling</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#model-specification-2"><i class="fa fa-check"></i>Model specification</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#model-fitting-9"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#condition-comparisons-9"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#condition-comparison-table-epoch"><i class="fa fa-check"></i>Condition comparison table (Epoch)</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#model-figure-2"><i class="fa fa-check"></i>Model figure</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html"><i class="fa fa-check"></i>Static Connecitvity</a>
 <ul>
 <li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#in-degree-model"><i class="fa fa-check"></i>In-degree model</a>
 <ul>
-<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#prior-predictive-checks-6"><i class="fa fa-check"></i>Prior predictive checks</a></li>
-<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-fitting-6"><i class="fa fa-check"></i>Model fitting</a></li>
-<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-diagnostics-6"><i class="fa fa-check"></i>Model diagnostics</a></li>
-<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-predictions-6"><i class="fa fa-check"></i>Model predictions</a></li>
-<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#condition-comparisons-6"><i class="fa fa-check"></i>Condition comparisons</a></li>
-<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#figure-6"><i class="fa fa-check"></i>Figure</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#prior-predictive-checks-7"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-fitting-10"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-diagnostics-7"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-predictions-8"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#condition-comparisons-10"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#figure-7"><i class="fa fa-check"></i>Figure</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#out-degree-model"><i class="fa fa-check"></i>Out-degree model</a>
 <ul>
-<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#prior-predictive-checks-7"><i class="fa fa-check"></i>Prior predictive checks</a></li>
-<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-fitting-7"><i class="fa fa-check"></i>Model fitting</a></li>
-<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-diagnostics-7"><i class="fa fa-check"></i>Model diagnostics</a></li>
-<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-predictions-7"><i class="fa fa-check"></i>Model predictions</a></li>
-<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#condition-comparisons-7"><i class="fa fa-check"></i>Condition comparisons</a></li>
-<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#figure-7"><i class="fa fa-check"></i>Figure</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#prior-predictive-checks-8"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-fitting-11"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-diagnostics-8"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-predictions-9"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#condition-comparisons-11"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#figure-8"><i class="fa fa-check"></i>Figure</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#correlation"><i class="fa fa-check"></i>Correlation</a></li>
 </ul></li>
@@ -248,10 +312,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="adaptive-connectivity.html"><a href="adaptive-connectivity.html#social-information-quality-model"><i class="fa fa-check"></i>Social Information Quality Model</a>
 <ul>
-<li class="chapter" data-level="" data-path="adaptive-connectivity.html"><a href="adaptive-connectivity.html#model-diagnostics-8"><i class="fa fa-check"></i>Model diagnostics</a></li>
-<li class="chapter" data-level="" data-path="adaptive-connectivity.html"><a href="adaptive-connectivity.html#model-predictions-8"><i class="fa fa-check"></i>Model predictions</a></li>
-<li class="chapter" data-level="" data-path="adaptive-connectivity.html"><a href="adaptive-connectivity.html#condition-comparisons-8"><i class="fa fa-check"></i>Condition comparisons</a></li>
-<li class="chapter" data-level="" data-path="adaptive-connectivity.html"><a href="adaptive-connectivity.html#figure-8"><i class="fa fa-check"></i>Figure</a></li>
+<li class="chapter" data-level="" data-path="adaptive-connectivity.html"><a href="adaptive-connectivity.html#model-diagnostics-9"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="adaptive-connectivity.html"><a href="adaptive-connectivity.html#model-predictions-10"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="adaptive-connectivity.html"><a href="adaptive-connectivity.html#condition-comparisons-12"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="adaptive-connectivity.html"><a href="adaptive-connectivity.html#figure-9"><i class="fa fa-check"></i>Figure</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html"><i class="fa fa-check"></i>Resouece Discoveries</a>
@@ -294,95 +358,130 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#rotation-per-condition"><i class="fa fa-check"></i>Rotation per condition</a></li>
 <li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-in-degree"><i class="fa fa-check"></i>Model In-Degree</a>
 <ul>
-<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-fitting-28"><i class="fa fa-check"></i>Model fitting</a></li>
-<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-diagnostics-29"><i class="fa fa-check"></i>Model diagnostics</a></li>
-<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#figure-28"><i class="fa fa-check"></i>Figure</a></li>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-fitting-32"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-diagnostics-30"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#figure-29"><i class="fa fa-check"></i>Figure</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-out-degree"><i class="fa fa-check"></i>Model Out-Degree</a>
 <ul>
-<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-fitting-29"><i class="fa fa-check"></i>Model fitting</a></li>
-<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-diagnostics-30"><i class="fa fa-check"></i>Model diagnostics</a></li>
-<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#figure-29"><i class="fa fa-check"></i>Figure</a></li>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-fitting-33"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-diagnostics-31"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#figure-30"><i class="fa fa-check"></i>Figure</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#combined-figures"><i class="fa fa-check"></i>Combined figures</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html"><i class="fa fa-check"></i>Roation Magnitude (Tracking)</a>
 <ul>
-<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#prior-predictive-checks-28"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#prior-predictive-checks-29"><i class="fa fa-check"></i>Prior predictive checks</a></li>
 <li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-fitting-9.5h"><i class="fa fa-check"></i>Model fitting (~9.5h)</a></li>
-<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-diagnostics-31"><i class="fa fa-check"></i>Model diagnostics</a></li>
-<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-predictions-9"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-diagnostics-32"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-predictions-11"><i class="fa fa-check"></i>Model predictions</a></li>
 <li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#figures"><i class="fa fa-check"></i>Figures</a></li>
 <li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#random-effects"><i class="fa fa-check"></i>Random Effects</a>
 <ul>
 <li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-tracking-efficiency"><i class="fa fa-check"></i>Model Tracking Efficiency</a></li>
 <li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-score"><i class="fa fa-check"></i>Model Score</a></li>
-</ul></li>
 <li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#random-effects-correlations"><i class="fa fa-check"></i>Random Effects Correlations</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#random-effects-visualization"><i class="fa fa-check"></i>Random Effects Visualization</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-2-temporal-dynamics"><i class="fa fa-check"></i>Model 2: Temporal Dynamics</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#temporal-figures"><i class="fa fa-check"></i>Temporal Figures</a>
+<ul>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#temporal-condition-comparisons"><i class="fa fa-check"></i>Temporal Condition Comparisons</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-3-social-cohesion-group-spread-effects-outdegree-1"><i class="fa fa-check"></i>Model 3: Social Cohesion &amp; Group Spread Effects (OutDegree &gt; 1)</a>
+<ul>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-3-new-feature-posterior-contrasts"><i class="fa fa-check"></i>Model 3: New Feature Posterior Contrasts</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#summary-table"><i class="fa fa-check"></i>Summary Table</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#figures-1"><i class="fa fa-check"></i>Figures</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html"><i class="fa fa-check"></i>Roation Magnitude (Search)</a>
 <ul>
-<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#prior-predictive-checks-29"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#prior-predictive-checks-30"><i class="fa fa-check"></i>Prior predictive checks</a></li>
 <li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#model-fitting-9.5h-1"><i class="fa fa-check"></i>Model fitting (~9.5h)</a></li>
-<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#model-diagnostics-32"><i class="fa fa-check"></i>Model diagnostics</a></li>
-<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#model-predictions-10"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#model-diagnostics-33"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#model-predictions-12"><i class="fa fa-check"></i>Model predictions</a></li>
 <li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#random-effects-1"><i class="fa fa-check"></i>Random Effects</a>
 <ul>
-<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#modeltracking-time"><i class="fa fa-check"></i>ModelTracking Time</a></li>
-</ul></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#model-tracking-time"><i class="fa fa-check"></i>Model Tracking Time</a></li>
 <li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#random-effects-correlations-1"><i class="fa fa-check"></i>Random Effects Correlations</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#random-effects-visualization-1"><i class="fa fa-check"></i>Random Effects Visualization</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#model-2-temporal-dynamics-1"><i class="fa fa-check"></i>Model 2: Temporal Dynamics</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#temporal-figures-1"><i class="fa fa-check"></i>Temporal Figures</a>
+<ul>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#temporal-condition-comparisons-1"><i class="fa fa-check"></i>Temporal Condition Comparisons</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#model-3-social-cohesion-outdegree-effects-outdegree-1"><i class="fa fa-check"></i>Model 3: Social Cohesion &amp; OutDegree Effects (OutDegree &gt; 1)</a>
+<ul>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#model-3-new-feature-posterior-contrasts-1"><i class="fa fa-check"></i>Model 3: New Feature Posterior Contrasts</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#summary-table-1"><i class="fa fa-check"></i>Summary Table</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#figures-2"><i class="fa fa-check"></i>Figures</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#model-4-peer-distance-moderation-of-social-features-outdegree-1"><i class="fa fa-check"></i>Model 4: Peer Distance Moderation of Social Features (OutDegree == 1)</a>
+<ul>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#model-4-social-feature-posterior-contrasts"><i class="fa fa-check"></i>Model 4: Social Feature Posterior Contrasts</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#summary-table-2"><i class="fa fa-check"></i>Summary Table</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#figures-3"><i class="fa fa-check"></i>Figures</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html"><i class="fa fa-check"></i>Rotation Direction (Tracking)</a>
 <ul>
 <li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#detector-change"><i class="fa fa-check"></i>Detector Change</a>
 <ul>
-<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-fitting-30"><i class="fa fa-check"></i>Model fitting</a></li>
-<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-diagnostics-33"><i class="fa fa-check"></i>Model diagnostics</a></li>
-<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-predictions-11"><i class="fa fa-check"></i>Model predictions</a></li>
-<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#figure-30"><i class="fa fa-check"></i>Figure</a></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-fitting-34"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-diagnostics-34"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-predictions-13"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#figure-31"><i class="fa fa-check"></i>Figure</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#social-information"><i class="fa fa-check"></i>Social Information</a>
 <ul>
-<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-fitting-31"><i class="fa fa-check"></i>Model fitting</a></li>
-<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-diagnostics-34"><i class="fa fa-check"></i>Model diagnostics</a></li>
-<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-predictions-12"><i class="fa fa-check"></i>Model predictions</a></li>
-<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#figure-31"><i class="fa fa-check"></i>Figure</a></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-fitting-35"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-diagnostics-35"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-predictions-14"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#figure-32"><i class="fa fa-check"></i>Figure</a></li>
 </ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="fov-dynamics.html"><a href="fov-dynamics.html"><i class="fa fa-check"></i>FOV Dynamics</a>
+<ul>
+<li class="chapter" data-level="" data-path="fov-dynamics.html"><a href="fov-dynamics.html#fov-percentages-table"><i class="fa fa-check"></i>FOV Percentages Table</a></li>
+<li class="chapter" data-level="" data-path="fov-dynamics.html"><a href="fov-dynamics.html#fov-percentages-plot"><i class="fa fa-check"></i>FOV Percentages Plot</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html"><i class="fa fa-check"></i>Voluntary Payoff Sharing</a>
 <ul>
 <li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#sharing-actions-count"><i class="fa fa-check"></i>Sharing actions count</a></li>
 <li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#count-model"><i class="fa fa-check"></i>Count Model</a>
 <ul>
-<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-fitting-32"><i class="fa fa-check"></i>Model fitting</a></li>
-<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-diagnostics-35"><i class="fa fa-check"></i>Model diagnostics</a></li>
-<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-predictions-13"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-fitting-36"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-diagnostics-36"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-predictions-15"><i class="fa fa-check"></i>Model predictions</a></li>
 <li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#condition-draws"><i class="fa fa-check"></i>Condition draws</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#count-vs-score-model"><i class="fa fa-check"></i>Count vs Score model</a></li>
 <li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#total-sharing"><i class="fa fa-check"></i>Total Sharing</a></li>
 <li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#total-sharing-model"><i class="fa fa-check"></i>Total Sharing Model</a>
 <ul>
-<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-fitting-33"><i class="fa fa-check"></i>Model fitting</a></li>
-<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-diagnostics-38"><i class="fa fa-check"></i>Model diagnostics</a></li>
-<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-predictions-16"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-fitting-37"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-diagnostics-39"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-predictions-18"><i class="fa fa-check"></i>Model predictions</a></li>
 <li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#condition-draws-1"><i class="fa fa-check"></i>Condition draws</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#total-sharing-vs-score-model"><i class="fa fa-check"></i>Total Sharing vs Score Model</a></li>
 <li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#sharing-probability-resource-state-time-distance"><i class="fa fa-check"></i>Sharing Probability: Resource, State, Time, Distance</a>
 <ul>
-<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-fitting-34"><i class="fa fa-check"></i>Model fitting</a></li>
-<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-diagnostics-41"><i class="fa fa-check"></i>Model diagnostics</a></li>
-<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-predictions-19"><i class="fa fa-check"></i>Model predictions</a></li>
-<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#figure-34"><i class="fa fa-check"></i>Figure</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-fitting-38"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-diagnostics-42"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-predictions-21"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#figure-35"><i class="fa fa-check"></i>Figure</a></li>
 <li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#statistical-comparisons-4"><i class="fa fa-check"></i>Statistical Comparisons</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#sharing-probability-resource-distance"><i class="fa fa-check"></i>Sharing Probability: Resource, Distance</a>
 <ul>
-<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-fitting-35"><i class="fa fa-check"></i>Model fitting</a></li>
-<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-diagnostics-42"><i class="fa fa-check"></i>Model diagnostics</a></li>
-<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-predictions-20"><i class="fa fa-check"></i>Model predictions</a></li>
-<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#figure-35"><i class="fa fa-check"></i>Figure</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-fitting-39"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-diagnostics-43"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-predictions-22"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#figure-36"><i class="fa fa-check"></i>Figure</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -411,41 +510,41 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="detector-change" class="section level2 hasAnchor">
 <h2>Detector Change<a href="rotation-direction-tracking.html#detector-change" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb563"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb563-1"><a href="rotation-direction-tracking.html#cb563-1" tabindex="-1"></a>m.RotationDirection.DetectorChange.data <span class="ot">&lt;-</span> m.RotationDirection.tracking.data</span></code></pre></div>
-<div class="sourceCode" id="cb564"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb564-1"><a href="rotation-direction-tracking.html#cb564-1" tabindex="-1"></a>m.RotationDirection.DetectorChange.formula <span class="ot">&lt;-</span> <span class="fu">brmsformula</span>(</span>
-<span id="cb564-2"><a href="rotation-direction-tracking.html#cb564-2" tabindex="-1"></a>  IsRotationDifferent <span class="sc">~</span> IsDetectorChangeImporved <span class="sc">*</span> SignalingType <span class="sc">*</span> ResourceSpeed <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> Participant),</span>
-<span id="cb564-3"><a href="rotation-direction-tracking.html#cb564-3" tabindex="-1"></a>  <span class="at">family =</span> <span class="fu">bernoulli</span>()</span>
-<span id="cb564-4"><a href="rotation-direction-tracking.html#cb564-4" tabindex="-1"></a>  )</span>
-<span id="cb564-5"><a href="rotation-direction-tracking.html#cb564-5" tabindex="-1"></a></span>
-<span id="cb564-6"><a href="rotation-direction-tracking.html#cb564-6" tabindex="-1"></a>m.RotationDirection.DetectorChange.formula_comparison <span class="ot">&lt;-</span> <span class="fu">brmsformula</span>(</span>
-<span id="cb564-7"><a href="rotation-direction-tracking.html#cb564-7" tabindex="-1"></a>  IsRotationDifferent <span class="sc">~</span> IsDetectorChangeImporved <span class="sc">*</span> SignalingType <span class="sc">*</span> ResourceSpeed</span>
-<span id="cb564-8"><a href="rotation-direction-tracking.html#cb564-8" tabindex="-1"></a>  )</span>
-<span id="cb564-9"><a href="rotation-direction-tracking.html#cb564-9" tabindex="-1"></a></span>
-<span id="cb564-10"><a href="rotation-direction-tracking.html#cb564-10" tabindex="-1"></a>m.RotationDirection.DetectorChange.priors <span class="ot">&lt;-</span></span>
-<span id="cb564-11"><a href="rotation-direction-tracking.html#cb564-11" tabindex="-1"></a>  <span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="at">class =</span> <span class="st">&quot;Intercept&quot;</span>) <span class="sc">+</span></span>
-<span id="cb564-12"><a href="rotation-direction-tracking.html#cb564-12" tabindex="-1"></a>  <span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>, <span class="fl">0.5</span>), <span class="at">class =</span> b) <span class="sc">+</span></span>
-<span id="cb564-13"><a href="rotation-direction-tracking.html#cb564-13" tabindex="-1"></a>  <span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>, <span class="fl">0.1</span>), <span class="at">class =</span> <span class="st">&#39;sd&#39;</span>)</span></code></pre></div>
-<div id="model-fitting-30" class="section level3 hasAnchor">
-<h3>Model fitting<a href="rotation-direction-tracking.html#model-fitting-30" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb565"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb565-1"><a href="rotation-direction-tracking.html#cb565-1" tabindex="-1"></a>m.RotationDirection.DetectorChange.fit <span class="ot">&lt;-</span> <span class="fu">brm</span>(</span>
-<span id="cb565-2"><a href="rotation-direction-tracking.html#cb565-2" tabindex="-1"></a>  <span class="at">formula =</span> m.RotationDirection.DetectorChange.formula,</span>
-<span id="cb565-3"><a href="rotation-direction-tracking.html#cb565-3" tabindex="-1"></a>  <span class="at">data    =</span> m.RotationDirection.DetectorChange.data,</span>
-<span id="cb565-4"><a href="rotation-direction-tracking.html#cb565-4" tabindex="-1"></a>  <span class="at">prior   =</span> m.RotationDirection.DetectorChange.priors,</span>
-<span id="cb565-5"><a href="rotation-direction-tracking.html#cb565-5" tabindex="-1"></a>  <span class="at">chains  =</span> <span class="dv">4</span>,</span>
-<span id="cb565-6"><a href="rotation-direction-tracking.html#cb565-6" tabindex="-1"></a>  <span class="at">cores   =</span> <span class="dv">4</span>,</span>
-<span id="cb565-7"><a href="rotation-direction-tracking.html#cb565-7" tabindex="-1"></a>  <span class="at">seed    =</span> <span class="dv">42</span>,</span>
-<span id="cb565-8"><a href="rotation-direction-tracking.html#cb565-8" tabindex="-1"></a>  <span class="at">warmup =</span> <span class="dv">500</span>,</span>
-<span id="cb565-9"><a href="rotation-direction-tracking.html#cb565-9" tabindex="-1"></a>  <span class="at">iter    =</span> <span class="dv">2000</span>,</span>
-<span id="cb565-10"><a href="rotation-direction-tracking.html#cb565-10" tabindex="-1"></a>  <span class="at">file =</span> <span class="fu">paste0</span>(fits_path, <span class="st">&#39;rotation_dir_detector_change_1.rds&#39;</span>),</span>
-<span id="cb565-11"><a href="rotation-direction-tracking.html#cb565-11" tabindex="-1"></a>  <span class="at">backend =</span> <span class="st">&quot;cmdstanr&quot;</span>,</span>
-<span id="cb565-12"><a href="rotation-direction-tracking.html#cb565-12" tabindex="-1"></a>  <span class="at">threads =</span> <span class="fu">threading</span>(<span class="dv">100</span>),</span>
-<span id="cb565-13"><a href="rotation-direction-tracking.html#cb565-13" tabindex="-1"></a>  <span class="at">control =</span> <span class="fu">list</span>(<span class="at">adapt_delta =</span> <span class="fl">0.95</span>),</span>
-<span id="cb565-14"><a href="rotation-direction-tracking.html#cb565-14" tabindex="-1"></a>  <span class="at">save_pars =</span> <span class="fu">save_pars</span>(<span class="at">all =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb565-15"><a href="rotation-direction-tracking.html#cb565-15" tabindex="-1"></a>  )</span></code></pre></div>
+<div class="sourceCode" id="cb667"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb667-1"><a href="rotation-direction-tracking.html#cb667-1" tabindex="-1"></a>m.RotationDirection.DetectorChange.data <span class="ot">&lt;-</span> m.RotationDirection.tracking.data</span></code></pre></div>
+<div class="sourceCode" id="cb668"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb668-1"><a href="rotation-direction-tracking.html#cb668-1" tabindex="-1"></a>m.RotationDirection.DetectorChange.formula <span class="ot">&lt;-</span> <span class="fu">brmsformula</span>(</span>
+<span id="cb668-2"><a href="rotation-direction-tracking.html#cb668-2" tabindex="-1"></a>  IsRotationDifferent <span class="sc">~</span> IsDetectorChangeImporved <span class="sc">*</span> SignalingType <span class="sc">*</span> ResourceSpeed <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> Participant),</span>
+<span id="cb668-3"><a href="rotation-direction-tracking.html#cb668-3" tabindex="-1"></a>  <span class="at">family =</span> <span class="fu">bernoulli</span>()</span>
+<span id="cb668-4"><a href="rotation-direction-tracking.html#cb668-4" tabindex="-1"></a>  )</span>
+<span id="cb668-5"><a href="rotation-direction-tracking.html#cb668-5" tabindex="-1"></a></span>
+<span id="cb668-6"><a href="rotation-direction-tracking.html#cb668-6" tabindex="-1"></a>m.RotationDirection.DetectorChange.formula_comparison <span class="ot">&lt;-</span> <span class="fu">brmsformula</span>(</span>
+<span id="cb668-7"><a href="rotation-direction-tracking.html#cb668-7" tabindex="-1"></a>  IsRotationDifferent <span class="sc">~</span> IsDetectorChangeImporved <span class="sc">*</span> SignalingType <span class="sc">*</span> ResourceSpeed</span>
+<span id="cb668-8"><a href="rotation-direction-tracking.html#cb668-8" tabindex="-1"></a>  )</span>
+<span id="cb668-9"><a href="rotation-direction-tracking.html#cb668-9" tabindex="-1"></a></span>
+<span id="cb668-10"><a href="rotation-direction-tracking.html#cb668-10" tabindex="-1"></a>m.RotationDirection.DetectorChange.priors <span class="ot">&lt;-</span></span>
+<span id="cb668-11"><a href="rotation-direction-tracking.html#cb668-11" tabindex="-1"></a>  <span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="at">class =</span> <span class="st">&quot;Intercept&quot;</span>) <span class="sc">+</span></span>
+<span id="cb668-12"><a href="rotation-direction-tracking.html#cb668-12" tabindex="-1"></a>  <span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>, <span class="fl">0.5</span>), <span class="at">class =</span> b) <span class="sc">+</span></span>
+<span id="cb668-13"><a href="rotation-direction-tracking.html#cb668-13" tabindex="-1"></a>  <span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>, <span class="fl">0.1</span>), <span class="at">class =</span> <span class="st">&#39;sd&#39;</span>)</span></code></pre></div>
+<div id="model-fitting-34" class="section level3 hasAnchor">
+<h3>Model fitting<a href="rotation-direction-tracking.html#model-fitting-34" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb669"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb669-1"><a href="rotation-direction-tracking.html#cb669-1" tabindex="-1"></a>m.RotationDirection.DetectorChange.fit <span class="ot">&lt;-</span> <span class="fu">brm</span>(</span>
+<span id="cb669-2"><a href="rotation-direction-tracking.html#cb669-2" tabindex="-1"></a>  <span class="at">formula =</span> m.RotationDirection.DetectorChange.formula,</span>
+<span id="cb669-3"><a href="rotation-direction-tracking.html#cb669-3" tabindex="-1"></a>  <span class="at">data    =</span> m.RotationDirection.DetectorChange.data,</span>
+<span id="cb669-4"><a href="rotation-direction-tracking.html#cb669-4" tabindex="-1"></a>  <span class="at">prior   =</span> m.RotationDirection.DetectorChange.priors,</span>
+<span id="cb669-5"><a href="rotation-direction-tracking.html#cb669-5" tabindex="-1"></a>  <span class="at">chains  =</span> <span class="dv">4</span>,</span>
+<span id="cb669-6"><a href="rotation-direction-tracking.html#cb669-6" tabindex="-1"></a>  <span class="at">cores   =</span> <span class="dv">4</span>,</span>
+<span id="cb669-7"><a href="rotation-direction-tracking.html#cb669-7" tabindex="-1"></a>  <span class="at">seed    =</span> <span class="dv">42</span>,</span>
+<span id="cb669-8"><a href="rotation-direction-tracking.html#cb669-8" tabindex="-1"></a>  <span class="at">warmup =</span> <span class="dv">500</span>,</span>
+<span id="cb669-9"><a href="rotation-direction-tracking.html#cb669-9" tabindex="-1"></a>  <span class="at">iter    =</span> <span class="dv">2000</span>,</span>
+<span id="cb669-10"><a href="rotation-direction-tracking.html#cb669-10" tabindex="-1"></a>  <span class="at">file =</span> <span class="fu">paste0</span>(fits_path, <span class="st">&#39;rotation_dir_detector_change_1.rds&#39;</span>),</span>
+<span id="cb669-11"><a href="rotation-direction-tracking.html#cb669-11" tabindex="-1"></a>  <span class="at">backend =</span> <span class="st">&quot;cmdstanr&quot;</span>,</span>
+<span id="cb669-12"><a href="rotation-direction-tracking.html#cb669-12" tabindex="-1"></a>  <span class="at">threads =</span> <span class="fu">threading</span>(<span class="dv">100</span>),</span>
+<span id="cb669-13"><a href="rotation-direction-tracking.html#cb669-13" tabindex="-1"></a>  <span class="at">control =</span> <span class="fu">list</span>(<span class="at">adapt_delta =</span> <span class="fl">0.95</span>),</span>
+<span id="cb669-14"><a href="rotation-direction-tracking.html#cb669-14" tabindex="-1"></a>  <span class="at">save_pars =</span> <span class="fu">save_pars</span>(<span class="at">all =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb669-15"><a href="rotation-direction-tracking.html#cb669-15" tabindex="-1"></a>  )</span></code></pre></div>
 </div>
-<div id="model-diagnostics-33" class="section level3 hasAnchor">
-<h3>Model diagnostics<a href="rotation-direction-tracking.html#model-diagnostics-33" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-638-1.png" width="672" style="display: block; margin: auto;" /><img src="collective_tracking_results_files/figure-html/unnamed-chunk-638-2.png" width="672" style="display: block; margin: auto;" /><img src="collective_tracking_results_files/figure-html/unnamed-chunk-638-3.png" width="672" style="display: block; margin: auto;" /><img src="collective_tracking_results_files/figure-html/unnamed-chunk-638-4.png" width="672" style="display: block; margin: auto;" /></p>
+<div id="model-diagnostics-34" class="section level3 hasAnchor">
+<h3>Model diagnostics<a href="rotation-direction-tracking.html#model-diagnostics-34" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-785-1.png" width="672" style="display: block; margin: auto;" /><img src="collective_tracking_results_files/figure-html/unnamed-chunk-785-2.png" width="672" style="display: block; margin: auto;" /><img src="collective_tracking_results_files/figure-html/unnamed-chunk-785-3.png" width="672" style="display: block; margin: auto;" /><img src="collective_tracking_results_files/figure-html/unnamed-chunk-785-4.png" width="672" style="display: block; margin: auto;" /></p>
 <pre><code>##  Family: bernoulli 
 ##   Links: mu = logit 
 ## Formula: IsRotationDifferent ~ IsDetectorChangeImporved * SignalingType * ResourceSpeed + (1 | Participant) 
@@ -481,81 +580,81 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 ## and Tail_ESS are effective sample size measures, and Rhat is the potential
 ## scale reduction factor on split chains (at convergence, Rhat = 1).</code></pre>
 </div>
-<div id="model-predictions-11" class="section level3 hasAnchor">
-<h3>Model predictions<a href="rotation-direction-tracking.html#model-predictions-11" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="model-predictions-13" class="section level3 hasAnchor">
+<h3>Model predictions<a href="rotation-direction-tracking.html#model-predictions-13" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
-<div id="figure-30" class="section level3 hasAnchor">
-<h3>Figure<a href="rotation-direction-tracking.html#figure-30" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb567"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb567-1"><a href="rotation-direction-tracking.html#cb567-1" tabindex="-1"></a>fig_rotation_direction_detector_change <span class="ot">&lt;-</span> m.RotationDirection.DetectorChange.draws <span class="sc">%&gt;%</span></span>
-<span id="cb567-2"><a href="rotation-direction-tracking.html#cb567-2" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">IsDetectorChangeImporved =</span> <span class="fu">ifelse</span>(IsDetectorChangeImporved <span class="sc">==</span> <span class="dv">1</span>, <span class="st">&quot;Approaching Resource&quot;</span>, <span class="st">&quot;Moving Away from Resource&quot;</span>)) <span class="sc">%&gt;%</span> </span>
-<span id="cb567-3"><a href="rotation-direction-tracking.html#cb567-3" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> SignalingType, </span>
-<span id="cb567-4"><a href="rotation-direction-tracking.html#cb567-4" tabindex="-1"></a>             <span class="at">y =</span> .epred, </span>
-<span id="cb567-5"><a href="rotation-direction-tracking.html#cb567-5" tabindex="-1"></a>             <span class="at">color =</span> SignalingType, </span>
-<span id="cb567-6"><a href="rotation-direction-tracking.html#cb567-6" tabindex="-1"></a>             <span class="at">fill =</span> SignalingType,</span>
-<span id="cb567-7"><a href="rotation-direction-tracking.html#cb567-7" tabindex="-1"></a>             <span class="at">shape =</span> ResourceSpeed)) <span class="sc">+</span></span>
-<span id="cb567-8"><a href="rotation-direction-tracking.html#cb567-8" tabindex="-1"></a>  ggdist<span class="sc">::</span><span class="fu">stat_pointinterval</span>(</span>
-<span id="cb567-9"><a href="rotation-direction-tracking.html#cb567-9" tabindex="-1"></a>    <span class="at">position =</span> <span class="fu">position_dodge</span>(<span class="at">width =</span> .<span class="dv">5</span>),</span>
-<span id="cb567-10"><a href="rotation-direction-tracking.html#cb567-10" tabindex="-1"></a>    <span class="at">point_interval =</span> <span class="st">&quot;mean_hdci&quot;</span>,</span>
-<span id="cb567-11"><a href="rotation-direction-tracking.html#cb567-11" tabindex="-1"></a>    <span class="at">.width =</span> <span class="fl">0.9</span>,</span>
-<span id="cb567-12"><a href="rotation-direction-tracking.html#cb567-12" tabindex="-1"></a>    <span class="at">point_size =</span> <span class="fl">3.6</span>,</span>
-<span id="cb567-13"><a href="rotation-direction-tracking.html#cb567-13" tabindex="-1"></a>    ) <span class="sc">+</span> </span>
-<span id="cb567-14"><a href="rotation-direction-tracking.html#cb567-14" tabindex="-1"></a>  <span class="fu">theme_nice</span>(<span class="at">legend.pos =</span> <span class="st">&quot;right&quot;</span>) <span class="sc">+</span></span>
-<span id="cb567-15"><a href="rotation-direction-tracking.html#cb567-15" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="st">&#39;A&#39;</span>, <span class="st">&#39;NP&#39;</span>, <span class="st">&#39;VP&#39;</span>, <span class="st">&#39;FP&#39;</span>),</span>
-<span id="cb567-16"><a href="rotation-direction-tracking.html#cb567-16" tabindex="-1"></a>                     <span class="at">aesthetics =</span> <span class="fu">c</span>(<span class="st">&quot;colour&quot;</span>, <span class="st">&quot;fill&quot;</span>),</span>
-<span id="cb567-17"><a href="rotation-direction-tracking.html#cb567-17" tabindex="-1"></a>                     <span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;#000000&quot;</span>, <span class="st">&quot;#DF536B&quot;</span>, <span class="st">&quot;#61D04F&quot;</span>, <span class="st">&quot;#2297E6&quot;</span>), </span>
-<span id="cb567-18"><a href="rotation-direction-tracking.html#cb567-18" tabindex="-1"></a>                     <span class="at">guide =</span> <span class="fu">guide_legend</span>(<span class="at">title =</span> <span class="st">&quot;Payoff Condition&quot;</span>)) <span class="sc">+</span></span>
-<span id="cb567-19"><a href="rotation-direction-tracking.html#cb567-19" tabindex="-1"></a>  <span class="fu">scale_shape_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="dv">21</span>, <span class="dv">24</span>), <span class="at">guide =</span> <span class="fu">guide_legend</span>(<span class="at">title =</span> <span class="st">&quot;Resource&quot;</span>)) <span class="sc">+</span></span>
-<span id="cb567-20"><a href="rotation-direction-tracking.html#cb567-20" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">cols =</span> <span class="fu">vars</span>(IsDetectorChangeImporved)) <span class="sc">+</span></span>
-<span id="cb567-21"><a href="rotation-direction-tracking.html#cb567-21" tabindex="-1"></a>  <span class="fu">theme_clean</span>() <span class="sc">+</span></span>
-<span id="cb567-22"><a href="rotation-direction-tracking.html#cb567-22" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;bottom&quot;</span>) <span class="sc">+</span></span>
-<span id="cb567-23"><a href="rotation-direction-tracking.html#cb567-23" tabindex="-1"></a>  <span class="fu">panel_border</span>() <span class="sc">+</span></span>
-<span id="cb567-24"><a href="rotation-direction-tracking.html#cb567-24" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">&quot;P(Rotation Direction Change)&quot;</span>, <span class="at">x =</span> <span class="st">&quot;&quot;</span>) <span class="co"># &quot;Payoff Condition&quot;</span></span>
-<span id="cb567-25"><a href="rotation-direction-tracking.html#cb567-25" tabindex="-1"></a></span>
-<span id="cb567-26"><a href="rotation-direction-tracking.html#cb567-26" tabindex="-1"></a>fig_rotation_direction_detector_change</span></code></pre></div>
-<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-641-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div id="figure-31" class="section level3 hasAnchor">
+<h3>Figure<a href="rotation-direction-tracking.html#figure-31" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb671"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb671-1"><a href="rotation-direction-tracking.html#cb671-1" tabindex="-1"></a>fig_rotation_direction_detector_change <span class="ot">&lt;-</span> m.RotationDirection.DetectorChange.draws <span class="sc">%&gt;%</span></span>
+<span id="cb671-2"><a href="rotation-direction-tracking.html#cb671-2" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">IsDetectorChangeImporved =</span> <span class="fu">ifelse</span>(IsDetectorChangeImporved <span class="sc">==</span> <span class="dv">1</span>, <span class="st">&quot;Approaching Resource&quot;</span>, <span class="st">&quot;Moving Away from Resource&quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb671-3"><a href="rotation-direction-tracking.html#cb671-3" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> SignalingType, </span>
+<span id="cb671-4"><a href="rotation-direction-tracking.html#cb671-4" tabindex="-1"></a>             <span class="at">y =</span> .epred, </span>
+<span id="cb671-5"><a href="rotation-direction-tracking.html#cb671-5" tabindex="-1"></a>             <span class="at">color =</span> SignalingType, </span>
+<span id="cb671-6"><a href="rotation-direction-tracking.html#cb671-6" tabindex="-1"></a>             <span class="at">fill =</span> SignalingType,</span>
+<span id="cb671-7"><a href="rotation-direction-tracking.html#cb671-7" tabindex="-1"></a>             <span class="at">shape =</span> ResourceSpeed)) <span class="sc">+</span></span>
+<span id="cb671-8"><a href="rotation-direction-tracking.html#cb671-8" tabindex="-1"></a>  ggdist<span class="sc">::</span><span class="fu">stat_pointinterval</span>(</span>
+<span id="cb671-9"><a href="rotation-direction-tracking.html#cb671-9" tabindex="-1"></a>    <span class="at">position =</span> <span class="fu">position_dodge</span>(<span class="at">width =</span> .<span class="dv">5</span>),</span>
+<span id="cb671-10"><a href="rotation-direction-tracking.html#cb671-10" tabindex="-1"></a>    <span class="at">point_interval =</span> <span class="st">&quot;mean_hdci&quot;</span>,</span>
+<span id="cb671-11"><a href="rotation-direction-tracking.html#cb671-11" tabindex="-1"></a>    <span class="at">.width =</span> <span class="fl">0.9</span>,</span>
+<span id="cb671-12"><a href="rotation-direction-tracking.html#cb671-12" tabindex="-1"></a>    <span class="at">point_size =</span> <span class="fl">3.6</span>,</span>
+<span id="cb671-13"><a href="rotation-direction-tracking.html#cb671-13" tabindex="-1"></a>    ) <span class="sc">+</span> </span>
+<span id="cb671-14"><a href="rotation-direction-tracking.html#cb671-14" tabindex="-1"></a>  <span class="fu">theme_nice</span>(<span class="at">legend.pos =</span> <span class="st">&quot;right&quot;</span>) <span class="sc">+</span></span>
+<span id="cb671-15"><a href="rotation-direction-tracking.html#cb671-15" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="st">&#39;A&#39;</span>, <span class="st">&#39;NP&#39;</span>, <span class="st">&#39;VP&#39;</span>, <span class="st">&#39;FP&#39;</span>),</span>
+<span id="cb671-16"><a href="rotation-direction-tracking.html#cb671-16" tabindex="-1"></a>                     <span class="at">aesthetics =</span> <span class="fu">c</span>(<span class="st">&quot;colour&quot;</span>, <span class="st">&quot;fill&quot;</span>),</span>
+<span id="cb671-17"><a href="rotation-direction-tracking.html#cb671-17" tabindex="-1"></a>                     <span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;#000000&quot;</span>, <span class="st">&quot;#DF536B&quot;</span>, <span class="st">&quot;#61D04F&quot;</span>, <span class="st">&quot;#2297E6&quot;</span>), </span>
+<span id="cb671-18"><a href="rotation-direction-tracking.html#cb671-18" tabindex="-1"></a>                     <span class="at">guide =</span> <span class="fu">guide_legend</span>(<span class="at">title =</span> <span class="st">&quot;Payoff Condition&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb671-19"><a href="rotation-direction-tracking.html#cb671-19" tabindex="-1"></a>  <span class="fu">scale_shape_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="dv">21</span>, <span class="dv">24</span>), <span class="at">guide =</span> <span class="fu">guide_legend</span>(<span class="at">title =</span> <span class="st">&quot;Resource&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb671-20"><a href="rotation-direction-tracking.html#cb671-20" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">cols =</span> <span class="fu">vars</span>(IsDetectorChangeImporved)) <span class="sc">+</span></span>
+<span id="cb671-21"><a href="rotation-direction-tracking.html#cb671-21" tabindex="-1"></a>  <span class="fu">theme_clean</span>() <span class="sc">+</span></span>
+<span id="cb671-22"><a href="rotation-direction-tracking.html#cb671-22" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;bottom&quot;</span>) <span class="sc">+</span></span>
+<span id="cb671-23"><a href="rotation-direction-tracking.html#cb671-23" tabindex="-1"></a>  <span class="fu">panel_border</span>() <span class="sc">+</span></span>
+<span id="cb671-24"><a href="rotation-direction-tracking.html#cb671-24" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">&quot;P(Rotation Direction Change)&quot;</span>, <span class="at">x =</span> <span class="st">&quot;&quot;</span>) <span class="co"># &quot;Payoff Condition&quot;</span></span>
+<span id="cb671-25"><a href="rotation-direction-tracking.html#cb671-25" tabindex="-1"></a></span>
+<span id="cb671-26"><a href="rotation-direction-tracking.html#cb671-26" tabindex="-1"></a>fig_rotation_direction_detector_change</span></code></pre></div>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-788-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 </div>
 <div id="social-information" class="section level2 hasAnchor">
 <h2>Social Information<a href="rotation-direction-tracking.html#social-information" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb568"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb568-1"><a href="rotation-direction-tracking.html#cb568-1" tabindex="-1"></a>m.RotationDirection.SocInfoQual.data <span class="ot">&lt;-</span> m.RotationDirection.tracking.data <span class="sc">%&gt;%</span> </span>
-<span id="cb568-2"><a href="rotation-direction-tracking.html#cb568-2" tabindex="-1"></a>  <span class="fu">filter</span>(SignalingType <span class="sc">!=</span> <span class="st">&#39;A&#39;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb568-3"><a href="rotation-direction-tracking.html#cb568-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">SignalingType =</span> <span class="fu">factor</span>(SignalingType, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">&#39;NP&#39;</span>, <span class="st">&#39;VP&#39;</span>, <span class="st">&#39;FP&#39;</span>))) <span class="sc">%&gt;%</span></span>
-<span id="cb568-4"><a href="rotation-direction-tracking.html#cb568-4" tabindex="-1"></a>  <span class="fu">filter</span>(IsSocialInfo <span class="sc">==</span> <span class="st">&quot;Yes&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb568-5"><a href="rotation-direction-tracking.html#cb568-5" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(IsSocialInfoDirecionDifferent))</span></code></pre></div>
-<div class="sourceCode" id="cb569"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb569-1"><a href="rotation-direction-tracking.html#cb569-1" tabindex="-1"></a>m.RotationDirection.SocInfoQual.formula <span class="ot">&lt;-</span> <span class="fu">brmsformula</span>(</span>
-<span id="cb569-2"><a href="rotation-direction-tracking.html#cb569-2" tabindex="-1"></a>  IsRotationDifferent <span class="sc">~</span> SignalingType <span class="sc">*</span> ResourceSpeed <span class="sc">*</span> IsSocialInfoDirecionDifferent <span class="sc">*</span> SocInfoQuality <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> Participant),</span>
-<span id="cb569-3"><a href="rotation-direction-tracking.html#cb569-3" tabindex="-1"></a>  <span class="at">family =</span> <span class="fu">bernoulli</span>()</span>
-<span id="cb569-4"><a href="rotation-direction-tracking.html#cb569-4" tabindex="-1"></a>  )</span>
-<span id="cb569-5"><a href="rotation-direction-tracking.html#cb569-5" tabindex="-1"></a></span>
-<span id="cb569-6"><a href="rotation-direction-tracking.html#cb569-6" tabindex="-1"></a>m.RotationDirection.SocInfoQual.formula_comparison <span class="ot">&lt;-</span> <span class="fu">brmsformula</span>(</span>
-<span id="cb569-7"><a href="rotation-direction-tracking.html#cb569-7" tabindex="-1"></a>  IsRotationDifferent <span class="sc">~</span> SignalingType <span class="sc">*</span> ResourceSpeed <span class="sc">*</span> IsSocialInfoDirecionDifferent <span class="sc">*</span> SocInfoQuality</span>
-<span id="cb569-8"><a href="rotation-direction-tracking.html#cb569-8" tabindex="-1"></a>  )</span>
-<span id="cb569-9"><a href="rotation-direction-tracking.html#cb569-9" tabindex="-1"></a></span>
-<span id="cb569-10"><a href="rotation-direction-tracking.html#cb569-10" tabindex="-1"></a>m.RotationDirection.SocInfoQual.priors <span class="ot">&lt;-</span></span>
-<span id="cb569-11"><a href="rotation-direction-tracking.html#cb569-11" tabindex="-1"></a>  <span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="at">class =</span> <span class="st">&quot;Intercept&quot;</span>) <span class="sc">+</span></span>
-<span id="cb569-12"><a href="rotation-direction-tracking.html#cb569-12" tabindex="-1"></a>  <span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>, <span class="fl">0.5</span>), <span class="at">class =</span> b) <span class="sc">+</span></span>
-<span id="cb569-13"><a href="rotation-direction-tracking.html#cb569-13" tabindex="-1"></a>  <span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>, <span class="fl">0.1</span>), <span class="at">class =</span> <span class="st">&#39;sd&#39;</span>)</span></code></pre></div>
-<div id="model-fitting-31" class="section level3 hasAnchor">
-<h3>Model fitting<a href="rotation-direction-tracking.html#model-fitting-31" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb570"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb570-1"><a href="rotation-direction-tracking.html#cb570-1" tabindex="-1"></a>m.RotationDirection.SocInfoQual.fit <span class="ot">&lt;-</span> <span class="fu">brm</span>(</span>
-<span id="cb570-2"><a href="rotation-direction-tracking.html#cb570-2" tabindex="-1"></a>  <span class="at">formula =</span> m.RotationDirection.SocInfoQual.formula,</span>
-<span id="cb570-3"><a href="rotation-direction-tracking.html#cb570-3" tabindex="-1"></a>  <span class="at">data    =</span> m.RotationDirection.SocInfoQual.data,</span>
-<span id="cb570-4"><a href="rotation-direction-tracking.html#cb570-4" tabindex="-1"></a>  <span class="at">prior   =</span> m.RotationDirection.SocInfoQual.priors,</span>
-<span id="cb570-5"><a href="rotation-direction-tracking.html#cb570-5" tabindex="-1"></a>  <span class="at">chains  =</span> <span class="dv">4</span>,</span>
-<span id="cb570-6"><a href="rotation-direction-tracking.html#cb570-6" tabindex="-1"></a>  <span class="at">cores   =</span> <span class="dv">4</span>,</span>
-<span id="cb570-7"><a href="rotation-direction-tracking.html#cb570-7" tabindex="-1"></a>  <span class="at">seed    =</span> <span class="dv">42</span>,</span>
-<span id="cb570-8"><a href="rotation-direction-tracking.html#cb570-8" tabindex="-1"></a>  <span class="at">warmup =</span> <span class="dv">500</span>,</span>
-<span id="cb570-9"><a href="rotation-direction-tracking.html#cb570-9" tabindex="-1"></a>  <span class="at">iter    =</span> <span class="dv">2000</span>,</span>
-<span id="cb570-10"><a href="rotation-direction-tracking.html#cb570-10" tabindex="-1"></a>  <span class="at">file =</span> <span class="fu">paste0</span>(fits_path, <span class="st">&#39;rotation_dir_soc_info_quality_1.rds&#39;</span>),</span>
-<span id="cb570-11"><a href="rotation-direction-tracking.html#cb570-11" tabindex="-1"></a>  <span class="at">backend =</span> <span class="st">&quot;cmdstanr&quot;</span>,</span>
-<span id="cb570-12"><a href="rotation-direction-tracking.html#cb570-12" tabindex="-1"></a>  <span class="at">threads =</span> <span class="fu">threading</span>(<span class="dv">100</span>),</span>
-<span id="cb570-13"><a href="rotation-direction-tracking.html#cb570-13" tabindex="-1"></a>  <span class="at">control =</span> <span class="fu">list</span>(<span class="at">adapt_delta =</span> <span class="fl">0.95</span>),</span>
-<span id="cb570-14"><a href="rotation-direction-tracking.html#cb570-14" tabindex="-1"></a>  <span class="at">save_pars =</span> <span class="fu">save_pars</span>(<span class="at">all =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb570-15"><a href="rotation-direction-tracking.html#cb570-15" tabindex="-1"></a>  )</span></code></pre></div>
+<div class="sourceCode" id="cb672"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb672-1"><a href="rotation-direction-tracking.html#cb672-1" tabindex="-1"></a>m.RotationDirection.SocInfoQual.data <span class="ot">&lt;-</span> m.RotationDirection.tracking.data <span class="sc">%&gt;%</span> </span>
+<span id="cb672-2"><a href="rotation-direction-tracking.html#cb672-2" tabindex="-1"></a>  <span class="fu">filter</span>(SignalingType <span class="sc">!=</span> <span class="st">&#39;A&#39;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb672-3"><a href="rotation-direction-tracking.html#cb672-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">SignalingType =</span> <span class="fu">factor</span>(SignalingType, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">&#39;NP&#39;</span>, <span class="st">&#39;VP&#39;</span>, <span class="st">&#39;FP&#39;</span>))) <span class="sc">%&gt;%</span></span>
+<span id="cb672-4"><a href="rotation-direction-tracking.html#cb672-4" tabindex="-1"></a>  <span class="fu">filter</span>(IsSocialInfo <span class="sc">==</span> <span class="st">&quot;Yes&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb672-5"><a href="rotation-direction-tracking.html#cb672-5" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(IsSocialInfoDirecionDifferent))</span></code></pre></div>
+<div class="sourceCode" id="cb673"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb673-1"><a href="rotation-direction-tracking.html#cb673-1" tabindex="-1"></a>m.RotationDirection.SocInfoQual.formula <span class="ot">&lt;-</span> <span class="fu">brmsformula</span>(</span>
+<span id="cb673-2"><a href="rotation-direction-tracking.html#cb673-2" tabindex="-1"></a>  IsRotationDifferent <span class="sc">~</span> SignalingType <span class="sc">*</span> ResourceSpeed <span class="sc">*</span> IsSocialInfoDirecionDifferent <span class="sc">*</span> SocInfoQuality <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> Participant),</span>
+<span id="cb673-3"><a href="rotation-direction-tracking.html#cb673-3" tabindex="-1"></a>  <span class="at">family =</span> <span class="fu">bernoulli</span>()</span>
+<span id="cb673-4"><a href="rotation-direction-tracking.html#cb673-4" tabindex="-1"></a>  )</span>
+<span id="cb673-5"><a href="rotation-direction-tracking.html#cb673-5" tabindex="-1"></a></span>
+<span id="cb673-6"><a href="rotation-direction-tracking.html#cb673-6" tabindex="-1"></a>m.RotationDirection.SocInfoQual.formula_comparison <span class="ot">&lt;-</span> <span class="fu">brmsformula</span>(</span>
+<span id="cb673-7"><a href="rotation-direction-tracking.html#cb673-7" tabindex="-1"></a>  IsRotationDifferent <span class="sc">~</span> SignalingType <span class="sc">*</span> ResourceSpeed <span class="sc">*</span> IsSocialInfoDirecionDifferent <span class="sc">*</span> SocInfoQuality</span>
+<span id="cb673-8"><a href="rotation-direction-tracking.html#cb673-8" tabindex="-1"></a>  )</span>
+<span id="cb673-9"><a href="rotation-direction-tracking.html#cb673-9" tabindex="-1"></a></span>
+<span id="cb673-10"><a href="rotation-direction-tracking.html#cb673-10" tabindex="-1"></a>m.RotationDirection.SocInfoQual.priors <span class="ot">&lt;-</span></span>
+<span id="cb673-11"><a href="rotation-direction-tracking.html#cb673-11" tabindex="-1"></a>  <span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="at">class =</span> <span class="st">&quot;Intercept&quot;</span>) <span class="sc">+</span></span>
+<span id="cb673-12"><a href="rotation-direction-tracking.html#cb673-12" tabindex="-1"></a>  <span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>, <span class="fl">0.5</span>), <span class="at">class =</span> b) <span class="sc">+</span></span>
+<span id="cb673-13"><a href="rotation-direction-tracking.html#cb673-13" tabindex="-1"></a>  <span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>, <span class="fl">0.1</span>), <span class="at">class =</span> <span class="st">&#39;sd&#39;</span>)</span></code></pre></div>
+<div id="model-fitting-35" class="section level3 hasAnchor">
+<h3>Model fitting<a href="rotation-direction-tracking.html#model-fitting-35" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb674"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb674-1"><a href="rotation-direction-tracking.html#cb674-1" tabindex="-1"></a>m.RotationDirection.SocInfoQual.fit <span class="ot">&lt;-</span> <span class="fu">brm</span>(</span>
+<span id="cb674-2"><a href="rotation-direction-tracking.html#cb674-2" tabindex="-1"></a>  <span class="at">formula =</span> m.RotationDirection.SocInfoQual.formula,</span>
+<span id="cb674-3"><a href="rotation-direction-tracking.html#cb674-3" tabindex="-1"></a>  <span class="at">data    =</span> m.RotationDirection.SocInfoQual.data,</span>
+<span id="cb674-4"><a href="rotation-direction-tracking.html#cb674-4" tabindex="-1"></a>  <span class="at">prior   =</span> m.RotationDirection.SocInfoQual.priors,</span>
+<span id="cb674-5"><a href="rotation-direction-tracking.html#cb674-5" tabindex="-1"></a>  <span class="at">chains  =</span> <span class="dv">4</span>,</span>
+<span id="cb674-6"><a href="rotation-direction-tracking.html#cb674-6" tabindex="-1"></a>  <span class="at">cores   =</span> <span class="dv">4</span>,</span>
+<span id="cb674-7"><a href="rotation-direction-tracking.html#cb674-7" tabindex="-1"></a>  <span class="at">seed    =</span> <span class="dv">42</span>,</span>
+<span id="cb674-8"><a href="rotation-direction-tracking.html#cb674-8" tabindex="-1"></a>  <span class="at">warmup =</span> <span class="dv">500</span>,</span>
+<span id="cb674-9"><a href="rotation-direction-tracking.html#cb674-9" tabindex="-1"></a>  <span class="at">iter    =</span> <span class="dv">2000</span>,</span>
+<span id="cb674-10"><a href="rotation-direction-tracking.html#cb674-10" tabindex="-1"></a>  <span class="at">file =</span> <span class="fu">paste0</span>(fits_path, <span class="st">&#39;rotation_dir_soc_info_quality_1.rds&#39;</span>),</span>
+<span id="cb674-11"><a href="rotation-direction-tracking.html#cb674-11" tabindex="-1"></a>  <span class="at">backend =</span> <span class="st">&quot;cmdstanr&quot;</span>,</span>
+<span id="cb674-12"><a href="rotation-direction-tracking.html#cb674-12" tabindex="-1"></a>  <span class="at">threads =</span> <span class="fu">threading</span>(<span class="dv">100</span>),</span>
+<span id="cb674-13"><a href="rotation-direction-tracking.html#cb674-13" tabindex="-1"></a>  <span class="at">control =</span> <span class="fu">list</span>(<span class="at">adapt_delta =</span> <span class="fl">0.95</span>),</span>
+<span id="cb674-14"><a href="rotation-direction-tracking.html#cb674-14" tabindex="-1"></a>  <span class="at">save_pars =</span> <span class="fu">save_pars</span>(<span class="at">all =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb674-15"><a href="rotation-direction-tracking.html#cb674-15" tabindex="-1"></a>  )</span></code></pre></div>
 </div>
-<div id="model-diagnostics-34" class="section level3 hasAnchor">
-<h3>Model diagnostics<a href="rotation-direction-tracking.html#model-diagnostics-34" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-646-1.png" width="672" style="display: block; margin: auto;" /><img src="collective_tracking_results_files/figure-html/unnamed-chunk-646-2.png" width="672" style="display: block; margin: auto;" /><img src="collective_tracking_results_files/figure-html/unnamed-chunk-646-3.png" width="672" style="display: block; margin: auto;" /><img src="collective_tracking_results_files/figure-html/unnamed-chunk-646-4.png" width="672" style="display: block; margin: auto;" /><img src="collective_tracking_results_files/figure-html/unnamed-chunk-646-5.png" width="672" style="display: block; margin: auto;" /></p>
+<div id="model-diagnostics-35" class="section level3 hasAnchor">
+<h3>Model diagnostics<a href="rotation-direction-tracking.html#model-diagnostics-35" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-793-1.png" width="672" style="display: block; margin: auto;" /><img src="collective_tracking_results_files/figure-html/unnamed-chunk-793-2.png" width="672" style="display: block; margin: auto;" /><img src="collective_tracking_results_files/figure-html/unnamed-chunk-793-3.png" width="672" style="display: block; margin: auto;" /><img src="collective_tracking_results_files/figure-html/unnamed-chunk-793-4.png" width="672" style="display: block; margin: auto;" /><img src="collective_tracking_results_files/figure-html/unnamed-chunk-793-5.png" width="672" style="display: block; margin: auto;" /></p>
 <pre><code>##  Family: bernoulli 
 ##   Links: mu = logit 
 ## Formula: IsRotationDifferent ~ SignalingType * ResourceSpeed * IsSocialInfoDirecionDifferent * SocInfoQuality + (1 | Participant) 
@@ -599,46 +698,46 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 ## and Tail_ESS are effective sample size measures, and Rhat is the potential
 ## scale reduction factor on split chains (at convergence, Rhat = 1).</code></pre>
 </div>
-<div id="model-predictions-12" class="section level3 hasAnchor">
-<h3>Model predictions<a href="rotation-direction-tracking.html#model-predictions-12" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="model-predictions-14" class="section level3 hasAnchor">
+<h3>Model predictions<a href="rotation-direction-tracking.html#model-predictions-14" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
-<div id="figure-31" class="section level3 hasAnchor">
-<h3>Figure<a href="rotation-direction-tracking.html#figure-31" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb572"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb572-1"><a href="rotation-direction-tracking.html#cb572-1" tabindex="-1"></a>fig_rotation_direction_soc_info_quality <span class="ot">&lt;-</span> m.RotationDirection.SocInfoQual.draws <span class="sc">%&gt;%</span></span>
-<span id="cb572-2"><a href="rotation-direction-tracking.html#cb572-2" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">IsSocialInfoDirecionDifferent =</span> <span class="fu">case_when</span>(</span>
-<span id="cb572-3"><a href="rotation-direction-tracking.html#cb572-3" tabindex="-1"></a>    IsSocialInfoDirecionDifferent <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">&quot;SI is aligned with rotation&quot;</span>, </span>
-<span id="cb572-4"><a href="rotation-direction-tracking.html#cb572-4" tabindex="-1"></a>    IsSocialInfoDirecionDifferent <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">&quot;SI is not aligned with rotation&quot;</span></span>
-<span id="cb572-5"><a href="rotation-direction-tracking.html#cb572-5" tabindex="-1"></a>    )) <span class="sc">%&gt;%</span></span>
-<span id="cb572-6"><a href="rotation-direction-tracking.html#cb572-6" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">SocInfoQualityCat =</span> <span class="fu">case_when</span>(</span>
-<span id="cb572-7"><a href="rotation-direction-tracking.html#cb572-7" tabindex="-1"></a>    SocInfoQuality <span class="sc">==</span> <span class="sc">-</span><span class="dv">1</span> <span class="sc">~</span> <span class="st">&quot;SI Bad&quot;</span>,</span>
-<span id="cb572-8"><a href="rotation-direction-tracking.html#cb572-8" tabindex="-1"></a>    SocInfoQuality <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">&quot;SI Good&quot;</span>,</span>
-<span id="cb572-9"><a href="rotation-direction-tracking.html#cb572-9" tabindex="-1"></a>  )) <span class="sc">%&gt;%</span> </span>
-<span id="cb572-10"><a href="rotation-direction-tracking.html#cb572-10" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> SignalingType, </span>
-<span id="cb572-11"><a href="rotation-direction-tracking.html#cb572-11" tabindex="-1"></a>             <span class="at">y =</span> .epred, </span>
-<span id="cb572-12"><a href="rotation-direction-tracking.html#cb572-12" tabindex="-1"></a>             <span class="at">color =</span> SignalingType, </span>
-<span id="cb572-13"><a href="rotation-direction-tracking.html#cb572-13" tabindex="-1"></a>             <span class="at">fill =</span> SignalingType,</span>
-<span id="cb572-14"><a href="rotation-direction-tracking.html#cb572-14" tabindex="-1"></a>             <span class="at">shape =</span> SocInfoQualityCat)) <span class="sc">+</span></span>
-<span id="cb572-15"><a href="rotation-direction-tracking.html#cb572-15" tabindex="-1"></a>  ggdist<span class="sc">::</span><span class="fu">stat_pointinterval</span>(</span>
-<span id="cb572-16"><a href="rotation-direction-tracking.html#cb572-16" tabindex="-1"></a>    <span class="at">position =</span> <span class="fu">position_dodge</span>(<span class="at">width =</span> .<span class="dv">5</span>),</span>
-<span id="cb572-17"><a href="rotation-direction-tracking.html#cb572-17" tabindex="-1"></a>    <span class="at">point_interval =</span> <span class="st">&quot;mean_hdci&quot;</span>,</span>
-<span id="cb572-18"><a href="rotation-direction-tracking.html#cb572-18" tabindex="-1"></a>    <span class="at">.width =</span> <span class="fl">0.9</span>,</span>
-<span id="cb572-19"><a href="rotation-direction-tracking.html#cb572-19" tabindex="-1"></a>    <span class="at">point_size =</span> <span class="fl">3.6</span>,</span>
-<span id="cb572-20"><a href="rotation-direction-tracking.html#cb572-20" tabindex="-1"></a>    ) <span class="sc">+</span> </span>
-<span id="cb572-21"><a href="rotation-direction-tracking.html#cb572-21" tabindex="-1"></a>  <span class="fu">theme_nice</span>(<span class="at">legend.pos =</span> <span class="st">&quot;right&quot;</span>) <span class="sc">+</span></span>
-<span id="cb572-22"><a href="rotation-direction-tracking.html#cb572-22" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="st">&#39;A&#39;</span>, <span class="st">&#39;NP&#39;</span>, <span class="st">&#39;VP&#39;</span>, <span class="st">&#39;FP&#39;</span>),</span>
-<span id="cb572-23"><a href="rotation-direction-tracking.html#cb572-23" tabindex="-1"></a>                     <span class="at">aesthetics =</span> <span class="fu">c</span>(<span class="st">&quot;colour&quot;</span>, <span class="st">&quot;fill&quot;</span>),</span>
-<span id="cb572-24"><a href="rotation-direction-tracking.html#cb572-24" tabindex="-1"></a>                     <span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;#000000&quot;</span>, <span class="st">&quot;#DF536B&quot;</span>, <span class="st">&quot;#61D04F&quot;</span>, <span class="st">&quot;#2297E6&quot;</span>), </span>
-<span id="cb572-25"><a href="rotation-direction-tracking.html#cb572-25" tabindex="-1"></a>                     <span class="at">guide =</span> <span class="fu">guide_legend</span>(<span class="at">title =</span> <span class="st">&quot;Payoff Condition&quot;</span>)) <span class="sc">+</span></span>
-<span id="cb572-26"><a href="rotation-direction-tracking.html#cb572-26" tabindex="-1"></a>  <span class="co"># scale_shape_manual(values = c(21, 24), guide = guide_legend(title = &quot;Resource&quot;)) +</span></span>
-<span id="cb572-27"><a href="rotation-direction-tracking.html#cb572-27" tabindex="-1"></a>  <span class="fu">scale_shape_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="dv">22</span>, <span class="dv">23</span>), <span class="at">guide =</span> <span class="fu">guide_legend</span>(<span class="at">title =</span> <span class="st">&quot;SI Quality&quot;</span>)) <span class="sc">+</span></span>
-<span id="cb572-28"><a href="rotation-direction-tracking.html#cb572-28" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">cols =</span> <span class="fu">vars</span>(IsSocialInfoDirecionDifferent), <span class="at">rows =</span> <span class="fu">vars</span>(ResourceSpeed)) <span class="sc">+</span></span>
-<span id="cb572-29"><a href="rotation-direction-tracking.html#cb572-29" tabindex="-1"></a>  <span class="fu">theme_clean</span>() <span class="sc">+</span></span>
-<span id="cb572-30"><a href="rotation-direction-tracking.html#cb572-30" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;bottom&quot;</span>) <span class="sc">+</span></span>
-<span id="cb572-31"><a href="rotation-direction-tracking.html#cb572-31" tabindex="-1"></a>  <span class="fu">panel_border</span>() <span class="sc">+</span></span>
-<span id="cb572-32"><a href="rotation-direction-tracking.html#cb572-32" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">&quot;P(Rotation Direction Change)&quot;</span>, <span class="at">x =</span> <span class="st">&quot;&quot;</span>) <span class="co"># &quot;Payoff Condition&quot;</span></span>
-<span id="cb572-33"><a href="rotation-direction-tracking.html#cb572-33" tabindex="-1"></a></span>
-<span id="cb572-34"><a href="rotation-direction-tracking.html#cb572-34" tabindex="-1"></a>fig_rotation_direction_soc_info_quality</span></code></pre></div>
-<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-649-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div id="figure-32" class="section level3 hasAnchor">
+<h3>Figure<a href="rotation-direction-tracking.html#figure-32" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb676"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb676-1"><a href="rotation-direction-tracking.html#cb676-1" tabindex="-1"></a>fig_rotation_direction_soc_info_quality <span class="ot">&lt;-</span> m.RotationDirection.SocInfoQual.draws <span class="sc">%&gt;%</span></span>
+<span id="cb676-2"><a href="rotation-direction-tracking.html#cb676-2" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">IsSocialInfoDirecionDifferent =</span> <span class="fu">case_when</span>(</span>
+<span id="cb676-3"><a href="rotation-direction-tracking.html#cb676-3" tabindex="-1"></a>    IsSocialInfoDirecionDifferent <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">&quot;SI is aligned with rotation&quot;</span>, </span>
+<span id="cb676-4"><a href="rotation-direction-tracking.html#cb676-4" tabindex="-1"></a>    IsSocialInfoDirecionDifferent <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">&quot;SI is not aligned with rotation&quot;</span></span>
+<span id="cb676-5"><a href="rotation-direction-tracking.html#cb676-5" tabindex="-1"></a>    )) <span class="sc">%&gt;%</span></span>
+<span id="cb676-6"><a href="rotation-direction-tracking.html#cb676-6" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">SocInfoQualityCat =</span> <span class="fu">case_when</span>(</span>
+<span id="cb676-7"><a href="rotation-direction-tracking.html#cb676-7" tabindex="-1"></a>    SocInfoQuality <span class="sc">==</span> <span class="sc">-</span><span class="dv">1</span> <span class="sc">~</span> <span class="st">&quot;SI Bad&quot;</span>,</span>
+<span id="cb676-8"><a href="rotation-direction-tracking.html#cb676-8" tabindex="-1"></a>    SocInfoQuality <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">&quot;SI Good&quot;</span>,</span>
+<span id="cb676-9"><a href="rotation-direction-tracking.html#cb676-9" tabindex="-1"></a>  )) <span class="sc">%&gt;%</span> </span>
+<span id="cb676-10"><a href="rotation-direction-tracking.html#cb676-10" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> SignalingType, </span>
+<span id="cb676-11"><a href="rotation-direction-tracking.html#cb676-11" tabindex="-1"></a>             <span class="at">y =</span> .epred, </span>
+<span id="cb676-12"><a href="rotation-direction-tracking.html#cb676-12" tabindex="-1"></a>             <span class="at">color =</span> SignalingType, </span>
+<span id="cb676-13"><a href="rotation-direction-tracking.html#cb676-13" tabindex="-1"></a>             <span class="at">fill =</span> SignalingType,</span>
+<span id="cb676-14"><a href="rotation-direction-tracking.html#cb676-14" tabindex="-1"></a>             <span class="at">shape =</span> SocInfoQualityCat)) <span class="sc">+</span></span>
+<span id="cb676-15"><a href="rotation-direction-tracking.html#cb676-15" tabindex="-1"></a>  ggdist<span class="sc">::</span><span class="fu">stat_pointinterval</span>(</span>
+<span id="cb676-16"><a href="rotation-direction-tracking.html#cb676-16" tabindex="-1"></a>    <span class="at">position =</span> <span class="fu">position_dodge</span>(<span class="at">width =</span> .<span class="dv">5</span>),</span>
+<span id="cb676-17"><a href="rotation-direction-tracking.html#cb676-17" tabindex="-1"></a>    <span class="at">point_interval =</span> <span class="st">&quot;mean_hdci&quot;</span>,</span>
+<span id="cb676-18"><a href="rotation-direction-tracking.html#cb676-18" tabindex="-1"></a>    <span class="at">.width =</span> <span class="fl">0.9</span>,</span>
+<span id="cb676-19"><a href="rotation-direction-tracking.html#cb676-19" tabindex="-1"></a>    <span class="at">point_size =</span> <span class="fl">3.6</span>,</span>
+<span id="cb676-20"><a href="rotation-direction-tracking.html#cb676-20" tabindex="-1"></a>    ) <span class="sc">+</span> </span>
+<span id="cb676-21"><a href="rotation-direction-tracking.html#cb676-21" tabindex="-1"></a>  <span class="fu">theme_nice</span>(<span class="at">legend.pos =</span> <span class="st">&quot;right&quot;</span>) <span class="sc">+</span></span>
+<span id="cb676-22"><a href="rotation-direction-tracking.html#cb676-22" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="st">&#39;A&#39;</span>, <span class="st">&#39;NP&#39;</span>, <span class="st">&#39;VP&#39;</span>, <span class="st">&#39;FP&#39;</span>),</span>
+<span id="cb676-23"><a href="rotation-direction-tracking.html#cb676-23" tabindex="-1"></a>                     <span class="at">aesthetics =</span> <span class="fu">c</span>(<span class="st">&quot;colour&quot;</span>, <span class="st">&quot;fill&quot;</span>),</span>
+<span id="cb676-24"><a href="rotation-direction-tracking.html#cb676-24" tabindex="-1"></a>                     <span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;#000000&quot;</span>, <span class="st">&quot;#DF536B&quot;</span>, <span class="st">&quot;#61D04F&quot;</span>, <span class="st">&quot;#2297E6&quot;</span>), </span>
+<span id="cb676-25"><a href="rotation-direction-tracking.html#cb676-25" tabindex="-1"></a>                     <span class="at">guide =</span> <span class="fu">guide_legend</span>(<span class="at">title =</span> <span class="st">&quot;Payoff Condition&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb676-26"><a href="rotation-direction-tracking.html#cb676-26" tabindex="-1"></a>  <span class="co"># scale_shape_manual(values = c(21, 24), guide = guide_legend(title = &quot;Resource&quot;)) +</span></span>
+<span id="cb676-27"><a href="rotation-direction-tracking.html#cb676-27" tabindex="-1"></a>  <span class="fu">scale_shape_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="dv">22</span>, <span class="dv">23</span>), <span class="at">guide =</span> <span class="fu">guide_legend</span>(<span class="at">title =</span> <span class="st">&quot;SI Quality&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb676-28"><a href="rotation-direction-tracking.html#cb676-28" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">cols =</span> <span class="fu">vars</span>(IsSocialInfoDirecionDifferent), <span class="at">rows =</span> <span class="fu">vars</span>(ResourceSpeed)) <span class="sc">+</span></span>
+<span id="cb676-29"><a href="rotation-direction-tracking.html#cb676-29" tabindex="-1"></a>  <span class="fu">theme_clean</span>() <span class="sc">+</span></span>
+<span id="cb676-30"><a href="rotation-direction-tracking.html#cb676-30" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;bottom&quot;</span>) <span class="sc">+</span></span>
+<span id="cb676-31"><a href="rotation-direction-tracking.html#cb676-31" tabindex="-1"></a>  <span class="fu">panel_border</span>() <span class="sc">+</span></span>
+<span id="cb676-32"><a href="rotation-direction-tracking.html#cb676-32" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">&quot;P(Rotation Direction Change)&quot;</span>, <span class="at">x =</span> <span class="st">&quot;&quot;</span>) <span class="co"># &quot;Payoff Condition&quot;</span></span>
+<span id="cb676-33"><a href="rotation-direction-tracking.html#cb676-33" tabindex="-1"></a></span>
+<span id="cb676-34"><a href="rotation-direction-tracking.html#cb676-34" tabindex="-1"></a>fig_rotation_direction_soc_info_quality</span></code></pre></div>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-796-1.png" width="672" style="display: block; margin: auto;" /></p>
 
 </div>
 </div>
@@ -649,7 +748,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 <a href="roation-magnitude-search.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="voluntary-payoff-sharing.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="fov-dynamics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

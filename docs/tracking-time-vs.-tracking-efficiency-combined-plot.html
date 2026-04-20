@@ -23,7 +23,7 @@
 <meta name="author" content="Valerii Chirkov" />
 
 
-<meta name="date" content="2025-09-14" />
+<meta name="date" content="2026-04-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="tracking-efficiency.html"/>
-<link rel="next" href="static-connecitvity.html"/>
+<link rel="next" href="average-median-distance-to-resource.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -59,8 +59,9 @@
 
 
 <style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -70,7 +71,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -176,26 +177,40 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#figure-1"><i class="fa fa-check"></i>Figure</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-comparison"><i class="fa fa-check"></i>Model Comparison</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-3"><i class="fa fa-check"></i>Model 3</a>
+<ul>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-fitting-2"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-predictions-2"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#condition-comparisons-2"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#figure-2"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-4-collected-points-by-epoch"><i class="fa fa-check"></i>Model 4: Collected Points by Epoch</a>
+<ul>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-specification"><i class="fa fa-check"></i>Model specification</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-fitting-3"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#condition-comparisons-3"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-figure"><i class="fa fa-check"></i>Model figure</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html"><i class="fa fa-check"></i>Tracking Time</a>
 <ul>
 <li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-1-1"><i class="fa fa-check"></i>Model 1</a>
 <ul>
 <li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#prior-predictive-checks-2"><i class="fa fa-check"></i>Prior predictive checks</a></li>
-<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-fitting-2"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-fitting-4"><i class="fa fa-check"></i>Model fitting</a></li>
 <li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-diagnostics-2"><i class="fa fa-check"></i>Model diagnostics</a></li>
-<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-predictions-2"><i class="fa fa-check"></i>Model predictions</a></li>
-<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#condition-comparisons-2"><i class="fa fa-check"></i>Condition comparisons</a></li>
-<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#figure-2"><i class="fa fa-check"></i>Figure</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-predictions-3"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#condition-comparisons-4"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#figure-3"><i class="fa fa-check"></i>Figure</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-2-1"><i class="fa fa-check"></i>Model 2</a>
 <ul>
 <li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#prior-predictive-checks-3"><i class="fa fa-check"></i>Prior predictive checks</a></li>
-<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-fitting-3"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-fitting-5"><i class="fa fa-check"></i>Model fitting</a></li>
 <li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-diagnostics-3"><i class="fa fa-check"></i>Model diagnostics</a></li>
-<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-predictions-3"><i class="fa fa-check"></i>Model predictions</a></li>
-<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#condition-comparisons-3"><i class="fa fa-check"></i>Condition comparisons</a></li>
-<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#figure-3"><i class="fa fa-check"></i>Figure</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-predictions-4"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#condition-comparisons-5"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#figure-4"><i class="fa fa-check"></i>Figure</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-comparison-1"><i class="fa fa-check"></i>Model Comparison</a></li>
 </ul></li>
@@ -204,43 +219,92 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-1-2"><i class="fa fa-check"></i>Model 1</a>
 <ul>
 <li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#prior-predictive-checks-4"><i class="fa fa-check"></i>Prior predictive checks</a></li>
-<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-fitting-4"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-fitting-6"><i class="fa fa-check"></i>Model fitting</a></li>
 <li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-diagnostics-4"><i class="fa fa-check"></i>Model diagnostics</a></li>
-<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-predictions-4"><i class="fa fa-check"></i>Model predictions</a></li>
-<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#condition-comparisons-4"><i class="fa fa-check"></i>Condition comparisons</a></li>
-<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#figure-4"><i class="fa fa-check"></i>Figure</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-predictions-5"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#condition-comparisons-6"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#figure-5"><i class="fa fa-check"></i>Figure</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-2-2"><i class="fa fa-check"></i>Model 2</a>
 <ul>
 <li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#prior-predictive-checks-5"><i class="fa fa-check"></i>Prior predictive checks</a></li>
-<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-fitting-5"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-fitting-7"><i class="fa fa-check"></i>Model fitting</a></li>
 <li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-diagnostics-5"><i class="fa fa-check"></i>Model diagnostics</a></li>
-<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-predictions-5"><i class="fa fa-check"></i>Model predictions</a></li>
-<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#condition-comparisons-5"><i class="fa fa-check"></i>Condition comparisons</a></li>
-<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#figure-5"><i class="fa fa-check"></i>Figure</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-predictions-6"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#condition-comparisons-7"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#figure-6"><i class="fa fa-check"></i>Figure</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-comparison-2"><i class="fa fa-check"></i>Model Comparison</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="tracking-time-vs.-tracking-efficiency-combined-plot.html"><a href="tracking-time-vs.-tracking-efficiency-combined-plot.html"><i class="fa fa-check"></i>Tracking Time vs. Tracking Efficiency Combined Plot</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html"><i class="fa fa-check"></i>Average Median Distance to Resource</a>
+<ul>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#data-preparation"><i class="fa fa-check"></i>Data Preparation</a>
+<ul>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#step-1-compute-per-participant-average-distance-from-time-series"><i class="fa fa-check"></i>Step 1: Compute per-participant average distance from time series</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#step-2-map-participants-to-groups"><i class="fa fa-check"></i>Step 2: Map participants to groups</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#step-3-compute-group-level-median-distance-time-series-for-interacting-groups"><i class="fa fa-check"></i>Step 3: Compute group-level median distance time series for interacting groups</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#step-4-construct-nominal-groups-from-solo-participants"><i class="fa fa-check"></i>Step 4: Construct nominal groups from solo participants</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#step-5-combine-all-data"><i class="fa fa-check"></i>Step 5: Combine all data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#descriptive-statistics"><i class="fa fa-check"></i>Descriptive Statistics</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#descriptive-plots"><i class="fa fa-check"></i>Descriptive Plots</a>
+<ul>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#average-median-distance-by-condition"><i class="fa fa-check"></i>Average Median Distance by Condition</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#distribution-comparison"><i class="fa fa-check"></i>Distribution Comparison</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#statistical-model"><i class="fa fa-check"></i>Statistical Model</a>
+<ul>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#data-for-modelling"><i class="fa fa-check"></i>Data for modelling</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#model-specification-1"><i class="fa fa-check"></i>Model specification</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#prior-predictive-checks-6"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#model-fitting-8"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#model-diagnostics-6"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#model-predictions-7"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#condition-comparisons-8"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#combined-comparison-table"><i class="fa fa-check"></i>Combined comparison table</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#model-figure-1"><i class="fa fa-check"></i>Model figure</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html"><i class="fa fa-check"></i>Average Median Distance to Resource by Epoch</a>
+<ul>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#data-preparation-epoch"><i class="fa fa-check"></i>Data Preparation (Epoch)</a>
+<ul>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#step-1-compute-per-participant-average-distance"><i class="fa fa-check"></i>Step 1: Compute per-participant average distance</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#step-2-map-participants-to-groups-1"><i class="fa fa-check"></i>Step 2: Map participants to groups</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#step-3-compute-group-level-median-distance-time-series-for-interacting-groups-1"><i class="fa fa-check"></i>Step 3: Compute group-level median distance time series for interacting groups</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#step-4-construct-nominal-groups-from-solo-participants-1"><i class="fa fa-check"></i>Step 4: Construct nominal groups from solo participants</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#step-5-combine-all-data-1"><i class="fa fa-check"></i>Step 5: Combine all data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#statistical-model-epoch"><i class="fa fa-check"></i>Statistical Model (Epoch)</a>
+<ul>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#data-for-modelling-1"><i class="fa fa-check"></i>Data for modelling</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#model-specification-2"><i class="fa fa-check"></i>Model specification</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#model-fitting-9"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#condition-comparisons-9"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#condition-comparison-table-epoch"><i class="fa fa-check"></i>Condition comparison table (Epoch)</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#model-figure-2"><i class="fa fa-check"></i>Model figure</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html"><i class="fa fa-check"></i>Static Connecitvity</a>
 <ul>
 <li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#in-degree-model"><i class="fa fa-check"></i>In-degree model</a>
 <ul>
-<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#prior-predictive-checks-6"><i class="fa fa-check"></i>Prior predictive checks</a></li>
-<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-fitting-6"><i class="fa fa-check"></i>Model fitting</a></li>
-<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-diagnostics-6"><i class="fa fa-check"></i>Model diagnostics</a></li>
-<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-predictions-6"><i class="fa fa-check"></i>Model predictions</a></li>
-<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#condition-comparisons-6"><i class="fa fa-check"></i>Condition comparisons</a></li>
-<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#figure-6"><i class="fa fa-check"></i>Figure</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#prior-predictive-checks-7"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-fitting-10"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-diagnostics-7"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-predictions-8"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#condition-comparisons-10"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#figure-7"><i class="fa fa-check"></i>Figure</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#out-degree-model"><i class="fa fa-check"></i>Out-degree model</a>
 <ul>
-<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#prior-predictive-checks-7"><i class="fa fa-check"></i>Prior predictive checks</a></li>
-<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-fitting-7"><i class="fa fa-check"></i>Model fitting</a></li>
-<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-diagnostics-7"><i class="fa fa-check"></i>Model diagnostics</a></li>
-<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-predictions-7"><i class="fa fa-check"></i>Model predictions</a></li>
-<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#condition-comparisons-7"><i class="fa fa-check"></i>Condition comparisons</a></li>
-<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#figure-7"><i class="fa fa-check"></i>Figure</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#prior-predictive-checks-8"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-fitting-11"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-diagnostics-8"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-predictions-9"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#condition-comparisons-11"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#figure-8"><i class="fa fa-check"></i>Figure</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#correlation"><i class="fa fa-check"></i>Correlation</a></li>
 </ul></li>
@@ -248,10 +312,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="adaptive-connectivity.html"><a href="adaptive-connectivity.html#social-information-quality-model"><i class="fa fa-check"></i>Social Information Quality Model</a>
 <ul>
-<li class="chapter" data-level="" data-path="adaptive-connectivity.html"><a href="adaptive-connectivity.html#model-diagnostics-8"><i class="fa fa-check"></i>Model diagnostics</a></li>
-<li class="chapter" data-level="" data-path="adaptive-connectivity.html"><a href="adaptive-connectivity.html#model-predictions-8"><i class="fa fa-check"></i>Model predictions</a></li>
-<li class="chapter" data-level="" data-path="adaptive-connectivity.html"><a href="adaptive-connectivity.html#condition-comparisons-8"><i class="fa fa-check"></i>Condition comparisons</a></li>
-<li class="chapter" data-level="" data-path="adaptive-connectivity.html"><a href="adaptive-connectivity.html#figure-8"><i class="fa fa-check"></i>Figure</a></li>
+<li class="chapter" data-level="" data-path="adaptive-connectivity.html"><a href="adaptive-connectivity.html#model-diagnostics-9"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="adaptive-connectivity.html"><a href="adaptive-connectivity.html#model-predictions-10"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="adaptive-connectivity.html"><a href="adaptive-connectivity.html#condition-comparisons-12"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="adaptive-connectivity.html"><a href="adaptive-connectivity.html#figure-9"><i class="fa fa-check"></i>Figure</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html"><i class="fa fa-check"></i>Resouece Discoveries</a>
@@ -294,95 +358,130 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#rotation-per-condition"><i class="fa fa-check"></i>Rotation per condition</a></li>
 <li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-in-degree"><i class="fa fa-check"></i>Model In-Degree</a>
 <ul>
-<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-fitting-28"><i class="fa fa-check"></i>Model fitting</a></li>
-<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-diagnostics-29"><i class="fa fa-check"></i>Model diagnostics</a></li>
-<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#figure-28"><i class="fa fa-check"></i>Figure</a></li>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-fitting-32"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-diagnostics-30"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#figure-29"><i class="fa fa-check"></i>Figure</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-out-degree"><i class="fa fa-check"></i>Model Out-Degree</a>
 <ul>
-<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-fitting-29"><i class="fa fa-check"></i>Model fitting</a></li>
-<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-diagnostics-30"><i class="fa fa-check"></i>Model diagnostics</a></li>
-<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#figure-29"><i class="fa fa-check"></i>Figure</a></li>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-fitting-33"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-diagnostics-31"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#figure-30"><i class="fa fa-check"></i>Figure</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#combined-figures"><i class="fa fa-check"></i>Combined figures</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html"><i class="fa fa-check"></i>Roation Magnitude (Tracking)</a>
 <ul>
-<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#prior-predictive-checks-28"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#prior-predictive-checks-29"><i class="fa fa-check"></i>Prior predictive checks</a></li>
 <li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-fitting-9.5h"><i class="fa fa-check"></i>Model fitting (~9.5h)</a></li>
-<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-diagnostics-31"><i class="fa fa-check"></i>Model diagnostics</a></li>
-<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-predictions-9"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-diagnostics-32"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-predictions-11"><i class="fa fa-check"></i>Model predictions</a></li>
 <li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#figures"><i class="fa fa-check"></i>Figures</a></li>
 <li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#random-effects"><i class="fa fa-check"></i>Random Effects</a>
 <ul>
 <li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-tracking-efficiency"><i class="fa fa-check"></i>Model Tracking Efficiency</a></li>
 <li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-score"><i class="fa fa-check"></i>Model Score</a></li>
-</ul></li>
 <li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#random-effects-correlations"><i class="fa fa-check"></i>Random Effects Correlations</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#random-effects-visualization"><i class="fa fa-check"></i>Random Effects Visualization</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-2-temporal-dynamics"><i class="fa fa-check"></i>Model 2: Temporal Dynamics</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#temporal-figures"><i class="fa fa-check"></i>Temporal Figures</a>
+<ul>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#temporal-condition-comparisons"><i class="fa fa-check"></i>Temporal Condition Comparisons</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-3-social-cohesion-group-spread-effects-outdegree-1"><i class="fa fa-check"></i>Model 3: Social Cohesion &amp; Group Spread Effects (OutDegree &gt; 1)</a>
+<ul>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-3-new-feature-posterior-contrasts"><i class="fa fa-check"></i>Model 3: New Feature Posterior Contrasts</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#summary-table"><i class="fa fa-check"></i>Summary Table</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#figures-1"><i class="fa fa-check"></i>Figures</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html"><i class="fa fa-check"></i>Roation Magnitude (Search)</a>
 <ul>
-<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#prior-predictive-checks-29"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#prior-predictive-checks-30"><i class="fa fa-check"></i>Prior predictive checks</a></li>
 <li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#model-fitting-9.5h-1"><i class="fa fa-check"></i>Model fitting (~9.5h)</a></li>
-<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#model-diagnostics-32"><i class="fa fa-check"></i>Model diagnostics</a></li>
-<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#model-predictions-10"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#model-diagnostics-33"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#model-predictions-12"><i class="fa fa-check"></i>Model predictions</a></li>
 <li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#random-effects-1"><i class="fa fa-check"></i>Random Effects</a>
 <ul>
-<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#modeltracking-time"><i class="fa fa-check"></i>ModelTracking Time</a></li>
-</ul></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#model-tracking-time"><i class="fa fa-check"></i>Model Tracking Time</a></li>
 <li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#random-effects-correlations-1"><i class="fa fa-check"></i>Random Effects Correlations</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#random-effects-visualization-1"><i class="fa fa-check"></i>Random Effects Visualization</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#model-2-temporal-dynamics-1"><i class="fa fa-check"></i>Model 2: Temporal Dynamics</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#temporal-figures-1"><i class="fa fa-check"></i>Temporal Figures</a>
+<ul>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#temporal-condition-comparisons-1"><i class="fa fa-check"></i>Temporal Condition Comparisons</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#model-3-social-cohesion-outdegree-effects-outdegree-1"><i class="fa fa-check"></i>Model 3: Social Cohesion &amp; OutDegree Effects (OutDegree &gt; 1)</a>
+<ul>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#model-3-new-feature-posterior-contrasts-1"><i class="fa fa-check"></i>Model 3: New Feature Posterior Contrasts</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#summary-table-1"><i class="fa fa-check"></i>Summary Table</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#figures-2"><i class="fa fa-check"></i>Figures</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#model-4-peer-distance-moderation-of-social-features-outdegree-1"><i class="fa fa-check"></i>Model 4: Peer Distance Moderation of Social Features (OutDegree == 1)</a>
+<ul>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#model-4-social-feature-posterior-contrasts"><i class="fa fa-check"></i>Model 4: Social Feature Posterior Contrasts</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#summary-table-2"><i class="fa fa-check"></i>Summary Table</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#figures-3"><i class="fa fa-check"></i>Figures</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html"><i class="fa fa-check"></i>Rotation Direction (Tracking)</a>
 <ul>
 <li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#detector-change"><i class="fa fa-check"></i>Detector Change</a>
 <ul>
-<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-fitting-30"><i class="fa fa-check"></i>Model fitting</a></li>
-<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-diagnostics-33"><i class="fa fa-check"></i>Model diagnostics</a></li>
-<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-predictions-11"><i class="fa fa-check"></i>Model predictions</a></li>
-<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#figure-30"><i class="fa fa-check"></i>Figure</a></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-fitting-34"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-diagnostics-34"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-predictions-13"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#figure-31"><i class="fa fa-check"></i>Figure</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#social-information"><i class="fa fa-check"></i>Social Information</a>
 <ul>
-<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-fitting-31"><i class="fa fa-check"></i>Model fitting</a></li>
-<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-diagnostics-34"><i class="fa fa-check"></i>Model diagnostics</a></li>
-<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-predictions-12"><i class="fa fa-check"></i>Model predictions</a></li>
-<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#figure-31"><i class="fa fa-check"></i>Figure</a></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-fitting-35"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-diagnostics-35"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-predictions-14"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#figure-32"><i class="fa fa-check"></i>Figure</a></li>
 </ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="fov-dynamics.html"><a href="fov-dynamics.html"><i class="fa fa-check"></i>FOV Dynamics</a>
+<ul>
+<li class="chapter" data-level="" data-path="fov-dynamics.html"><a href="fov-dynamics.html#fov-percentages-table"><i class="fa fa-check"></i>FOV Percentages Table</a></li>
+<li class="chapter" data-level="" data-path="fov-dynamics.html"><a href="fov-dynamics.html#fov-percentages-plot"><i class="fa fa-check"></i>FOV Percentages Plot</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html"><i class="fa fa-check"></i>Voluntary Payoff Sharing</a>
 <ul>
 <li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#sharing-actions-count"><i class="fa fa-check"></i>Sharing actions count</a></li>
 <li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#count-model"><i class="fa fa-check"></i>Count Model</a>
 <ul>
-<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-fitting-32"><i class="fa fa-check"></i>Model fitting</a></li>
-<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-diagnostics-35"><i class="fa fa-check"></i>Model diagnostics</a></li>
-<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-predictions-13"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-fitting-36"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-diagnostics-36"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-predictions-15"><i class="fa fa-check"></i>Model predictions</a></li>
 <li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#condition-draws"><i class="fa fa-check"></i>Condition draws</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#count-vs-score-model"><i class="fa fa-check"></i>Count vs Score model</a></li>
 <li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#total-sharing"><i class="fa fa-check"></i>Total Sharing</a></li>
 <li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#total-sharing-model"><i class="fa fa-check"></i>Total Sharing Model</a>
 <ul>
-<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-fitting-33"><i class="fa fa-check"></i>Model fitting</a></li>
-<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-diagnostics-38"><i class="fa fa-check"></i>Model diagnostics</a></li>
-<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-predictions-16"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-fitting-37"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-diagnostics-39"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-predictions-18"><i class="fa fa-check"></i>Model predictions</a></li>
 <li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#condition-draws-1"><i class="fa fa-check"></i>Condition draws</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#total-sharing-vs-score-model"><i class="fa fa-check"></i>Total Sharing vs Score Model</a></li>
 <li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#sharing-probability-resource-state-time-distance"><i class="fa fa-check"></i>Sharing Probability: Resource, State, Time, Distance</a>
 <ul>
-<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-fitting-34"><i class="fa fa-check"></i>Model fitting</a></li>
-<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-diagnostics-41"><i class="fa fa-check"></i>Model diagnostics</a></li>
-<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-predictions-19"><i class="fa fa-check"></i>Model predictions</a></li>
-<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#figure-34"><i class="fa fa-check"></i>Figure</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-fitting-38"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-diagnostics-42"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-predictions-21"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#figure-35"><i class="fa fa-check"></i>Figure</a></li>
 <li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#statistical-comparisons-4"><i class="fa fa-check"></i>Statistical Comparisons</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#sharing-probability-resource-distance"><i class="fa fa-check"></i>Sharing Probability: Resource, Distance</a>
 <ul>
-<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-fitting-35"><i class="fa fa-check"></i>Model fitting</a></li>
-<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-diagnostics-42"><i class="fa fa-check"></i>Model diagnostics</a></li>
-<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-predictions-20"><i class="fa fa-check"></i>Model predictions</a></li>
-<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#figure-35"><i class="fa fa-check"></i>Figure</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-fitting-39"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-diagnostics-43"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-predictions-22"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#figure-36"><i class="fa fa-check"></i>Figure</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -404,8 +503,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="tracking-time-vs.-tracking-efficiency-combined-plot" class="section level1 hasAnchor">
 <h1>Tracking Time vs. Tracking Efficiency Combined Plot<a href="tracking-time-vs.-tracking-efficiency-combined-plot.html#tracking-time-vs.-tracking-efficiency-combined-plot" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-218-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-220-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-249-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-251-1.png" width="672" style="display: block; margin: auto;" /></p>
 
 </div>
             </section>
@@ -414,7 +513,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 <a href="tracking-efficiency.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="static-connecitvity.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="average-median-distance-to-resource.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
