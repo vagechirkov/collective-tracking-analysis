@@ -1,0 +1,1792 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Average Median Distance to Resource | Collective Resource Tracking Statistical Analysis</title>
+  <meta name="description" content="Average Median Distance to Resource | Collective Resource Tracking Statistical Analysis" />
+  <meta name="generator" content="bookdown 0.44 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Average Median Distance to Resource | Collective Resource Tracking Statistical Analysis" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Average Median Distance to Resource | Collective Resource Tracking Statistical Analysis" />
+  
+  
+  
+
+<meta name="author" content="Valerii Chirkov" />
+
+
+<meta name="date" content="2026-04-20" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="tracking-time-vs.-tracking-efficiency-combined-plot.html"/>
+<link rel="next" href="average-median-distance-to-resource-by-epoch.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #204a87; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #204a87; font-weight: bold; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #ce5c00; font-weight: bold; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Load Packages &amp; Data</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#subject-level-data"><i class="fa fa-check"></i>Subject-level Data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#time-series-data"><i class="fa fa-check"></i>Time Series Data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#resource-discoveries-data"><i class="fa fa-check"></i>Resource Discoveries Data</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#resource-discoveries-data-voluntary-payoff-condition"><i class="fa fa-check"></i>Resource Discoveries Data: Voluntary Payoff condition</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#session-information"><i class="fa fa-check"></i>Session Information</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="demographics-and-data-filtering.html"><a href="demographics-and-data-filtering.html"><i class="fa fa-check"></i>Demographics and data filtering</a>
+<ul>
+<li class="chapter" data-level="" data-path="demographics-and-data-filtering.html"><a href="demographics-and-data-filtering.html#count-excluded-participants-on-each-step-of-data-cleaning"><i class="fa fa-check"></i>Count excluded participants on each step of data cleaning</a></li>
+<li class="chapter" data-level="" data-path="demographics-and-data-filtering.html"><a href="demographics-and-data-filtering.html#sex"><i class="fa fa-check"></i>Sex</a></li>
+<li class="chapter" data-level="" data-path="demographics-and-data-filtering.html"><a href="demographics-and-data-filtering.html#age"><i class="fa fa-check"></i>Age</a></li>
+<li class="chapter" data-level="" data-path="demographics-and-data-filtering.html"><a href="demographics-and-data-filtering.html#approvals"><i class="fa fa-check"></i>Approvals</a></li>
+<li class="chapter" data-level="" data-path="demographics-and-data-filtering.html"><a href="demographics-and-data-filtering.html#duplicates-time-steps-when-the-participant-was-not-moving"><i class="fa fa-check"></i>Duplicates (time steps when the participant was not moving)</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html"><i class="fa fa-check"></i>Collected Points</a>
+<ul>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-1"><i class="fa fa-check"></i>Model 1</a>
+<ul>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#prior-predictive-checks"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-fitting"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-diagnostics"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-predictions"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#condition-comparisons"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#figure"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-2"><i class="fa fa-check"></i>Model 2</a>
+<ul>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#prior-predictive-checks-1"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-fitting-1"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-diagnostics-1"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-predictions-1"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#condition-comparisons-1"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#figure-1"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-comparison"><i class="fa fa-check"></i>Model Comparison</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-3"><i class="fa fa-check"></i>Model 3</a>
+<ul>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-fitting-2"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-predictions-2"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#condition-comparisons-2"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#figure-2"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-4-collected-points-by-epoch"><i class="fa fa-check"></i>Model 4: Collected Points by Epoch</a>
+<ul>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-specification"><i class="fa fa-check"></i>Model specification</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-fitting-3"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#condition-comparisons-3"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="collected-points.html"><a href="collected-points.html#model-figure"><i class="fa fa-check"></i>Model figure</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html"><i class="fa fa-check"></i>Tracking Time</a>
+<ul>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-1-1"><i class="fa fa-check"></i>Model 1</a>
+<ul>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#prior-predictive-checks-2"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-fitting-4"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-diagnostics-2"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-predictions-3"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#condition-comparisons-4"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#figure-3"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-2-1"><i class="fa fa-check"></i>Model 2</a>
+<ul>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#prior-predictive-checks-3"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-fitting-5"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-diagnostics-3"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-predictions-4"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#condition-comparisons-5"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#figure-4"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="tracking-time.html"><a href="tracking-time.html#model-comparison-1"><i class="fa fa-check"></i>Model Comparison</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html"><i class="fa fa-check"></i>Tracking Efficiency</a>
+<ul>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-1-2"><i class="fa fa-check"></i>Model 1</a>
+<ul>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#prior-predictive-checks-4"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-fitting-6"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-diagnostics-4"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-predictions-5"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#condition-comparisons-6"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#figure-5"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-2-2"><i class="fa fa-check"></i>Model 2</a>
+<ul>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#prior-predictive-checks-5"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-fitting-7"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-diagnostics-5"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-predictions-6"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#condition-comparisons-7"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#figure-6"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="tracking-efficiency.html"><a href="tracking-efficiency.html#model-comparison-2"><i class="fa fa-check"></i>Model Comparison</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="tracking-time-vs.-tracking-efficiency-combined-plot.html"><a href="tracking-time-vs.-tracking-efficiency-combined-plot.html"><i class="fa fa-check"></i>Tracking Time vs. Tracking Efficiency Combined Plot</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html"><i class="fa fa-check"></i>Average Median Distance to Resource</a>
+<ul>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#data-preparation"><i class="fa fa-check"></i>Data Preparation</a>
+<ul>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#step-1-compute-per-participant-average-distance-from-time-series"><i class="fa fa-check"></i>Step 1: Compute per-participant average distance from time series</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#step-2-map-participants-to-groups"><i class="fa fa-check"></i>Step 2: Map participants to groups</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#step-3-compute-group-level-median-distance-time-series-for-interacting-groups"><i class="fa fa-check"></i>Step 3: Compute group-level median distance time series for interacting groups</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#step-4-construct-nominal-groups-from-solo-participants"><i class="fa fa-check"></i>Step 4: Construct nominal groups from solo participants</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#step-5-combine-all-data"><i class="fa fa-check"></i>Step 5: Combine all data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#descriptive-statistics"><i class="fa fa-check"></i>Descriptive Statistics</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#descriptive-plots"><i class="fa fa-check"></i>Descriptive Plots</a>
+<ul>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#average-median-distance-by-condition"><i class="fa fa-check"></i>Average Median Distance by Condition</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#distribution-comparison"><i class="fa fa-check"></i>Distribution Comparison</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#statistical-model"><i class="fa fa-check"></i>Statistical Model</a>
+<ul>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#data-for-modelling"><i class="fa fa-check"></i>Data for modelling</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#model-specification-1"><i class="fa fa-check"></i>Model specification</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#prior-predictive-checks-6"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#model-fitting-8"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#model-diagnostics-6"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#model-predictions-7"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#condition-comparisons-8"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#combined-comparison-table"><i class="fa fa-check"></i>Combined comparison table</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource.html"><a href="average-median-distance-to-resource.html#model-figure-1"><i class="fa fa-check"></i>Model figure</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html"><i class="fa fa-check"></i>Average Median Distance to Resource by Epoch</a>
+<ul>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#data-preparation-epoch"><i class="fa fa-check"></i>Data Preparation (Epoch)</a>
+<ul>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#step-1-compute-per-participant-average-distance"><i class="fa fa-check"></i>Step 1: Compute per-participant average distance</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#step-2-map-participants-to-groups-1"><i class="fa fa-check"></i>Step 2: Map participants to groups</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#step-3-compute-group-level-median-distance-time-series-for-interacting-groups-1"><i class="fa fa-check"></i>Step 3: Compute group-level median distance time series for interacting groups</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#step-4-construct-nominal-groups-from-solo-participants-1"><i class="fa fa-check"></i>Step 4: Construct nominal groups from solo participants</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#step-5-combine-all-data-1"><i class="fa fa-check"></i>Step 5: Combine all data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#statistical-model-epoch"><i class="fa fa-check"></i>Statistical Model (Epoch)</a>
+<ul>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#data-for-modelling-1"><i class="fa fa-check"></i>Data for modelling</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#model-specification-2"><i class="fa fa-check"></i>Model specification</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#model-fitting-9"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#condition-comparisons-9"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#condition-comparison-table-epoch"><i class="fa fa-check"></i>Condition comparison table (Epoch)</a></li>
+<li class="chapter" data-level="" data-path="average-median-distance-to-resource-by-epoch.html"><a href="average-median-distance-to-resource-by-epoch.html#model-figure-2"><i class="fa fa-check"></i>Model figure</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html"><i class="fa fa-check"></i>Static Connecitvity</a>
+<ul>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#in-degree-model"><i class="fa fa-check"></i>In-degree model</a>
+<ul>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#prior-predictive-checks-7"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-fitting-10"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-diagnostics-7"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-predictions-8"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#condition-comparisons-10"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#figure-7"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#out-degree-model"><i class="fa fa-check"></i>Out-degree model</a>
+<ul>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#prior-predictive-checks-8"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-fitting-11"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-diagnostics-8"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#model-predictions-9"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#condition-comparisons-11"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#figure-8"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="static-connecitvity.html"><a href="static-connecitvity.html#correlation"><i class="fa fa-check"></i>Correlation</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="adaptive-connectivity.html"><a href="adaptive-connectivity.html"><i class="fa fa-check"></i>Adaptive Connectivity</a>
+<ul>
+<li class="chapter" data-level="" data-path="adaptive-connectivity.html"><a href="adaptive-connectivity.html#social-information-quality-model"><i class="fa fa-check"></i>Social Information Quality Model</a>
+<ul>
+<li class="chapter" data-level="" data-path="adaptive-connectivity.html"><a href="adaptive-connectivity.html#model-diagnostics-9"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="adaptive-connectivity.html"><a href="adaptive-connectivity.html#model-predictions-10"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="adaptive-connectivity.html"><a href="adaptive-connectivity.html#condition-comparisons-12"><i class="fa fa-check"></i>Condition comparisons</a></li>
+<li class="chapter" data-level="" data-path="adaptive-connectivity.html"><a href="adaptive-connectivity.html#figure-9"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html"><i class="fa fa-check"></i>Resouece Discoveries</a>
+<ul>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#fast"><i class="fa fa-check"></i>Fast</a>
+<ul>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#probability-of-staying-on-resource"><i class="fa fa-check"></i>Probability of staying on resource</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#probability-of-staying-on-resource-vp"><i class="fa fa-check"></i>Probability of staying on resource VP</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#probability-of-reaching-resource"><i class="fa fa-check"></i>Probability of reaching resource</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#probability-of-reaching-resource-vp"><i class="fa fa-check"></i>Probability of reaching resource VP</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#out-degree"><i class="fa fa-check"></i>Out degree</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#out-degree-discoverer"><i class="fa fa-check"></i>Out degree (Discoverer)</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#out-degree-vp"><i class="fa fa-check"></i>Out degree VP</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#in-degree"><i class="fa fa-check"></i>In degree</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#in-degree-others"><i class="fa fa-check"></i>In degree (Others)</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#in-degree-vp"><i class="fa fa-check"></i>In degree VP</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#combine-plot"><i class="fa fa-check"></i>Combine plot</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#combine-plot-inout-degree-full"><i class="fa fa-check"></i>Combine plot (in/out degree full)</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#combine-plot-vp"><i class="fa fa-check"></i>Combine plot VP</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#slow"><i class="fa fa-check"></i>Slow</a>
+<ul>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#probability-of-staying-on-resource-1"><i class="fa fa-check"></i>Probability of staying on resource</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#probability-of-staying-on-resource-vp-1"><i class="fa fa-check"></i>Probability of staying on resource VP</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#probability-of-reaching-on-resource"><i class="fa fa-check"></i>Probability of reaching on resource</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#probability-of-reaching-resource-vp-1"><i class="fa fa-check"></i>Probability of reaching resource VP</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#out-degree-1"><i class="fa fa-check"></i>Out degree</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#out-degree-discoverer-1"><i class="fa fa-check"></i>Out degree (Discoverer)</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#out-degree-vp-1"><i class="fa fa-check"></i>Out degree VP</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#in-degree-1"><i class="fa fa-check"></i>In degree</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#in-degree-others-1"><i class="fa fa-check"></i>In degree (Others)</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#in-degree-vp-1"><i class="fa fa-check"></i>In degree VP</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#combine-plot-1"><i class="fa fa-check"></i>Combine plot</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#combine-plot-inout-degree-full-1"><i class="fa fa-check"></i>Combine plot (in/out degree full)</a></li>
+<li class="chapter" data-level="" data-path="resouece-discoveries.html"><a href="resouece-discoveries.html#combine-plot-vp-1"><i class="fa fa-check"></i>Combine plot VP</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html"><i class="fa fa-check"></i>Degree and Rank</a>
+<ul>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#rotation-per-condition"><i class="fa fa-check"></i>Rotation per condition</a></li>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-in-degree"><i class="fa fa-check"></i>Model In-Degree</a>
+<ul>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-fitting-32"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-diagnostics-30"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#figure-29"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-out-degree"><i class="fa fa-check"></i>Model Out-Degree</a>
+<ul>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-fitting-33"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#model-diagnostics-31"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#figure-30"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="degree-and-rank.html"><a href="degree-and-rank.html#combined-figures"><i class="fa fa-check"></i>Combined figures</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html"><i class="fa fa-check"></i>Roation Magnitude (Tracking)</a>
+<ul>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#prior-predictive-checks-29"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-fitting-9.5h"><i class="fa fa-check"></i>Model fitting (~9.5h)</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-diagnostics-32"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-predictions-11"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#figures"><i class="fa fa-check"></i>Figures</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#random-effects"><i class="fa fa-check"></i>Random Effects</a>
+<ul>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-tracking-efficiency"><i class="fa fa-check"></i>Model Tracking Efficiency</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-score"><i class="fa fa-check"></i>Model Score</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#random-effects-correlations"><i class="fa fa-check"></i>Random Effects Correlations</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#random-effects-visualization"><i class="fa fa-check"></i>Random Effects Visualization</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-2-temporal-dynamics"><i class="fa fa-check"></i>Model 2: Temporal Dynamics</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#temporal-figures"><i class="fa fa-check"></i>Temporal Figures</a>
+<ul>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#temporal-condition-comparisons"><i class="fa fa-check"></i>Temporal Condition Comparisons</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-3-social-cohesion-group-spread-effects-outdegree-1"><i class="fa fa-check"></i>Model 3: Social Cohesion &amp; Group Spread Effects (OutDegree &gt; 1)</a>
+<ul>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#model-3-new-feature-posterior-contrasts"><i class="fa fa-check"></i>Model 3: New Feature Posterior Contrasts</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#summary-table"><i class="fa fa-check"></i>Summary Table</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-tracking.html"><a href="roation-magnitude-tracking.html#figures-1"><i class="fa fa-check"></i>Figures</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html"><i class="fa fa-check"></i>Roation Magnitude (Search)</a>
+<ul>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#prior-predictive-checks-30"><i class="fa fa-check"></i>Prior predictive checks</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#model-fitting-9.5h-1"><i class="fa fa-check"></i>Model fitting (~9.5h)</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#model-diagnostics-33"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#model-predictions-12"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#random-effects-1"><i class="fa fa-check"></i>Random Effects</a>
+<ul>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#model-tracking-time"><i class="fa fa-check"></i>Model Tracking Time</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#random-effects-correlations-1"><i class="fa fa-check"></i>Random Effects Correlations</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#random-effects-visualization-1"><i class="fa fa-check"></i>Random Effects Visualization</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#model-2-temporal-dynamics-1"><i class="fa fa-check"></i>Model 2: Temporal Dynamics</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#temporal-figures-1"><i class="fa fa-check"></i>Temporal Figures</a>
+<ul>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#temporal-condition-comparisons-1"><i class="fa fa-check"></i>Temporal Condition Comparisons</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#model-3-social-cohesion-outdegree-effects-outdegree-1"><i class="fa fa-check"></i>Model 3: Social Cohesion &amp; OutDegree Effects (OutDegree &gt; 1)</a>
+<ul>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#model-3-new-feature-posterior-contrasts-1"><i class="fa fa-check"></i>Model 3: New Feature Posterior Contrasts</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#summary-table-1"><i class="fa fa-check"></i>Summary Table</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#figures-2"><i class="fa fa-check"></i>Figures</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#model-4-peer-distance-moderation-of-social-features-outdegree-1"><i class="fa fa-check"></i>Model 4: Peer Distance Moderation of Social Features (OutDegree == 1)</a>
+<ul>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#model-4-social-feature-posterior-contrasts"><i class="fa fa-check"></i>Model 4: Social Feature Posterior Contrasts</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#summary-table-2"><i class="fa fa-check"></i>Summary Table</a></li>
+<li class="chapter" data-level="" data-path="roation-magnitude-search.html"><a href="roation-magnitude-search.html#figures-3"><i class="fa fa-check"></i>Figures</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html"><i class="fa fa-check"></i>Rotation Direction (Tracking)</a>
+<ul>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#detector-change"><i class="fa fa-check"></i>Detector Change</a>
+<ul>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-fitting-34"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-diagnostics-34"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-predictions-13"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#figure-31"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#social-information"><i class="fa fa-check"></i>Social Information</a>
+<ul>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-fitting-35"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-diagnostics-35"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#model-predictions-14"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="rotation-direction-tracking.html"><a href="rotation-direction-tracking.html#figure-32"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="fov-dynamics.html"><a href="fov-dynamics.html"><i class="fa fa-check"></i>FOV Dynamics</a>
+<ul>
+<li class="chapter" data-level="" data-path="fov-dynamics.html"><a href="fov-dynamics.html#fov-percentages-table"><i class="fa fa-check"></i>FOV Percentages Table</a></li>
+<li class="chapter" data-level="" data-path="fov-dynamics.html"><a href="fov-dynamics.html#fov-percentages-plot"><i class="fa fa-check"></i>FOV Percentages Plot</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html"><i class="fa fa-check"></i>Voluntary Payoff Sharing</a>
+<ul>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#sharing-actions-count"><i class="fa fa-check"></i>Sharing actions count</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#count-model"><i class="fa fa-check"></i>Count Model</a>
+<ul>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-fitting-36"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-diagnostics-36"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-predictions-15"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#condition-draws"><i class="fa fa-check"></i>Condition draws</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#count-vs-score-model"><i class="fa fa-check"></i>Count vs Score model</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#total-sharing"><i class="fa fa-check"></i>Total Sharing</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#total-sharing-model"><i class="fa fa-check"></i>Total Sharing Model</a>
+<ul>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-fitting-37"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-diagnostics-39"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-predictions-18"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#condition-draws-1"><i class="fa fa-check"></i>Condition draws</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#total-sharing-vs-score-model"><i class="fa fa-check"></i>Total Sharing vs Score Model</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#sharing-probability-resource-state-time-distance"><i class="fa fa-check"></i>Sharing Probability: Resource, State, Time, Distance</a>
+<ul>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-fitting-38"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-diagnostics-42"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-predictions-21"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#figure-35"><i class="fa fa-check"></i>Figure</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#statistical-comparisons-4"><i class="fa fa-check"></i>Statistical Comparisons</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#sharing-probability-resource-distance"><i class="fa fa-check"></i>Sharing Probability: Resource, Distance</a>
+<ul>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-fitting-39"><i class="fa fa-check"></i>Model fitting</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-diagnostics-43"><i class="fa fa-check"></i>Model diagnostics</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#model-predictions-22"><i class="fa fa-check"></i>Model predictions</a></li>
+<li class="chapter" data-level="" data-path="voluntary-payoff-sharing.html"><a href="voluntary-payoff-sharing.html#figure-36"><i class="fa fa-check"></i>Figure</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Collective Resource Tracking Statistical Analysis</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="average-median-distance-to-resource" class="section level1 hasAnchor">
+<h1>Average Median Distance to Resource<a href="average-median-distance-to-resource.html#average-median-distance-to-resource" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This analysis computes the average median distance to the resource center
+across the experiment. For each group (or nominal group), at each time step we
+take the median distance across all members, then average that median across
+all time steps. We compare this group-level metric between interacting groups
+(FP, NP, VP) and synthetic “nominal groups” constructed by randomly combining
+the time-series data of five solitary participants.</p>
+<div id="data-preparation" class="section level2 hasAnchor">
+<h2>Data Preparation<a href="average-median-distance-to-resource.html#data-preparation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="step-1-compute-per-participant-average-distance-from-time-series" class="section level3 hasAnchor">
+<h3>Step 1: Compute per-participant average distance from time series<a href="average-median-distance-to-resource.html#step-1-compute-per-participant-average-distance-from-time-series" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Participant"],"name":[1],"type":["fct"],"align":["left"]},{"label":["SignalingType"],"name":[2],"type":["fct"],"align":["left"]},{"label":["ResourceSpeed"],"name":[3],"type":["fct"],"align":["left"]},{"label":["AvgDist"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"1012F54BE7B8916F","2":"FP","3":"slow","4":"92.22359"},{"1":"10351E72C46F0604","2":"NP","3":"slow","4":"33.88574"},{"1":"10F3CD94080FD7A9","2":"NP","3":"slow","4":"20.81812"},{"1":"11AFAEED41B11B20","2":"FP","3":"slow","4":"15.36290"},{"1":"123D81F697F290DC","2":"A","3":"fast","4":"103.01717"},{"1":"12411CE43517C410","2":"VP","3":"slow","4":"17.37015"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+<div id="step-2-map-participants-to-groups" class="section level3 hasAnchor">
+<h3>Step 2: Map participants to groups<a href="average-median-distance-to-resource.html#step-2-map-participants-to-groups" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Participant"],"name":[1],"type":["fct"],"align":["left"]},{"label":["SignalingType"],"name":[2],"type":["fct"],"align":["left"]},{"label":["ResourceSpeed"],"name":[3],"type":["fct"],"align":["left"]},{"label":["AvgDist"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Group"],"name":[5],"type":["fct"],"align":["left"]}],"data":[{"1":"1012F54BE7B8916F","2":"FP","3":"slow","4":"92.22359","5":"FP-10"},{"1":"10351E72C46F0604","2":"NP","3":"slow","4":"33.88574","5":"NP-11"},{"1":"10F3CD94080FD7A9","2":"NP","3":"slow","4":"20.81812","5":"NP-3"},{"1":"11AFAEED41B11B20","2":"FP","3":"slow","4":"15.36290","5":"FP-39"},{"1":"123D81F697F290DC","2":"A","3":"fast","4":"103.01717","5":"A-1"},{"1":"12411CE43517C410","2":"VP","3":"slow","4":"17.37015","5":"VP-36"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+<div id="step-3-compute-group-level-median-distance-time-series-for-interacting-groups" class="section level3 hasAnchor">
+<h3>Step 3: Compute group-level median distance time series for interacting groups<a href="average-median-distance-to-resource.html#step-3-compute-group-level-median-distance-time-series-for-interacting-groups" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For interacting groups (FP, NP, VP conditions with valid groups), at each
+time step we take the median distance across all group members, then
+average across all time steps.</p>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Group"],"name":[1],"type":["fct"],"align":["left"]},{"label":["SignalingType"],"name":[2],"type":["fct"],"align":["left"]},{"label":["ResourceSpeed"],"name":[3],"type":["fct"],"align":["left"]},{"label":["AvgMedDist"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"FP-1","2":"FP","3":"slow","4":"16.01059"},{"1":"FP-10","2":"FP","3":"slow","4":"86.59868"},{"1":"FP-11","2":"FP","3":"slow","4":"17.51100"},{"1":"FP-13","2":"FP","3":"slow","4":"13.08569"},{"1":"FP-14","2":"FP","3":"fast","4":"62.43359"},{"1":"FP-15","2":"FP","3":"fast","4":"48.76260"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+<div id="step-4-construct-nominal-groups-from-solo-participants" class="section level3 hasAnchor">
+<h3>Step 4: Construct nominal groups from solo participants<a href="average-median-distance-to-resource.html#step-4-construct-nominal-groups-from-solo-participants" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We construct synthetic “nominal groups” by randomly combining 5 solitary
+participants (from the A condition) who played in the same resource speed.
+For each nominal group, at each time step we take the median across the
+5 solo participants’ distances, then average across time.</p>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Group"],"name":[1],"type":["chr"],"align":["left"]},{"label":["SignalingType"],"name":[2],"type":["chr"],"align":["left"]},{"label":["ResourceSpeed"],"name":[3],"type":["chr"],"align":["left"]},{"label":["AvgMedDist"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"Nominal-fast-1","2":"Nominal","3":"fast","4":"77.79250"},{"1":"Nominal-fast-2","2":"Nominal","3":"fast","4":"92.61997"},{"1":"Nominal-fast-3","2":"Nominal","3":"fast","4":"112.44754"},{"1":"Nominal-fast-4","2":"Nominal","3":"fast","4":"92.48703"},{"1":"Nominal-fast-5","2":"Nominal","3":"fast","4":"55.59922"},{"1":"Nominal-fast-6","2":"Nominal","3":"fast","4":"101.61230"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+<div id="step-5-combine-all-data" class="section level3 hasAnchor">
+<h3>Step 5: Combine all data<a href="average-median-distance-to-resource.html#step-5-combine-all-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Group"],"name":[1],"type":["chr"],"align":["left"]},{"label":["SignalingType"],"name":[2],"type":["fct"],"align":["left"]},{"label":["ResourceSpeed"],"name":[3],"type":["fct"],"align":["left"]},{"label":["AvgMedDist"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"FP-1","2":"FP","3":"slow","4":"16.01059"},{"1":"FP-10","2":"FP","3":"slow","4":"86.59868"},{"1":"FP-11","2":"FP","3":"slow","4":"17.51100"},{"1":"FP-13","2":"FP","3":"slow","4":"13.08569"},{"1":"FP-14","2":"FP","3":"fast","4":"62.43359"},{"1":"FP-15","2":"FP","3":"fast","4":"48.76260"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+Number of observations per condition:
+<table class=" lightable-classic" style="font-family: &quot;Arial Narrow&quot;, &quot;Source Sans Pro&quot;, sans-serif; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+SignalingType
+</th>
+<th style="text-align:left;">
+ResourceSpeed
+</th>
+<th style="text-align:right;">
+n
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Nominal
+</td>
+<td style="text-align:left;">
+fast
+</td>
+<td style="text-align:right;">
+500
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Nominal
+</td>
+<td style="text-align:left;">
+slow
+</td>
+<td style="text-align:right;">
+500
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP
+</td>
+<td style="text-align:left;">
+fast
+</td>
+<td style="text-align:right;">
+17
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP
+</td>
+<td style="text-align:left;">
+slow
+</td>
+<td style="text-align:right;">
+18
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+VP
+</td>
+<td style="text-align:left;">
+fast
+</td>
+<td style="text-align:right;">
+19
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+VP
+</td>
+<td style="text-align:left;">
+slow
+</td>
+<td style="text-align:right;">
+17
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NP
+</td>
+<td style="text-align:left;">
+fast
+</td>
+<td style="text-align:right;">
+15
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NP
+</td>
+<td style="text-align:left;">
+slow
+</td>
+<td style="text-align:right;">
+17
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="descriptive-statistics" class="section level2 hasAnchor">
+<h2>Descriptive Statistics<a href="average-median-distance-to-resource.html#descriptive-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<table class=" lightable-classic" style="font-family: &quot;Arial Narrow&quot;, &quot;Source Sans Pro&quot;, sans-serif; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+SignalingType
+</th>
+<th style="text-align:left;">
+ResourceSpeed
+</th>
+<th style="text-align:right;">
+Mean
+</th>
+<th style="text-align:right;">
+SD
+</th>
+<th style="text-align:right;">
+Median
+</th>
+<th style="text-align:right;">
+Min
+</th>
+<th style="text-align:right;">
+Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Nominal
+</td>
+<td style="text-align:left;">
+fast
+</td>
+<td style="text-align:right;">
+86.37
+</td>
+<td style="text-align:right;">
+13.98
+</td>
+<td style="text-align:right;">
+86.98
+</td>
+<td style="text-align:right;">
+38.24
+</td>
+<td style="text-align:right;">
+123.01
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Nominal
+</td>
+<td style="text-align:left;">
+slow
+</td>
+<td style="text-align:right;">
+38.87
+</td>
+<td style="text-align:right;">
+20.25
+</td>
+<td style="text-align:right;">
+32.58
+</td>
+<td style="text-align:right;">
+12.95
+</td>
+<td style="text-align:right;">
+109.51
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP
+</td>
+<td style="text-align:left;">
+fast
+</td>
+<td style="text-align:right;">
+65.12
+</td>
+<td style="text-align:right;">
+18.33
+</td>
+<td style="text-align:right;">
+62.43
+</td>
+<td style="text-align:right;">
+37.23
+</td>
+<td style="text-align:right;">
+98.64
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP
+</td>
+<td style="text-align:left;">
+slow
+</td>
+<td style="text-align:right;">
+25.18
+</td>
+<td style="text-align:right;">
+19.55
+</td>
+<td style="text-align:right;">
+17.01
+</td>
+<td style="text-align:right;">
+12.84
+</td>
+<td style="text-align:right;">
+86.60
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+VP
+</td>
+<td style="text-align:left;">
+fast
+</td>
+<td style="text-align:right;">
+78.69
+</td>
+<td style="text-align:right;">
+13.01
+</td>
+<td style="text-align:right;">
+76.19
+</td>
+<td style="text-align:right;">
+59.49
+</td>
+<td style="text-align:right;">
+106.83
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+VP
+</td>
+<td style="text-align:left;">
+slow
+</td>
+<td style="text-align:right;">
+28.40
+</td>
+<td style="text-align:right;">
+11.49
+</td>
+<td style="text-align:right;">
+26.53
+</td>
+<td style="text-align:right;">
+14.30
+</td>
+<td style="text-align:right;">
+54.74
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NP
+</td>
+<td style="text-align:left;">
+fast
+</td>
+<td style="text-align:right;">
+88.46
+</td>
+<td style="text-align:right;">
+14.24
+</td>
+<td style="text-align:right;">
+88.54
+</td>
+<td style="text-align:right;">
+63.58
+</td>
+<td style="text-align:right;">
+112.29
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NP
+</td>
+<td style="text-align:left;">
+slow
+</td>
+<td style="text-align:right;">
+33.65
+</td>
+<td style="text-align:right;">
+24.61
+</td>
+<td style="text-align:right;">
+24.40
+</td>
+<td style="text-align:right;">
+15.28
+</td>
+<td style="text-align:right;">
+100.02
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="descriptive-plots" class="section level2 hasAnchor">
+<h2>Descriptive Plots<a href="average-median-distance-to-resource.html#descriptive-plots" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="average-median-distance-by-condition" class="section level3 hasAnchor">
+<h3>Average Median Distance by Condition<a href="average-median-distance-to-resource.html#average-median-distance-by-condition" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Plot showing the average median distance for nominal groups, FP, VP, and NP,
+split by resource speed.</p>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-261-1.png" width="960" style="display: block; margin: auto;" /></p>
+</div>
+<div id="distribution-comparison" class="section level3 hasAnchor">
+<h3>Distribution Comparison<a href="average-median-distance-to-resource.html#distribution-comparison" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-263-1.png" width="960" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="statistical-model" class="section level2 hasAnchor">
+<h2>Statistical Model<a href="average-median-distance-to-resource.html#statistical-model" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We model the average median distance using a Gamma family with a log link.
+The dependent variable is a strictly positive, continuous physical distance
+with a right skew, making the Gamma distribution an appropriate choice.
+We use <code>SignalingType</code> (Nominal vs FP vs VP vs NP) and <code>ResourceSpeed</code> as
+predictors with their interaction.</p>
+<div id="data-for-modelling" class="section level3 hasAnchor">
+<h3>Data for modelling<a href="average-median-distance-to-resource.html#data-for-modelling" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+Real group counts:
+# A tibble: 2 × 2
+ResourceSpeed n
+<fct> <int>
+1 fast 51
+2 slow 52
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Group"],"name":[1],"type":["chr"],"align":["left"]},{"label":["SignalingType"],"name":[2],"type":["fct"],"align":["left"]},{"label":["ResourceSpeed"],"name":[3],"type":["fct"],"align":["left"]},{"label":["AvgMedDist"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"FP-1","2":"FP","3":"slow","4":"16.01059"},{"1":"FP-10","2":"FP","3":"slow","4":"86.59868"},{"1":"FP-11","2":"FP","3":"slow","4":"17.51100"},{"1":"FP-13","2":"FP","3":"slow","4":"13.08569"},{"1":"FP-14","2":"FP","3":"fast","4":"62.43359"},{"1":"FP-15","2":"FP","3":"fast","4":"48.76260"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="average-median-distance-to-resource.html#cb219-1" tabindex="-1"></a>m.AvgMedDist.model_data <span class="sc">%&gt;%</span></span>
+<span id="cb219-2"><a href="average-median-distance-to-resource.html#cb219-2" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> AvgMedDist)) <span class="sc">+</span></span>
+<span id="cb219-3"><a href="average-median-distance-to-resource.html#cb219-3" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>, <span class="at">fill =</span> <span class="st">&quot;lightblue&quot;</span>, <span class="at">color =</span> <span class="st">&quot;black&quot;</span>) <span class="sc">+</span></span>
+<span id="cb219-4"><a href="average-median-distance-to-resource.html#cb219-4" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">rows =</span> <span class="fu">vars</span>(ResourceSpeed), <span class="at">cols =</span> <span class="fu">vars</span>(SignalingType)) <span class="sc">+</span></span>
+<span id="cb219-5"><a href="average-median-distance-to-resource.html#cb219-5" tabindex="-1"></a>  <span class="fu">theme_nice</span>()</span></code></pre></div>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-265-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="model-specification-1" class="section level3 hasAnchor">
+<h3>Model specification<a href="average-median-distance-to-resource.html#model-specification-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb220"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb220-1"><a href="average-median-distance-to-resource.html#cb220-1" tabindex="-1"></a>m.AvgMedDist.<span class="fl">1.</span>formula <span class="ot">&lt;-</span> <span class="fu">brmsformula</span>(</span>
+<span id="cb220-2"><a href="average-median-distance-to-resource.html#cb220-2" tabindex="-1"></a>  AvgMedDist <span class="sc">~</span> <span class="dv">1</span> <span class="sc">+</span> SignalingType <span class="sc">*</span> ResourceSpeed <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> Group),</span>
+<span id="cb220-3"><a href="average-median-distance-to-resource.html#cb220-3" tabindex="-1"></a>  <span class="at">family =</span> <span class="fu">Gamma</span>(<span class="at">link =</span> <span class="st">&quot;log&quot;</span>)</span>
+<span id="cb220-4"><a href="average-median-distance-to-resource.html#cb220-4" tabindex="-1"></a>)</span>
+<span id="cb220-5"><a href="average-median-distance-to-resource.html#cb220-5" tabindex="-1"></a></span>
+<span id="cb220-6"><a href="average-median-distance-to-resource.html#cb220-6" tabindex="-1"></a>m.AvgMedDist.<span class="fl">1.</span>formula_comparison <span class="ot">&lt;-</span> <span class="fu">brmsformula</span>(</span>
+<span id="cb220-7"><a href="average-median-distance-to-resource.html#cb220-7" tabindex="-1"></a>  AvgMedDist <span class="sc">~</span> <span class="dv">1</span> <span class="sc">+</span> SignalingType <span class="sc">*</span> ResourceSpeed</span>
+<span id="cb220-8"><a href="average-median-distance-to-resource.html#cb220-8" tabindex="-1"></a>)</span>
+<span id="cb220-9"><a href="average-median-distance-to-resource.html#cb220-9" tabindex="-1"></a></span>
+<span id="cb220-10"><a href="average-median-distance-to-resource.html#cb220-10" tabindex="-1"></a>m.AvgMedDist.<span class="fl">1.</span>priors <span class="ot">&lt;-</span></span>
+<span id="cb220-11"><a href="average-median-distance-to-resource.html#cb220-11" tabindex="-1"></a>  <span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>, <span class="fl">0.5</span>), <span class="at">class =</span> b) <span class="sc">+</span></span>
+<span id="cb220-12"><a href="average-median-distance-to-resource.html#cb220-12" tabindex="-1"></a>  <span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">4</span>, <span class="dv">1</span>), <span class="at">class =</span> Intercept) <span class="sc">+</span> <span class="co"># log(~55) ≈ 4; regularises intercept on log scale</span></span>
+<span id="cb220-13"><a href="average-median-distance-to-resource.html#cb220-13" tabindex="-1"></a>  <span class="fu">prior</span>(<span class="fu">gamma</span>(<span class="dv">4</span>, <span class="fl">0.1</span>), <span class="at">class =</span> shape) <span class="sc">+</span></span>
+<span id="cb220-14"><a href="average-median-distance-to-resource.html#cb220-14" tabindex="-1"></a>  <span class="fu">prior</span>(<span class="fu">exponential</span>(<span class="dv">1</span>), <span class="at">class =</span> sd, <span class="at">lb =</span> <span class="dv">0</span>)</span></code></pre></div>
+</div>
+<div id="prior-predictive-checks-6" class="section level3 hasAnchor">
+<h3>Prior predictive checks<a href="average-median-distance-to-resource.html#prior-predictive-checks-6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb221-1"><a href="average-median-distance-to-resource.html#cb221-1" tabindex="-1"></a>m.AvgMedDist.<span class="fl">1.</span>fit_prior <span class="ot">&lt;-</span> <span class="fu">brm</span>(</span>
+<span id="cb221-2"><a href="average-median-distance-to-resource.html#cb221-2" tabindex="-1"></a>  <span class="at">formula =</span> m.AvgMedDist.<span class="fl">1.</span>formula,</span>
+<span id="cb221-3"><a href="average-median-distance-to-resource.html#cb221-3" tabindex="-1"></a>  <span class="at">data =</span> m.AvgMedDist.model_data,</span>
+<span id="cb221-4"><a href="average-median-distance-to-resource.html#cb221-4" tabindex="-1"></a>  <span class="at">prior =</span> m.AvgMedDist.<span class="fl">1.</span>priors,</span>
+<span id="cb221-5"><a href="average-median-distance-to-resource.html#cb221-5" tabindex="-1"></a>  <span class="at">chains =</span> <span class="dv">4</span>,</span>
+<span id="cb221-6"><a href="average-median-distance-to-resource.html#cb221-6" tabindex="-1"></a>  <span class="at">cores =</span> <span class="dv">4</span>,</span>
+<span id="cb221-7"><a href="average-median-distance-to-resource.html#cb221-7" tabindex="-1"></a>  <span class="at">seed =</span> <span class="dv">42</span>,</span>
+<span id="cb221-8"><a href="average-median-distance-to-resource.html#cb221-8" tabindex="-1"></a>  <span class="at">iter =</span> <span class="dv">2000</span>,</span>
+<span id="cb221-9"><a href="average-median-distance-to-resource.html#cb221-9" tabindex="-1"></a>  <span class="at">file =</span> <span class="fu">paste0</span>(fits_path, <span class="st">&quot;avg_med_dist_1_prior.rds&quot;</span>),</span>
+<span id="cb221-10"><a href="average-median-distance-to-resource.html#cb221-10" tabindex="-1"></a>  <span class="at">sample_prior =</span> <span class="st">&quot;only&quot;</span>,</span>
+<span id="cb221-11"><a href="average-median-distance-to-resource.html#cb221-11" tabindex="-1"></a>  <span class="at">backend =</span> <span class="st">&quot;cmdstanr&quot;</span>,</span>
+<span id="cb221-12"><a href="average-median-distance-to-resource.html#cb221-12" tabindex="-1"></a>  <span class="at">threads =</span> <span class="fu">threading</span>(<span class="dv">100</span>),</span>
+<span id="cb221-13"><a href="average-median-distance-to-resource.html#cb221-13" tabindex="-1"></a>  <span class="at">control =</span> <span class="fu">list</span>(<span class="at">adapt_delta =</span> <span class="fl">0.99</span>),</span>
+<span id="cb221-14"><a href="average-median-distance-to-resource.html#cb221-14" tabindex="-1"></a>  <span class="at">save_pars =</span> <span class="fu">save_pars</span>(<span class="at">all =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb221-15"><a href="average-median-distance-to-resource.html#cb221-15" tabindex="-1"></a>)</span>
+<span id="cb221-16"><a href="average-median-distance-to-resource.html#cb221-16" tabindex="-1"></a></span>
+<span id="cb221-17"><a href="average-median-distance-to-resource.html#cb221-17" tabindex="-1"></a>m.AvgMedDist.<span class="fl">1.</span>y <span class="ot">&lt;-</span> m.AvgMedDist.model_data<span class="sc">$</span>AvgMedDist</span></code></pre></div>
+<div class="sourceCode" id="cb222"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb222-1"><a href="average-median-distance-to-resource.html#cb222-1" tabindex="-1"></a><span class="fu">summary</span>(m.AvgMedDist.<span class="fl">1.</span>fit_prior)</span></code></pre></div>
+<pre><code>##  Family: gamma 
+##   Links: mu = log; shape = identity 
+## Formula: AvgMedDist ~ 1 + SignalingType * ResourceSpeed + (1 | Group) 
+##    Data: m.AvgMedDist.model_data (Number of observations: 311) 
+##   Draws: 4 chains, each with iter = 2000; warmup = 1000; thin = 1;
+##          total post-warmup draws = 4000
+## 
+## Multilevel Hyperparameters:
+## ~Group (Number of levels: 311) 
+##               Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+## sd(Intercept)     1.02      1.01     0.03     3.76 1.00     4115     2157
+## 
+## Regression Coefficients:
+##                                   Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+## Intercept                             3.99      1.02     1.98     5.99 1.00     5229     3185
+## SignalingTypeNP                       0.00      0.50    -0.96     0.97 1.00     5021     3195
+## SignalingTypeVP                       0.00      0.49    -0.96     0.94 1.00     5257     3256
+## SignalingTypeFP                      -0.00      0.49    -1.00     0.98 1.00     4869     2933
+## ResourceSpeedslow                    -0.01      0.49    -0.97     0.96 1.00     5433     2629
+## SignalingTypeNP:ResourceSpeedslow    -0.00      0.51    -1.01     0.98 1.00     4727     3112
+## SignalingTypeVP:ResourceSpeedslow     0.00      0.50    -0.97     0.98 1.00     5266     3017
+## SignalingTypeFP:ResourceSpeedslow     0.02      0.51    -0.96     1.03 1.00     4915     2912
+## 
+## Further Distributional Parameters:
+##       Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+## shape    39.99     20.13    11.02    89.85 1.00     4733     2562
+## 
+## Draws were sampled using sample(hmc). For each parameter, Bulk_ESS
+## and Tail_ESS are effective sample size measures, and Rhat is the potential
+## scale reduction factor on split chains (at convergence, Rhat = 1).</code></pre>
+</div>
+<div id="model-fitting-8" class="section level3 hasAnchor">
+<h3>Model fitting<a href="average-median-distance-to-resource.html#model-fitting-8" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb224"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb224-1"><a href="average-median-distance-to-resource.html#cb224-1" tabindex="-1"></a>m.AvgMedDist.<span class="fl">1.</span>fit <span class="ot">&lt;-</span> <span class="fu">brm</span>(</span>
+<span id="cb224-2"><a href="average-median-distance-to-resource.html#cb224-2" tabindex="-1"></a>  <span class="at">formula =</span> m.AvgMedDist.<span class="fl">1.</span>formula,</span>
+<span id="cb224-3"><a href="average-median-distance-to-resource.html#cb224-3" tabindex="-1"></a>  <span class="at">data =</span> m.AvgMedDist.model_data,</span>
+<span id="cb224-4"><a href="average-median-distance-to-resource.html#cb224-4" tabindex="-1"></a>  <span class="at">prior =</span> m.AvgMedDist.<span class="fl">1.</span>priors,</span>
+<span id="cb224-5"><a href="average-median-distance-to-resource.html#cb224-5" tabindex="-1"></a>  <span class="at">chains =</span> <span class="dv">7</span>,</span>
+<span id="cb224-6"><a href="average-median-distance-to-resource.html#cb224-6" tabindex="-1"></a>  <span class="at">cores =</span> <span class="dv">7</span>,</span>
+<span id="cb224-7"><a href="average-median-distance-to-resource.html#cb224-7" tabindex="-1"></a>  <span class="at">seed =</span> <span class="dv">42</span>,</span>
+<span id="cb224-8"><a href="average-median-distance-to-resource.html#cb224-8" tabindex="-1"></a>  <span class="at">iter =</span> <span class="dv">10000</span>,</span>
+<span id="cb224-9"><a href="average-median-distance-to-resource.html#cb224-9" tabindex="-1"></a>  <span class="at">file =</span> <span class="fu">paste0</span>(fits_path, <span class="st">&quot;avg_med_dist_1.rds&quot;</span>),</span>
+<span id="cb224-10"><a href="average-median-distance-to-resource.html#cb224-10" tabindex="-1"></a>  <span class="at">backend =</span> <span class="st">&quot;cmdstanr&quot;</span>,</span>
+<span id="cb224-11"><a href="average-median-distance-to-resource.html#cb224-11" tabindex="-1"></a>  <span class="at">threads =</span> <span class="fu">threading</span>(<span class="dv">100</span>),</span>
+<span id="cb224-12"><a href="average-median-distance-to-resource.html#cb224-12" tabindex="-1"></a>  <span class="at">control =</span> <span class="fu">list</span>(<span class="at">adapt_delta =</span> <span class="fl">0.99</span>),</span>
+<span id="cb224-13"><a href="average-median-distance-to-resource.html#cb224-13" tabindex="-1"></a>  <span class="at">save_pars =</span> <span class="fu">save_pars</span>(<span class="at">all =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb224-14"><a href="average-median-distance-to-resource.html#cb224-14" tabindex="-1"></a>)</span></code></pre></div>
+<pre><code>##  Family: gamma 
+##   Links: mu = log; shape = identity 
+## Formula: AvgMedDist ~ 1 + SignalingType * ResourceSpeed + (1 | Group) 
+##    Data: m.AvgMedDist.model_data (Number of observations: 311) 
+##   Draws: 7 chains, each with iter = 10000; warmup = 5000; thin = 1;
+##          total post-warmup draws = 35000
+## 
+## Multilevel Hyperparameters:
+## ~Group (Number of levels: 311) 
+##               Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+## sd(Intercept)     0.35      0.02     0.29     0.39 1.00     1341     2721
+## 
+## Regression Coefficients:
+##                                   Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+## Intercept                             4.44      0.04     4.37     4.51 1.00     7090    13186
+## SignalingTypeNP                       0.03      0.10    -0.17     0.23 1.00     7850    14555
+## SignalingTypeVP                      -0.08      0.09    -0.26     0.10 1.00     7314    14015
+## SignalingTypeFP                      -0.28      0.10    -0.48    -0.10 1.00     7579    12023
+## ResourceSpeedslow                    -0.88      0.05    -0.98    -0.78 1.00     7422    13246
+## SignalingTypeNP:ResourceSpeedslow    -0.21      0.14    -0.48     0.06 1.00     8001    13513
+## SignalingTypeVP:ResourceSpeedslow    -0.18      0.13    -0.44     0.07 1.00     7636    14063
+## SignalingTypeFP:ResourceSpeedslow    -0.21      0.13    -0.47     0.06 1.00     8486    14638
+## 
+## Further Distributional Parameters:
+##       Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+## shape    45.47     19.39    18.05    93.12 1.01      792     2017
+## 
+## Draws were sampled using sample(hmc). For each parameter, Bulk_ESS
+## and Tail_ESS are effective sample size measures, and Rhat is the potential
+## scale reduction factor on split chains (at convergence, Rhat = 1).</code></pre>
+</div>
+<div id="model-diagnostics-6" class="section level3 hasAnchor">
+<h3>Model diagnostics<a href="average-median-distance-to-resource.html#model-diagnostics-6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb226"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb226-1"><a href="average-median-distance-to-resource.html#cb226-1" tabindex="-1"></a>m.AvgMedDist.<span class="fl">1.</span>yrep <span class="ot">&lt;-</span> <span class="fu">posterior_predict</span>(m.AvgMedDist.<span class="fl">1.</span>fit, <span class="at">draws =</span> <span class="dv">1000</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb227-1"><a href="average-median-distance-to-resource.html#cb227-1" tabindex="-1"></a><span class="fu">plot</span>(m.AvgMedDist.<span class="fl">1.</span>fit, <span class="at">ask =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-273-1.png" width="672" style="display: block; margin: auto;" /><img src="collective_tracking_results_files/figure-html/unnamed-chunk-273-2.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb228"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb228-1"><a href="average-median-distance-to-resource.html#cb228-1" tabindex="-1"></a><span class="fu">ppc_dens_overlay</span>(m.AvgMedDist.<span class="fl">1.</span>y, m.AvgMedDist.<span class="fl">1.</span>yrep[<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, ])</span></code></pre></div>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-274-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb229"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb229-1"><a href="average-median-distance-to-resource.html#cb229-1" tabindex="-1"></a><span class="fu">ppc_dens_overlay_grouped</span>(m.AvgMedDist.<span class="fl">1.</span>y, m.AvgMedDist.<span class="fl">1.</span>yrep[<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, ],</span>
+<span id="cb229-2"><a href="average-median-distance-to-resource.html#cb229-2" tabindex="-1"></a>  <span class="at">group =</span> m.AvgMedDist.model_data<span class="sc">$</span>ResourceSpeed</span>
+<span id="cb229-3"><a href="average-median-distance-to-resource.html#cb229-3" tabindex="-1"></a>)</span></code></pre></div>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-275-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb230"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb230-1"><a href="average-median-distance-to-resource.html#cb230-1" tabindex="-1"></a><span class="fu">ppc_dens_overlay_grouped</span>(m.AvgMedDist.<span class="fl">1.</span>y, m.AvgMedDist.<span class="fl">1.</span>yrep[<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, ],</span>
+<span id="cb230-2"><a href="average-median-distance-to-resource.html#cb230-2" tabindex="-1"></a>  <span class="at">group =</span> m.AvgMedDist.model_data<span class="sc">$</span>SignalingType</span>
+<span id="cb230-3"><a href="average-median-distance-to-resource.html#cb230-3" tabindex="-1"></a>)</span></code></pre></div>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-276-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb231"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb231-1"><a href="average-median-distance-to-resource.html#cb231-1" tabindex="-1"></a>group <span class="ot">&lt;-</span> m.AvgMedDist.model_data<span class="sc">$</span>SignalingType</span>
+<span id="cb231-2"><a href="average-median-distance-to-resource.html#cb231-2" tabindex="-1"></a>mask <span class="ot">&lt;-</span> m.AvgMedDist.model_data<span class="sc">$</span>ResourceSpeed <span class="sc">==</span> <span class="st">&quot;fast&quot;</span></span>
+<span id="cb231-3"><a href="average-median-distance-to-resource.html#cb231-3" tabindex="-1"></a></span>
+<span id="cb231-4"><a href="average-median-distance-to-resource.html#cb231-4" tabindex="-1"></a><span class="fu">ppc_dens_overlay_grouped</span>(m.AvgMedDist.<span class="fl">1.</span>y[mask],</span>
+<span id="cb231-5"><a href="average-median-distance-to-resource.html#cb231-5" tabindex="-1"></a>  m.AvgMedDist.<span class="fl">1.</span>yrep[<span class="dv">1</span><span class="sc">:</span><span class="dv">50</span>, mask],</span>
+<span id="cb231-6"><a href="average-median-distance-to-resource.html#cb231-6" tabindex="-1"></a>  <span class="at">group =</span> group[mask]</span>
+<span id="cb231-7"><a href="average-median-distance-to-resource.html#cb231-7" tabindex="-1"></a>)</span></code></pre></div>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-277-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb232"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb232-1"><a href="average-median-distance-to-resource.html#cb232-1" tabindex="-1"></a>group <span class="ot">&lt;-</span> m.AvgMedDist.model_data<span class="sc">$</span>SignalingType</span>
+<span id="cb232-2"><a href="average-median-distance-to-resource.html#cb232-2" tabindex="-1"></a>mask <span class="ot">&lt;-</span> m.AvgMedDist.model_data<span class="sc">$</span>ResourceSpeed <span class="sc">==</span> <span class="st">&quot;slow&quot;</span></span>
+<span id="cb232-3"><a href="average-median-distance-to-resource.html#cb232-3" tabindex="-1"></a></span>
+<span id="cb232-4"><a href="average-median-distance-to-resource.html#cb232-4" tabindex="-1"></a><span class="fu">ppc_dens_overlay_grouped</span>(m.AvgMedDist.<span class="fl">1.</span>y[mask],</span>
+<span id="cb232-5"><a href="average-median-distance-to-resource.html#cb232-5" tabindex="-1"></a>  m.AvgMedDist.<span class="fl">1.</span>yrep[<span class="dv">1</span><span class="sc">:</span><span class="dv">50</span>, mask],</span>
+<span id="cb232-6"><a href="average-median-distance-to-resource.html#cb232-6" tabindex="-1"></a>  <span class="at">group =</span> group[mask]</span>
+<span id="cb232-7"><a href="average-median-distance-to-resource.html#cb232-7" tabindex="-1"></a>)</span></code></pre></div>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-278-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="model-predictions-7" class="section level3 hasAnchor">
+<h3>Model predictions<a href="average-median-distance-to-resource.html#model-predictions-7" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-279-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="condition-comparisons-8" class="section level3 hasAnchor">
+<h3>Condition comparisons<a href="average-median-distance-to-resource.html#condition-comparisons-8" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb233"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb233-1"><a href="average-median-distance-to-resource.html#cb233-1" tabindex="-1"></a>m.AvgMedDist.<span class="fl">1.</span>emmeans_contrast_draws<span class="fl">.1</span> <span class="ot">&lt;-</span> m.AvgMedDist.<span class="fl">1.</span>fit <span class="sc">%&gt;%</span></span>
+<span id="cb233-2"><a href="average-median-distance-to-resource.html#cb233-2" tabindex="-1"></a>  <span class="fu">emmeans</span>(<span class="sc">~</span> SignalingType <span class="sc">*</span> ResourceSpeed,</span>
+<span id="cb233-3"><a href="average-median-distance-to-resource.html#cb233-3" tabindex="-1"></a>    <span class="at">epred =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb233-4"><a href="average-median-distance-to-resource.html#cb233-4" tabindex="-1"></a>    <span class="at">type =</span> <span class="st">&quot;response&quot;</span>,</span>
+<span id="cb233-5"><a href="average-median-distance-to-resource.html#cb233-5" tabindex="-1"></a>    <span class="at">re_formula =</span> m.AvgMedDist.<span class="fl">1.</span>formula_comparison</span>
+<span id="cb233-6"><a href="average-median-distance-to-resource.html#cb233-6" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb233-7"><a href="average-median-distance-to-resource.html#cb233-7" tabindex="-1"></a>  <span class="fu">contrast</span>(<span class="at">method =</span> <span class="st">&quot;pairwise&quot;</span>, <span class="at">simple =</span> <span class="st">&quot;each&quot;</span>, <span class="at">combine =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb233-8"><a href="average-median-distance-to-resource.html#cb233-8" tabindex="-1"></a>  <span class="fu">gather_emmeans_draws</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb234"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb234-1"><a href="average-median-distance-to-resource.html#cb234-1" tabindex="-1"></a>m.AvgMedDist.<span class="fl">1.</span>comparison<span class="fl">.1</span> <span class="ot">&lt;-</span> m.AvgMedDist.<span class="fl">1.</span>emmeans_contrast_draws<span class="fl">.1</span> <span class="sc">%&gt;%</span></span>
+<span id="cb234-2"><a href="average-median-distance-to-resource.html#cb234-2" tabindex="-1"></a>  ggdist<span class="sc">::</span><span class="fu">mean_hdci</span>(<span class="at">.width =</span> <span class="fl">0.9</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb234-3"><a href="average-median-distance-to-resource.html#cb234-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">.value =</span> <span class="fu">round</span>(.value, <span class="dv">2</span>), <span class="at">.lower =</span> <span class="fu">round</span>(.lower, <span class="dv">2</span>), <span class="at">.upper =</span> <span class="fu">round</span>(.upper, <span class="dv">2</span>))</span>
+<span id="cb234-4"><a href="average-median-distance-to-resource.html#cb234-4" tabindex="-1"></a></span>
+<span id="cb234-5"><a href="average-median-distance-to-resource.html#cb234-5" tabindex="-1"></a>m.AvgMedDist.<span class="fl">1.</span>comparison<span class="fl">.1</span> <span class="sc">%&gt;%</span></span>
+<span id="cb234-6"><a href="average-median-distance-to-resource.html#cb234-6" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="st">&quot;html&quot;</span>, <span class="at">digits =</span> <span class="dv">2</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb234-7"><a href="average-median-distance-to-resource.html#cb234-7" tabindex="-1"></a>  <span class="fu">kable_classic</span>(<span class="at">full_width =</span> <span class="cn">TRUE</span>, <span class="at">position =</span> <span class="st">&quot;center&quot;</span>)</span></code></pre></div>
+<table class=" lightable-classic" style="font-family: &quot;Arial Narrow&quot;, &quot;Source Sans Pro&quot;, sans-serif; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+ResourceSpeed
+</th>
+<th style="text-align:left;">
+SignalingType
+</th>
+<th style="text-align:left;">
+contrast
+</th>
+<th style="text-align:right;">
+.value
+</th>
+<th style="text-align:right;">
+.lower
+</th>
+<th style="text-align:right;">
+.upper
+</th>
+<th style="text-align:right;">
+.width
+</th>
+<th style="text-align:left;">
+.point
+</th>
+<th style="text-align:left;">
+.interval
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+FP
+</td>
+<td style="text-align:left;">
+fast - slow
+</td>
+<td style="text-align:right;">
+42.35
+</td>
+<td style="text-align:right;">
+32.35
+</td>
+<td style="text-align:right;">
+52.22
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+Nominal
+</td>
+<td style="text-align:left;">
+fast - slow
+</td>
+<td style="text-align:right;">
+49.53
+</td>
+<td style="text-align:right;">
+44.05
+</td>
+<td style="text-align:right;">
+55.03
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+NP
+</td>
+<td style="text-align:left;">
+fast - slow
+</td>
+<td style="text-align:right;">
+58.30
+</td>
+<td style="text-align:right;">
+43.69
+</td>
+<td style="text-align:right;">
+72.19
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+VP
+</td>
+<td style="text-align:left;">
+fast - slow
+</td>
+<td style="text-align:right;">
+51.32
+</td>
+<td style="text-align:right;">
+39.28
+</td>
+<td style="text-align:right;">
+62.57
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fast
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+Nominal - FP
+</td>
+<td style="text-align:right;">
+20.77
+</td>
+<td style="text-align:right;">
+9.91
+</td>
+<td style="text-align:right;">
+31.46
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fast
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+Nominal - NP
+</td>
+<td style="text-align:right;">
+-3.12
+</td>
+<td style="text-align:right;">
+-16.94
+</td>
+<td style="text-align:right;">
+12.08
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fast
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+Nominal - VP
+</td>
+<td style="text-align:right;">
+6.31
+</td>
+<td style="text-align:right;">
+-5.91
+</td>
+<td style="text-align:right;">
+18.21
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fast
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+NP - FP
+</td>
+<td style="text-align:right;">
+23.89
+</td>
+<td style="text-align:right;">
+6.55
+</td>
+<td style="text-align:right;">
+40.48
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fast
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+NP - VP
+</td>
+<td style="text-align:right;">
+9.43
+</td>
+<td style="text-align:right;">
+-8.14
+</td>
+<td style="text-align:right;">
+27.00
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fast
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+VP - FP
+</td>
+<td style="text-align:right;">
+14.46
+</td>
+<td style="text-align:right;">
+0.03
+</td>
+<td style="text-align:right;">
+29.33
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+slow
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+Nominal - FP
+</td>
+<td style="text-align:right;">
+13.58
+</td>
+<td style="text-align:right;">
+9.69
+</td>
+<td style="text-align:right;">
+17.35
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+slow
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+Nominal - NP
+</td>
+<td style="text-align:right;">
+5.65
+</td>
+<td style="text-align:right;">
+0.96
+</td>
+<td style="text-align:right;">
+10.70
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+slow
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+Nominal - VP
+</td>
+<td style="text-align:right;">
+8.09
+</td>
+<td style="text-align:right;">
+3.66
+</td>
+<td style="text-align:right;">
+12.74
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+slow
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+NP - FP
+</td>
+<td style="text-align:right;">
+7.93
+</td>
+<td style="text-align:right;">
+2.40
+</td>
+<td style="text-align:right;">
+13.34
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+slow
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+NP - VP
+</td>
+<td style="text-align:right;">
+2.44
+</td>
+<td style="text-align:right;">
+-3.73
+</td>
+<td style="text-align:right;">
+8.32
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+slow
+</td>
+<td style="text-align:left;">
+.
+</td>
+<td style="text-align:left;">
+VP - FP
+</td>
+<td style="text-align:right;">
+5.49
+</td>
+<td style="text-align:right;">
+0.34
+</td>
+<td style="text-align:right;">
+10.66
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb235"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb235-1"><a href="average-median-distance-to-resource.html#cb235-1" tabindex="-1"></a>m.AvgMedDist.<span class="fl">1.</span>emmeans_contrast_draws<span class="fl">.1</span> <span class="sc">%&gt;%</span></span>
+<span id="cb235-2"><a href="average-median-distance-to-resource.html#cb235-2" tabindex="-1"></a>  <span class="fu">filter</span>(ResourceSpeed <span class="sc">!=</span> <span class="st">&quot;.&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb235-3"><a href="average-median-distance-to-resource.html#cb235-3" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">prediction =</span> .value) <span class="sc">%&gt;%</span></span>
+<span id="cb235-4"><a href="average-median-distance-to-resource.html#cb235-4" tabindex="-1"></a>  <span class="fu">ggplot</span>(</span>
+<span id="cb235-5"><a href="average-median-distance-to-resource.html#cb235-5" tabindex="-1"></a>    <span class="fu">aes</span>(</span>
+<span id="cb235-6"><a href="average-median-distance-to-resource.html#cb235-6" tabindex="-1"></a>      <span class="at">y =</span> contrast,</span>
+<span id="cb235-7"><a href="average-median-distance-to-resource.html#cb235-7" tabindex="-1"></a>      <span class="at">x =</span> prediction,</span>
+<span id="cb235-8"><a href="average-median-distance-to-resource.html#cb235-8" tabindex="-1"></a>      <span class="at">color =</span> ResourceSpeed, <span class="at">shape =</span> ResourceSpeed, <span class="at">fill =</span> ResourceSpeed</span>
+<span id="cb235-9"><a href="average-median-distance-to-resource.html#cb235-9" tabindex="-1"></a>    )</span>
+<span id="cb235-10"><a href="average-median-distance-to-resource.html#cb235-10" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb235-11"><a href="average-median-distance-to-resource.html#cb235-11" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">rows =</span> <span class="fu">vars</span>(ResourceSpeed)) <span class="sc">+</span></span>
+<span id="cb235-12"><a href="average-median-distance-to-resource.html#cb235-12" tabindex="-1"></a>  <span class="fu">stat_pointinterval</span>(<span class="at">.width =</span> <span class="fl">0.9</span>) <span class="sc">+</span></span>
+<span id="cb235-13"><a href="average-median-distance-to-resource.html#cb235-13" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">get_colors</span>(<span class="st">&quot;Qual2&quot;</span>, <span class="at">num.colors =</span> <span class="dv">2</span>, <span class="at">reverse =</span> <span class="cn">TRUE</span>, <span class="at">gradient =</span> <span class="cn">FALSE</span>)) <span class="sc">+</span></span>
+<span id="cb235-14"><a href="average-median-distance-to-resource.html#cb235-14" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">get_colors</span>(<span class="st">&quot;Qual2&quot;</span>, <span class="at">num.colors =</span> <span class="dv">2</span>, <span class="at">reverse =</span> <span class="cn">TRUE</span>, <span class="at">gradient =</span> <span class="cn">FALSE</span>)) <span class="sc">+</span></span>
+<span id="cb235-15"><a href="average-median-distance-to-resource.html#cb235-15" tabindex="-1"></a>  <span class="fu">scale_shape_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="dv">21</span>, <span class="dv">24</span>)) <span class="sc">+</span></span>
+<span id="cb235-16"><a href="average-median-distance-to-resource.html#cb235-16" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> <span class="dv">0</span>), <span class="at">linetype =</span> <span class="st">&quot;longdash&quot;</span>) <span class="sc">+</span></span>
+<span id="cb235-17"><a href="average-median-distance-to-resource.html#cb235-17" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Difference in Average Median Distance&quot;</span>) <span class="sc">+</span></span>
+<span id="cb235-18"><a href="average-median-distance-to-resource.html#cb235-18" tabindex="-1"></a>  <span class="fu">theme_nice</span>()</span></code></pre></div>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-283-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb236"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb236-1"><a href="average-median-distance-to-resource.html#cb236-1" tabindex="-1"></a>m.AvgMedDist.<span class="fl">1.</span>emmeans_contrast_draws<span class="fl">.2</span> <span class="ot">&lt;-</span> m.AvgMedDist.<span class="fl">1.</span>fit <span class="sc">%&gt;%</span></span>
+<span id="cb236-2"><a href="average-median-distance-to-resource.html#cb236-2" tabindex="-1"></a>  <span class="fu">emmeans</span>(<span class="sc">~</span>ResourceSpeed,</span>
+<span id="cb236-3"><a href="average-median-distance-to-resource.html#cb236-3" tabindex="-1"></a>    <span class="at">epred =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb236-4"><a href="average-median-distance-to-resource.html#cb236-4" tabindex="-1"></a>    <span class="at">type =</span> <span class="st">&quot;response&quot;</span>,</span>
+<span id="cb236-5"><a href="average-median-distance-to-resource.html#cb236-5" tabindex="-1"></a>    <span class="at">re_formula =</span> m.AvgMedDist.<span class="fl">1.</span>formula_comparison</span>
+<span id="cb236-6"><a href="average-median-distance-to-resource.html#cb236-6" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb236-7"><a href="average-median-distance-to-resource.html#cb236-7" tabindex="-1"></a>  <span class="fu">contrast</span>(<span class="at">method =</span> <span class="st">&quot;pairwise&quot;</span>, <span class="at">simple =</span> <span class="st">&quot;each&quot;</span>, <span class="at">combine =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb236-8"><a href="average-median-distance-to-resource.html#cb236-8" tabindex="-1"></a>  <span class="fu">gather_emmeans_draws</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb237"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb237-1"><a href="average-median-distance-to-resource.html#cb237-1" tabindex="-1"></a>m.AvgMedDist.<span class="fl">1.</span>comparison<span class="fl">.2</span> <span class="ot">&lt;-</span> m.AvgMedDist.<span class="fl">1.</span>emmeans_contrast_draws<span class="fl">.2</span> <span class="sc">%&gt;%</span></span>
+<span id="cb237-2"><a href="average-median-distance-to-resource.html#cb237-2" tabindex="-1"></a>  ggdist<span class="sc">::</span><span class="fu">mean_hdci</span>(<span class="at">.width =</span> <span class="fl">0.9</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb237-3"><a href="average-median-distance-to-resource.html#cb237-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">.value =</span> <span class="fu">round</span>(.value, <span class="dv">2</span>), <span class="at">.lower =</span> <span class="fu">round</span>(.lower, <span class="dv">2</span>), <span class="at">.upper =</span> <span class="fu">round</span>(.upper, <span class="dv">2</span>))</span>
+<span id="cb237-4"><a href="average-median-distance-to-resource.html#cb237-4" tabindex="-1"></a></span>
+<span id="cb237-5"><a href="average-median-distance-to-resource.html#cb237-5" tabindex="-1"></a>m.AvgMedDist.<span class="fl">1.</span>comparison<span class="fl">.2</span> <span class="sc">%&gt;%</span></span>
+<span id="cb237-6"><a href="average-median-distance-to-resource.html#cb237-6" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="st">&quot;html&quot;</span>, <span class="at">digits =</span> <span class="dv">2</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb237-7"><a href="average-median-distance-to-resource.html#cb237-7" tabindex="-1"></a>  <span class="fu">kable_classic</span>(<span class="at">full_width =</span> <span class="cn">TRUE</span>, <span class="at">position =</span> <span class="st">&quot;center&quot;</span>)</span></code></pre></div>
+<table class=" lightable-classic" style="font-family: &quot;Arial Narrow&quot;, &quot;Source Sans Pro&quot;, sans-serif; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+contrast
+</th>
+<th style="text-align:right;">
+.value
+</th>
+<th style="text-align:right;">
+.lower
+</th>
+<th style="text-align:right;">
+.upper
+</th>
+<th style="text-align:right;">
+.width
+</th>
+<th style="text-align:left;">
+.point
+</th>
+<th style="text-align:left;">
+.interval
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+fast - slow
+</td>
+<td style="text-align:right;">
+50.38
+</td>
+<td style="text-align:right;">
+44.93
+</td>
+<td style="text-align:right;">
+55.87
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:left;">
+mean
+</td>
+<td style="text-align:left;">
+hdci
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="combined-comparison-table" class="section level3 hasAnchor">
+<h3>Combined comparison table<a href="average-median-distance-to-resource.html#combined-comparison-table" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb238"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb238-1"><a href="average-median-distance-to-resource.html#cb238-1" tabindex="-1"></a>m.AvgMedDist.<span class="fl">1.</span>comparison.combined_table <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(</span>
+<span id="cb238-2"><a href="average-median-distance-to-resource.html#cb238-2" tabindex="-1"></a>  m.AvgMedDist.<span class="fl">1.</span>comparison<span class="fl">.2</span>,</span>
+<span id="cb238-3"><a href="average-median-distance-to-resource.html#cb238-3" tabindex="-1"></a>  m.AvgMedDist.<span class="fl">1.</span>comparison<span class="fl">.1</span></span>
+<span id="cb238-4"><a href="average-median-distance-to-resource.html#cb238-4" tabindex="-1"></a>) <span class="sc">%&gt;%</span></span>
+<span id="cb238-5"><a href="average-median-distance-to-resource.html#cb238-5" tabindex="-1"></a>  <span class="fu">select</span>(ResourceSpeed, SignalingType, contrast, .value, .lower, .upper) <span class="sc">%&gt;%</span></span>
+<span id="cb238-6"><a href="average-median-distance-to-resource.html#cb238-6" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb238-7"><a href="average-median-distance-to-resource.html#cb238-7" tabindex="-1"></a>    <span class="at">ResourceSpeed =</span> <span class="fu">ifelse</span>(<span class="fu">is.na</span>(ResourceSpeed), <span class="st">&quot;.&quot;</span>, <span class="fu">as.character</span>(ResourceSpeed)),</span>
+<span id="cb238-8"><a href="average-median-distance-to-resource.html#cb238-8" tabindex="-1"></a>    <span class="at">SignalingType =</span> <span class="fu">ifelse</span>(<span class="fu">is.na</span>(SignalingType), <span class="st">&quot;.&quot;</span>, <span class="fu">as.character</span>(SignalingType)),</span>
+<span id="cb238-9"><a href="average-median-distance-to-resource.html#cb238-9" tabindex="-1"></a>    <span class="at">sig =</span> (.lower <span class="sc">*</span> .upper) <span class="sc">&gt;</span> <span class="dv">0</span>,</span>
+<span id="cb238-10"><a href="average-median-distance-to-resource.html#cb238-10" tabindex="-1"></a>    <span class="at">Estimate =</span> <span class="fu">sprintf</span>(<span class="st">&quot;%.2f&quot;</span>, .value),</span>
+<span id="cb238-11"><a href="average-median-distance-to-resource.html#cb238-11" tabindex="-1"></a>    <span class="at">Estimate =</span> <span class="fu">ifelse</span>(sig, <span class="fu">paste0</span>(<span class="st">&quot;</span><span class="sc">\\</span><span class="st">textbf{&quot;</span>, Estimate, <span class="st">&quot;}&quot;</span>), Estimate),</span>
+<span id="cb238-12"><a href="average-median-distance-to-resource.html#cb238-12" tabindex="-1"></a>    <span class="at">hpdi =</span> <span class="fu">sprintf</span>(<span class="st">&quot;[%.2f, %.2f]&quot;</span>, .lower, .upper),</span>
+<span id="cb238-13"><a href="average-median-distance-to-resource.html#cb238-13" tabindex="-1"></a>    <span class="at">hpdi =</span> <span class="fu">ifelse</span>(sig, <span class="fu">paste0</span>(<span class="st">&quot;</span><span class="sc">\\</span><span class="st">textbf{&quot;</span>, hpdi, <span class="st">&quot;}&quot;</span>), hpdi)</span>
+<span id="cb238-14"><a href="average-median-distance-to-resource.html#cb238-14" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb238-15"><a href="average-median-distance-to-resource.html#cb238-15" tabindex="-1"></a>  <span class="fu">select</span>(ResourceSpeed, SignalingType, contrast, Estimate, hpdi)</span>
+<span id="cb238-16"><a href="average-median-distance-to-resource.html#cb238-16" tabindex="-1"></a></span>
+<span id="cb238-17"><a href="average-median-distance-to-resource.html#cb238-17" tabindex="-1"></a><span class="fu">colnames</span>(m.AvgMedDist.<span class="fl">1.</span>comparison.combined_table) <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb238-18"><a href="average-median-distance-to-resource.html#cb238-18" tabindex="-1"></a>  <span class="st">&quot;Resource Speed&quot;</span>, <span class="st">&quot;Payoff Condition&quot;</span>, <span class="st">&quot;Contrast&quot;</span>, <span class="st">&quot;Mean&quot;</span>, <span class="st">&quot;90</span><span class="sc">\\</span><span class="st">% HPDI&quot;</span></span>
+<span id="cb238-19"><a href="average-median-distance-to-resource.html#cb238-19" tabindex="-1"></a>)</span>
+<span id="cb238-20"><a href="average-median-distance-to-resource.html#cb238-20" tabindex="-1"></a></span>
+<span id="cb238-21"><a href="average-median-distance-to-resource.html#cb238-21" tabindex="-1"></a></span>
+<span id="cb238-22"><a href="average-median-distance-to-resource.html#cb238-22" tabindex="-1"></a>kbl <span class="ot">&lt;-</span> <span class="fu">kable</span>(</span>
+<span id="cb238-23"><a href="average-median-distance-to-resource.html#cb238-23" tabindex="-1"></a>  m.AvgMedDist.<span class="fl">1.</span>comparison.combined_table,</span>
+<span id="cb238-24"><a href="average-median-distance-to-resource.html#cb238-24" tabindex="-1"></a>  <span class="at">format =</span> <span class="st">&quot;latex&quot;</span>,</span>
+<span id="cb238-25"><a href="average-median-distance-to-resource.html#cb238-25" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb238-26"><a href="average-median-distance-to-resource.html#cb238-26" tabindex="-1"></a>  <span class="at">align =</span> <span class="fu">c</span>(<span class="st">&quot;l&quot;</span>, <span class="st">&quot;l&quot;</span>, <span class="st">&quot;l&quot;</span>, <span class="st">&quot;r&quot;</span>, <span class="st">&quot;r&quot;</span>),</span>
+<span id="cb238-27"><a href="average-median-distance-to-resource.html#cb238-27" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">&quot;Posterior Estimates Average Median Distance&quot;</span>,</span>
+<span id="cb238-28"><a href="average-median-distance-to-resource.html#cb238-28" tabindex="-1"></a>  <span class="at">escape =</span> <span class="cn">FALSE</span></span>
+<span id="cb238-29"><a href="average-median-distance-to-resource.html#cb238-29" tabindex="-1"></a>) <span class="sc">%&gt;%</span></span>
+<span id="cb238-30"><a href="average-median-distance-to-resource.html#cb238-30" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">latex_options =</span> <span class="st">&quot;hold_position&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb238-31"><a href="average-median-distance-to-resource.html#cb238-31" tabindex="-1"></a>  <span class="fu">row_spec</span>(<span class="dv">0</span>, <span class="at">bold =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb238-32"><a href="average-median-distance-to-resource.html#cb238-32" tabindex="-1"></a></span>
+<span id="cb238-33"><a href="average-median-distance-to-resource.html#cb238-33" tabindex="-1"></a>unique_speeds <span class="ot">&lt;-</span> <span class="fu">unique</span>(m.AvgMedDist.<span class="fl">1.</span>comparison.combined_table<span class="sc">$</span><span class="st">`</span><span class="at">Resource Speed</span><span class="st">`</span>)</span>
+<span id="cb238-34"><a href="average-median-distance-to-resource.html#cb238-34" tabindex="-1"></a>start <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb238-35"><a href="average-median-distance-to-resource.html#cb238-35" tabindex="-1"></a><span class="cf">for</span> (speed <span class="cf">in</span> unique_speeds) {</span>
+<span id="cb238-36"><a href="average-median-distance-to-resource.html#cb238-36" tabindex="-1"></a>  n_rows <span class="ot">&lt;-</span> <span class="fu">sum</span>(m.AvgMedDist.<span class="fl">1.</span>comparison.combined_table<span class="sc">$</span><span class="st">`</span><span class="at">Resource Speed</span><span class="st">`</span> <span class="sc">==</span> speed)</span>
+<span id="cb238-37"><a href="average-median-distance-to-resource.html#cb238-37" tabindex="-1"></a>  <span class="cf">if</span> (speed <span class="sc">!=</span> <span class="st">&quot;.&quot;</span>) {</span>
+<span id="cb238-38"><a href="average-median-distance-to-resource.html#cb238-38" tabindex="-1"></a>    kbl <span class="ot">&lt;-</span> <span class="fu">group_rows</span>(kbl, speed, start, start <span class="sc">+</span> n_rows <span class="sc">-</span> <span class="dv">1</span>)</span>
+<span id="cb238-39"><a href="average-median-distance-to-resource.html#cb238-39" tabindex="-1"></a>  }</span>
+<span id="cb238-40"><a href="average-median-distance-to-resource.html#cb238-40" tabindex="-1"></a>  start <span class="ot">&lt;-</span> start <span class="sc">+</span> n_rows</span>
+<span id="cb238-41"><a href="average-median-distance-to-resource.html#cb238-41" tabindex="-1"></a>}</span>
+<span id="cb238-42"><a href="average-median-distance-to-resource.html#cb238-42" tabindex="-1"></a></span>
+<span id="cb238-43"><a href="average-median-distance-to-resource.html#cb238-43" tabindex="-1"></a><span class="fu">writeLines</span>(kbl, <span class="fu">paste0</span>(comparisons, <span class="st">&quot;avg_med_dist_1_comparison_combined.tex&quot;</span>))</span></code></pre></div>
+</div>
+<div id="model-figure-1" class="section level3 hasAnchor">
+<h3>Model figure<a href="average-median-distance-to-resource.html#model-figure-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="collective_tracking_results_files/figure-html/unnamed-chunk-287-1.png" width="960" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="tracking-time-vs.-tracking-efficiency-combined-plot.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="average-median-distance-to-resource-by-epoch.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>
